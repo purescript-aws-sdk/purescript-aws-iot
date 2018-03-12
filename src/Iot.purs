@@ -20,622 +20,866 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "Iot" :: String
-
 
 -- | <p>Accepts a pending certificate transfer. The default state of the certificate is INACTIVE.</p> <p>To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your certificates.</p>
 acceptCertificateTransfer :: forall eff. AcceptCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-acceptCertificateTransfer = Request.request serviceName "acceptCertificateTransfer" 
+acceptCertificateTransfer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "acceptCertificateTransfer"
 
 
 -- | <p>Adds a thing to a thing group.</p>
 addThingToThingGroup :: forall eff. AddThingToThingGroupRequest -> Aff (exception :: EXCEPTION | eff) AddThingToThingGroupResponse
-addThingToThingGroup = Request.request serviceName "addThingToThingGroup" 
+addThingToThingGroup = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "addThingToThingGroup"
 
 
 -- | <p>Associates a group with a continuous job. The following criteria must be met: </p> <ul> <li> <p>The job must have been created with the <code>targetSelection</code> field set to "CONTINUOUS".</p> </li> <li> <p>The job status must currently be "IN_PROGRESS".</p> </li> <li> <p>The total number of targets associated with a job must not exceed 100.</p> </li> </ul>
 associateTargetsWithJob :: forall eff. AssociateTargetsWithJobRequest -> Aff (exception :: EXCEPTION | eff) AssociateTargetsWithJobResponse
-associateTargetsWithJob = Request.request serviceName "associateTargetsWithJob" 
+associateTargetsWithJob = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "associateTargetsWithJob"
 
 
 -- | <p>Attaches a policy to the specified target.</p>
 attachPolicy :: forall eff. AttachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-attachPolicy = Request.request serviceName "attachPolicy" 
+attachPolicy = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "attachPolicy"
 
 
 -- | <p>Attaches the specified policy to the specified principal (certificate or other credential).</p> <p> <b>Note:</b> This API is deprecated. Please use <a>AttachPolicy</a> instead.</p>
 attachPrincipalPolicy :: forall eff. AttachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-attachPrincipalPolicy = Request.request serviceName "attachPrincipalPolicy" 
+attachPrincipalPolicy = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "attachPrincipalPolicy"
 
 
 -- | <p>Attaches the specified principal to the specified thing.</p>
 attachThingPrincipal :: forall eff. AttachThingPrincipalRequest -> Aff (exception :: EXCEPTION | eff) AttachThingPrincipalResponse
-attachThingPrincipal = Request.request serviceName "attachThingPrincipal" 
+attachThingPrincipal = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "attachThingPrincipal"
 
 
 -- | <p>Cancels a pending transfer for the specified certificate.</p> <p> <b>Note</b> Only the transfer source account can use this operation to cancel a transfer. (Transfer destinations can use <a>RejectCertificateTransfer</a> instead.) After transfer, AWS IoT returns the certificate to the source account in the INACTIVE state. After the destination account has accepted the transfer, the transfer cannot be cancelled.</p> <p>After a certificate transfer is cancelled, the status of the certificate changes from PENDING_TRANSFER to INACTIVE.</p>
 cancelCertificateTransfer :: forall eff. CancelCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-cancelCertificateTransfer = Request.request serviceName "cancelCertificateTransfer" 
+cancelCertificateTransfer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "cancelCertificateTransfer"
 
 
 -- | <p>Cancels a job.</p>
 cancelJob :: forall eff. CancelJobRequest -> Aff (exception :: EXCEPTION | eff) CancelJobResponse
-cancelJob = Request.request serviceName "cancelJob" 
+cancelJob = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "cancelJob"
 
 
 -- | <p>Clears the default authorizer.</p>
 clearDefaultAuthorizer :: forall eff. ClearDefaultAuthorizerRequest -> Aff (exception :: EXCEPTION | eff) ClearDefaultAuthorizerResponse
-clearDefaultAuthorizer = Request.request serviceName "clearDefaultAuthorizer" 
+clearDefaultAuthorizer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "clearDefaultAuthorizer"
 
 
 -- | <p>Creates an authorizer.</p>
 createAuthorizer :: forall eff. CreateAuthorizerRequest -> Aff (exception :: EXCEPTION | eff) CreateAuthorizerResponse
-createAuthorizer = Request.request serviceName "createAuthorizer" 
+createAuthorizer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createAuthorizer"
 
 
 -- | <p>Creates an X.509 certificate using the specified certificate signing request.</p> <p> <b>Note:</b> The CSR must include a public key that is either an RSA key with a length of at least 2048 bits or an ECC key from NIST P-256 or NIST P-384 curves. </p> <p> <b>Note:</b> Reusing the same certificate signing request (CSR) results in a distinct certificate.</p> <p>You can create multiple certificates in a batch by creating a directory, copying multiple .csr files into that directory, and then specifying that directory on the command line. The following commands show how to create a batch of certificates given a batch of CSRs.</p> <p>Assuming a set of CSRs are located inside of the directory my-csr-directory:</p> <p>On Linux and OS X, the command is:</p> <p>$ ls my-csr-directory/ | xargs -I {} aws iot create-certificate-from-csr --certificate-signing-request file://my-csr-directory/{}</p> <p>This command lists all of the CSRs in my-csr-directory and pipes each CSR file name to the aws iot create-certificate-from-csr AWS CLI command to create a certificate for the corresponding CSR.</p> <p>The aws iot create-certificate-from-csr part of the command can also be run in parallel to speed up the certificate creation process:</p> <p>$ ls my-csr-directory/ | xargs -P 10 -I {} aws iot create-certificate-from-csr --certificate-signing-request file://my-csr-directory/{}</p> <p>On Windows PowerShell, the command to create certificates for all CSRs in my-csr-directory is:</p> <p>&gt; ls -Name my-csr-directory | %{aws iot create-certificate-from-csr --certificate-signing-request file://my-csr-directory/$_}</p> <p>On a Windows command prompt, the command to create certificates for all CSRs in my-csr-directory is:</p> <p>&gt; forfiles /p my-csr-directory /c "cmd /c aws iot create-certificate-from-csr --certificate-signing-request file://@path"</p>
 createCertificateFromCsr :: forall eff. CreateCertificateFromCsrRequest -> Aff (exception :: EXCEPTION | eff) CreateCertificateFromCsrResponse
-createCertificateFromCsr = Request.request serviceName "createCertificateFromCsr" 
+createCertificateFromCsr = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createCertificateFromCsr"
 
 
 -- | <p>Creates a job.</p>
 createJob :: forall eff. CreateJobRequest -> Aff (exception :: EXCEPTION | eff) CreateJobResponse
-createJob = Request.request serviceName "createJob" 
+createJob = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createJob"
 
 
 -- | <p>Creates a 2048-bit RSA key pair and issues an X.509 certificate using the issued public key.</p> <p> <b>Note</b> This is the only time AWS IoT issues the private key for this certificate, so it is important to keep it in a secure location.</p>
 createKeysAndCertificate :: forall eff. CreateKeysAndCertificateRequest -> Aff (exception :: EXCEPTION | eff) CreateKeysAndCertificateResponse
-createKeysAndCertificate = Request.request serviceName "createKeysAndCertificate" 
+createKeysAndCertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createKeysAndCertificate"
 
 
 -- | <p>Creates an AWS IoT OTAUpdate on a target group of things or groups.</p>
 createOTAUpdate :: forall eff. CreateOTAUpdateRequest -> Aff (exception :: EXCEPTION | eff) CreateOTAUpdateResponse
-createOTAUpdate = Request.request serviceName "createOTAUpdate" 
+createOTAUpdate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createOTAUpdate"
 
 
 -- | <p>Creates an AWS IoT policy.</p> <p>The created policy is the default version for the policy. This operation creates a policy version with a version identifier of <b>1</b> and sets <b>1</b> as the policy's default version.</p>
 createPolicy :: forall eff. CreatePolicyRequest -> Aff (exception :: EXCEPTION | eff) CreatePolicyResponse
-createPolicy = Request.request serviceName "createPolicy" 
+createPolicy = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createPolicy"
 
 
 -- | <p>Creates a new version of the specified AWS IoT policy. To update a policy, create a new policy version. A managed policy can have up to five versions. If the policy has five versions, you must use <a>DeletePolicyVersion</a> to delete an existing version before you create a new one.</p> <p>Optionally, you can set the new version as the policy's default version. The default version is the operative version (that is, the version that is in effect for the certificates to which the policy is attached).</p>
 createPolicyVersion :: forall eff. CreatePolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) CreatePolicyVersionResponse
-createPolicyVersion = Request.request serviceName "createPolicyVersion" 
+createPolicyVersion = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createPolicyVersion"
 
 
 -- | <p>Creates a role alias.</p>
 createRoleAlias :: forall eff. CreateRoleAliasRequest -> Aff (exception :: EXCEPTION | eff) CreateRoleAliasResponse
-createRoleAlias = Request.request serviceName "createRoleAlias" 
+createRoleAlias = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createRoleAlias"
 
 
 -- | <p>Creates a stream for delivering one or more large files in chunks over MQTT. A stream transports data bytes in chunks or blocks packaged as MQTT messages from a source like S3. You can have one or more files associated with a stream. The total size of a file associated with the stream cannot exceed more than 2 MB. The stream will be created with version 0. If a stream is created with the same streamID as a stream that existed and was deleted within last 90 days, we will resurrect that old stream by incrementing the version by 1.</p>
 createStream :: forall eff. CreateStreamRequest -> Aff (exception :: EXCEPTION | eff) CreateStreamResponse
-createStream = Request.request serviceName "createStream" 
+createStream = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createStream"
 
 
 -- | <p>Creates a thing record in the thing registry.</p>
 createThing :: forall eff. CreateThingRequest -> Aff (exception :: EXCEPTION | eff) CreateThingResponse
-createThing = Request.request serviceName "createThing" 
+createThing = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createThing"
 
 
 -- | <p>Create a thing group.</p>
 createThingGroup :: forall eff. CreateThingGroupRequest -> Aff (exception :: EXCEPTION | eff) CreateThingGroupResponse
-createThingGroup = Request.request serviceName "createThingGroup" 
+createThingGroup = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createThingGroup"
 
 
 -- | <p>Creates a new thing type.</p>
 createThingType :: forall eff. CreateThingTypeRequest -> Aff (exception :: EXCEPTION | eff) CreateThingTypeResponse
-createThingType = Request.request serviceName "createThingType" 
+createThingType = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createThingType"
 
 
 -- | <p>Creates a rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the rule.</p>
 createTopicRule :: forall eff. CreateTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-createTopicRule = Request.request serviceName "createTopicRule" 
+createTopicRule = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "createTopicRule"
 
 
 -- | <p>Deletes an authorizer.</p>
 deleteAuthorizer :: forall eff. DeleteAuthorizerRequest -> Aff (exception :: EXCEPTION | eff) DeleteAuthorizerResponse
-deleteAuthorizer = Request.request serviceName "deleteAuthorizer" 
+deleteAuthorizer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteAuthorizer"
 
 
 -- | <p>Deletes a registered CA certificate.</p>
 deleteCACertificate :: forall eff. DeleteCACertificateRequest -> Aff (exception :: EXCEPTION | eff) DeleteCACertificateResponse
-deleteCACertificate = Request.request serviceName "deleteCACertificate" 
+deleteCACertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteCACertificate"
 
 
 -- | <p>Deletes the specified certificate.</p> <p>A certificate cannot be deleted if it has a policy attached to it or if its status is set to ACTIVE. To delete a certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the <a>UpdateCertificate</a> API to set the certificate to the INACTIVE status.</p>
 deleteCertificate :: forall eff. DeleteCertificateRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteCertificate = Request.request serviceName "deleteCertificate" 
+deleteCertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteCertificate"
 
 
 -- | <p>Delete an OTA update.</p>
 deleteOTAUpdate :: forall eff. DeleteOTAUpdateRequest -> Aff (exception :: EXCEPTION | eff) DeleteOTAUpdateResponse
-deleteOTAUpdate = Request.request serviceName "deleteOTAUpdate" 
+deleteOTAUpdate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteOTAUpdate"
 
 
 -- | <p>Deletes the specified policy.</p> <p>A policy cannot be deleted if it has non-default versions or it is attached to any certificate.</p> <p>To delete a policy, use the DeletePolicyVersion API to delete all non-default versions of the policy; use the DetachPrincipalPolicy API to detach the policy from any certificate; and then use the DeletePolicy API to delete the policy.</p> <p>When a policy is deleted using DeletePolicy, its default version is deleted with it.</p>
 deletePolicy :: forall eff. DeletePolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deletePolicy = Request.request serviceName "deletePolicy" 
+deletePolicy = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deletePolicy"
 
 
 -- | <p>Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this API. To delete the default version of a policy, use <a>DeletePolicy</a>. To find out which version of a policy is marked as the default version, use ListPolicyVersions.</p>
 deletePolicyVersion :: forall eff. DeletePolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deletePolicyVersion = Request.request serviceName "deletePolicyVersion" 
+deletePolicyVersion = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deletePolicyVersion"
 
 
 -- | <p>Deletes a CA certificate registration code.</p>
 deleteRegistrationCode :: forall eff. DeleteRegistrationCodeRequest -> Aff (exception :: EXCEPTION | eff) DeleteRegistrationCodeResponse
-deleteRegistrationCode = Request.request serviceName "deleteRegistrationCode" 
+deleteRegistrationCode = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteRegistrationCode"
 
 
 -- | <p>Deletes a role alias</p>
 deleteRoleAlias :: forall eff. DeleteRoleAliasRequest -> Aff (exception :: EXCEPTION | eff) DeleteRoleAliasResponse
-deleteRoleAlias = Request.request serviceName "deleteRoleAlias" 
+deleteRoleAlias = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteRoleAlias"
 
 
 -- | <p>Deletes a stream.</p>
 deleteStream :: forall eff. DeleteStreamRequest -> Aff (exception :: EXCEPTION | eff) DeleteStreamResponse
-deleteStream = Request.request serviceName "deleteStream" 
+deleteStream = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteStream"
 
 
 -- | <p>Deletes the specified thing.</p>
 deleteThing :: forall eff. DeleteThingRequest -> Aff (exception :: EXCEPTION | eff) DeleteThingResponse
-deleteThing = Request.request serviceName "deleteThing" 
+deleteThing = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteThing"
 
 
 -- | <p>Deletes a thing group.</p>
 deleteThingGroup :: forall eff. DeleteThingGroupRequest -> Aff (exception :: EXCEPTION | eff) DeleteThingGroupResponse
-deleteThingGroup = Request.request serviceName "deleteThingGroup" 
+deleteThingGroup = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteThingGroup"
 
 
 -- | <p>Deletes the specified thing type . You cannot delete a thing type if it has things associated with it. To delete a thing type, first mark it as deprecated by calling <a>DeprecateThingType</a>, then remove any associated things by calling <a>UpdateThing</a> to change the thing type on any associated thing, and finally use <a>DeleteThingType</a> to delete the thing type.</p>
 deleteThingType :: forall eff. DeleteThingTypeRequest -> Aff (exception :: EXCEPTION | eff) DeleteThingTypeResponse
-deleteThingType = Request.request serviceName "deleteThingType" 
+deleteThingType = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteThingType"
 
 
 -- | <p>Deletes the rule.</p>
 deleteTopicRule :: forall eff. DeleteTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteTopicRule = Request.request serviceName "deleteTopicRule" 
+deleteTopicRule = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteTopicRule"
 
 
 -- | <p>Deletes a logging level.</p>
 deleteV2LoggingLevel :: forall eff. DeleteV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteV2LoggingLevel = Request.request serviceName "deleteV2LoggingLevel" 
+deleteV2LoggingLevel = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deleteV2LoggingLevel"
 
 
 -- | <p>Deprecates a thing type. You can not associate new things with deprecated thing type.</p>
 deprecateThingType :: forall eff. DeprecateThingTypeRequest -> Aff (exception :: EXCEPTION | eff) DeprecateThingTypeResponse
-deprecateThingType = Request.request serviceName "deprecateThingType" 
+deprecateThingType = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "deprecateThingType"
 
 
 -- | <p>Describes an authorizer.</p>
 describeAuthorizer :: forall eff. DescribeAuthorizerRequest -> Aff (exception :: EXCEPTION | eff) DescribeAuthorizerResponse
-describeAuthorizer = Request.request serviceName "describeAuthorizer" 
+describeAuthorizer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeAuthorizer"
 
 
 -- | <p>Describes a registered CA certificate.</p>
 describeCACertificate :: forall eff. DescribeCACertificateRequest -> Aff (exception :: EXCEPTION | eff) DescribeCACertificateResponse
-describeCACertificate = Request.request serviceName "describeCACertificate" 
+describeCACertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeCACertificate"
 
 
 -- | <p>Gets information about the specified certificate.</p>
 describeCertificate :: forall eff. DescribeCertificateRequest -> Aff (exception :: EXCEPTION | eff) DescribeCertificateResponse
-describeCertificate = Request.request serviceName "describeCertificate" 
+describeCertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeCertificate"
 
 
 -- | <p>Describes the default authorizer.</p>
 describeDefaultAuthorizer :: forall eff. DescribeDefaultAuthorizerRequest -> Aff (exception :: EXCEPTION | eff) DescribeDefaultAuthorizerResponse
-describeDefaultAuthorizer = Request.request serviceName "describeDefaultAuthorizer" 
+describeDefaultAuthorizer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeDefaultAuthorizer"
 
 
 -- | <p>Returns a unique endpoint specific to the AWS account making the call.</p>
 describeEndpoint :: forall eff. DescribeEndpointRequest -> Aff (exception :: EXCEPTION | eff) DescribeEndpointResponse
-describeEndpoint = Request.request serviceName "describeEndpoint" 
+describeEndpoint = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeEndpoint"
 
 
 -- | <p>Describes event configurations.</p>
 describeEventConfigurations :: forall eff. DescribeEventConfigurationsRequest -> Aff (exception :: EXCEPTION | eff) DescribeEventConfigurationsResponse
-describeEventConfigurations = Request.request serviceName "describeEventConfigurations" 
+describeEventConfigurations = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeEventConfigurations"
 
 
 -- | <p>Describes a search index.</p>
 describeIndex :: forall eff. DescribeIndexRequest -> Aff (exception :: EXCEPTION | eff) DescribeIndexResponse
-describeIndex = Request.request serviceName "describeIndex" 
+describeIndex = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeIndex"
 
 
 -- | <p>Describes a job.</p>
 describeJob :: forall eff. DescribeJobRequest -> Aff (exception :: EXCEPTION | eff) DescribeJobResponse
-describeJob = Request.request serviceName "describeJob" 
+describeJob = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeJob"
 
 
 -- | <p>Describes a job execution.</p>
 describeJobExecution :: forall eff. DescribeJobExecutionRequest -> Aff (exception :: EXCEPTION | eff) DescribeJobExecutionResponse
-describeJobExecution = Request.request serviceName "describeJobExecution" 
+describeJobExecution = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeJobExecution"
 
 
 -- | <p>Describes a role alias.</p>
 describeRoleAlias :: forall eff. DescribeRoleAliasRequest -> Aff (exception :: EXCEPTION | eff) DescribeRoleAliasResponse
-describeRoleAlias = Request.request serviceName "describeRoleAlias" 
+describeRoleAlias = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeRoleAlias"
 
 
 -- | <p>Gets information about a stream.</p>
 describeStream :: forall eff. DescribeStreamRequest -> Aff (exception :: EXCEPTION | eff) DescribeStreamResponse
-describeStream = Request.request serviceName "describeStream" 
+describeStream = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeStream"
 
 
 -- | <p>Gets information about the specified thing.</p>
 describeThing :: forall eff. DescribeThingRequest -> Aff (exception :: EXCEPTION | eff) DescribeThingResponse
-describeThing = Request.request serviceName "describeThing" 
+describeThing = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeThing"
 
 
 -- | <p>Describe a thing group.</p>
 describeThingGroup :: forall eff. DescribeThingGroupRequest -> Aff (exception :: EXCEPTION | eff) DescribeThingGroupResponse
-describeThingGroup = Request.request serviceName "describeThingGroup" 
+describeThingGroup = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeThingGroup"
 
 
 -- | <p>Describes a bulk thing provisioning task.</p>
 describeThingRegistrationTask :: forall eff. DescribeThingRegistrationTaskRequest -> Aff (exception :: EXCEPTION | eff) DescribeThingRegistrationTaskResponse
-describeThingRegistrationTask = Request.request serviceName "describeThingRegistrationTask" 
+describeThingRegistrationTask = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeThingRegistrationTask"
 
 
 -- | <p>Gets information about the specified thing type.</p>
 describeThingType :: forall eff. DescribeThingTypeRequest -> Aff (exception :: EXCEPTION | eff) DescribeThingTypeResponse
-describeThingType = Request.request serviceName "describeThingType" 
+describeThingType = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "describeThingType"
 
 
 -- | <p>Detaches a policy from the specified target.</p>
 detachPolicy :: forall eff. DetachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-detachPolicy = Request.request serviceName "detachPolicy" 
+detachPolicy = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "detachPolicy"
 
 
 -- | <p>Removes the specified policy from the specified certificate.</p> <p> <b>Note:</b> This API is deprecated. Please use <a>DetachPolicy</a> instead.</p>
 detachPrincipalPolicy :: forall eff. DetachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-detachPrincipalPolicy = Request.request serviceName "detachPrincipalPolicy" 
+detachPrincipalPolicy = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "detachPrincipalPolicy"
 
 
 -- | <p>Detaches the specified principal from the specified thing.</p>
 detachThingPrincipal :: forall eff. DetachThingPrincipalRequest -> Aff (exception :: EXCEPTION | eff) DetachThingPrincipalResponse
-detachThingPrincipal = Request.request serviceName "detachThingPrincipal" 
+detachThingPrincipal = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "detachThingPrincipal"
 
 
 -- | <p>Disables the rule.</p>
 disableTopicRule :: forall eff. DisableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-disableTopicRule = Request.request serviceName "disableTopicRule" 
+disableTopicRule = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "disableTopicRule"
 
 
 -- | <p>Enables the rule.</p>
 enableTopicRule :: forall eff. EnableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-enableTopicRule = Request.request serviceName "enableTopicRule" 
+enableTopicRule = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "enableTopicRule"
 
 
 -- | <p>Gets effective policies.</p>
 getEffectivePolicies :: forall eff. GetEffectivePoliciesRequest -> Aff (exception :: EXCEPTION | eff) GetEffectivePoliciesResponse
-getEffectivePolicies = Request.request serviceName "getEffectivePolicies" 
+getEffectivePolicies = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getEffectivePolicies"
 
 
 -- | <p>Gets the search configuration.</p>
 getIndexingConfiguration :: forall eff. GetIndexingConfigurationRequest -> Aff (exception :: EXCEPTION | eff) GetIndexingConfigurationResponse
-getIndexingConfiguration = Request.request serviceName "getIndexingConfiguration" 
+getIndexingConfiguration = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getIndexingConfiguration"
 
 
 -- | <p>Gets a job document.</p>
 getJobDocument :: forall eff. GetJobDocumentRequest -> Aff (exception :: EXCEPTION | eff) GetJobDocumentResponse
-getJobDocument = Request.request serviceName "getJobDocument" 
+getJobDocument = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getJobDocument"
 
 
 -- | <p>Gets the logging options.</p>
 getLoggingOptions :: forall eff. GetLoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) GetLoggingOptionsResponse
-getLoggingOptions = Request.request serviceName "getLoggingOptions" 
+getLoggingOptions = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getLoggingOptions"
 
 
 -- | <p>Gets an OTA update.</p>
 getOTAUpdate :: forall eff. GetOTAUpdateRequest -> Aff (exception :: EXCEPTION | eff) GetOTAUpdateResponse
-getOTAUpdate = Request.request serviceName "getOTAUpdate" 
+getOTAUpdate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getOTAUpdate"
 
 
 -- | <p>Gets information about the specified policy with the policy document of the default version.</p>
 getPolicy :: forall eff. GetPolicyRequest -> Aff (exception :: EXCEPTION | eff) GetPolicyResponse
-getPolicy = Request.request serviceName "getPolicy" 
+getPolicy = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getPolicy"
 
 
 -- | <p>Gets information about the specified policy version.</p>
 getPolicyVersion :: forall eff. GetPolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) GetPolicyVersionResponse
-getPolicyVersion = Request.request serviceName "getPolicyVersion" 
+getPolicyVersion = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getPolicyVersion"
 
 
 -- | <p>Gets a registration code used to register a CA certificate with AWS IoT.</p>
 getRegistrationCode :: forall eff. GetRegistrationCodeRequest -> Aff (exception :: EXCEPTION | eff) GetRegistrationCodeResponse
-getRegistrationCode = Request.request serviceName "getRegistrationCode" 
+getRegistrationCode = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getRegistrationCode"
 
 
 -- | <p>Gets information about the rule.</p>
 getTopicRule :: forall eff. GetTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) GetTopicRuleResponse
-getTopicRule = Request.request serviceName "getTopicRule" 
+getTopicRule = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getTopicRule"
 
 
 -- | <p>Gets the fine grained logging options.</p>
 getV2LoggingOptions :: forall eff. GetV2LoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) GetV2LoggingOptionsResponse
-getV2LoggingOptions = Request.request serviceName "getV2LoggingOptions" 
+getV2LoggingOptions = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "getV2LoggingOptions"
 
 
 -- | <p>Lists the policies attached to the specified thing group.</p>
 listAttachedPolicies :: forall eff. ListAttachedPoliciesRequest -> Aff (exception :: EXCEPTION | eff) ListAttachedPoliciesResponse
-listAttachedPolicies = Request.request serviceName "listAttachedPolicies" 
+listAttachedPolicies = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listAttachedPolicies"
 
 
 -- | <p>Lists the authorizers registered in your account.</p>
 listAuthorizers :: forall eff. ListAuthorizersRequest -> Aff (exception :: EXCEPTION | eff) ListAuthorizersResponse
-listAuthorizers = Request.request serviceName "listAuthorizers" 
+listAuthorizers = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listAuthorizers"
 
 
 -- | <p>Lists the CA certificates registered for your AWS account.</p> <p>The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional results.</p>
 listCACertificates :: forall eff. ListCACertificatesRequest -> Aff (exception :: EXCEPTION | eff) ListCACertificatesResponse
-listCACertificates = Request.request serviceName "listCACertificates" 
+listCACertificates = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listCACertificates"
 
 
 -- | <p>Lists the certificates registered in your AWS account.</p> <p>The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional results.</p>
 listCertificates :: forall eff. ListCertificatesRequest -> Aff (exception :: EXCEPTION | eff) ListCertificatesResponse
-listCertificates = Request.request serviceName "listCertificates" 
+listCertificates = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listCertificates"
 
 
 -- | <p>List the device certificates signed by the specified CA certificate.</p>
 listCertificatesByCA :: forall eff. ListCertificatesByCARequest -> Aff (exception :: EXCEPTION | eff) ListCertificatesByCAResponse
-listCertificatesByCA = Request.request serviceName "listCertificatesByCA" 
+listCertificatesByCA = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listCertificatesByCA"
 
 
 -- | <p>Lists the search indices.</p>
 listIndices :: forall eff. ListIndicesRequest -> Aff (exception :: EXCEPTION | eff) ListIndicesResponse
-listIndices = Request.request serviceName "listIndices" 
+listIndices = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listIndices"
 
 
 -- | <p>Lists the job executions for a job.</p>
 listJobExecutionsForJob :: forall eff. ListJobExecutionsForJobRequest -> Aff (exception :: EXCEPTION | eff) ListJobExecutionsForJobResponse
-listJobExecutionsForJob = Request.request serviceName "listJobExecutionsForJob" 
+listJobExecutionsForJob = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listJobExecutionsForJob"
 
 
 -- | <p>Lists the job executions for the specified thing.</p>
 listJobExecutionsForThing :: forall eff. ListJobExecutionsForThingRequest -> Aff (exception :: EXCEPTION | eff) ListJobExecutionsForThingResponse
-listJobExecutionsForThing = Request.request serviceName "listJobExecutionsForThing" 
+listJobExecutionsForThing = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listJobExecutionsForThing"
 
 
 -- | <p>Lists jobs.</p>
 listJobs :: forall eff. ListJobsRequest -> Aff (exception :: EXCEPTION | eff) ListJobsResponse
-listJobs = Request.request serviceName "listJobs" 
+listJobs = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listJobs"
 
 
 -- | <p>Lists OTA updates.</p>
 listOTAUpdates :: forall eff. ListOTAUpdatesRequest -> Aff (exception :: EXCEPTION | eff) ListOTAUpdatesResponse
-listOTAUpdates = Request.request serviceName "listOTAUpdates" 
+listOTAUpdates = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listOTAUpdates"
 
 
 -- | <p>Lists certificates that are being transferred but not yet accepted.</p>
 listOutgoingCertificates :: forall eff. ListOutgoingCertificatesRequest -> Aff (exception :: EXCEPTION | eff) ListOutgoingCertificatesResponse
-listOutgoingCertificates = Request.request serviceName "listOutgoingCertificates" 
+listOutgoingCertificates = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listOutgoingCertificates"
 
 
 -- | <p>Lists your policies.</p>
 listPolicies :: forall eff. ListPoliciesRequest -> Aff (exception :: EXCEPTION | eff) ListPoliciesResponse
-listPolicies = Request.request serviceName "listPolicies" 
+listPolicies = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listPolicies"
 
 
 -- | <p>Lists the principals associated with the specified policy.</p> <p> <b>Note:</b> This API is deprecated. Please use <a>ListTargetsForPolicy</a> instead.</p>
 listPolicyPrincipals :: forall eff. ListPolicyPrincipalsRequest -> Aff (exception :: EXCEPTION | eff) ListPolicyPrincipalsResponse
-listPolicyPrincipals = Request.request serviceName "listPolicyPrincipals" 
+listPolicyPrincipals = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listPolicyPrincipals"
 
 
 -- | <p>Lists the versions of the specified policy and identifies the default version.</p>
 listPolicyVersions :: forall eff. ListPolicyVersionsRequest -> Aff (exception :: EXCEPTION | eff) ListPolicyVersionsResponse
-listPolicyVersions = Request.request serviceName "listPolicyVersions" 
+listPolicyVersions = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listPolicyVersions"
 
 
 -- | <p>Lists the policies attached to the specified principal. If you use an Cognito identity, the ID must be in <a href="http://docs.aws.amazon.com/cognitoidentity/latest/APIReference/API_GetCredentialsForIdentity.html#API_GetCredentialsForIdentity_RequestSyntax">AmazonCognito Identity format</a>.</p> <p> <b>Note:</b> This API is deprecated. Please use <a>ListAttachedPolicies</a> instead.</p>
 listPrincipalPolicies :: forall eff. ListPrincipalPoliciesRequest -> Aff (exception :: EXCEPTION | eff) ListPrincipalPoliciesResponse
-listPrincipalPolicies = Request.request serviceName "listPrincipalPolicies" 
+listPrincipalPolicies = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listPrincipalPolicies"
 
 
 -- | <p>Lists the things associated with the specified principal.</p>
 listPrincipalThings :: forall eff. ListPrincipalThingsRequest -> Aff (exception :: EXCEPTION | eff) ListPrincipalThingsResponse
-listPrincipalThings = Request.request serviceName "listPrincipalThings" 
+listPrincipalThings = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listPrincipalThings"
 
 
 -- | <p>Lists the role aliases registered in your account.</p>
 listRoleAliases :: forall eff. ListRoleAliasesRequest -> Aff (exception :: EXCEPTION | eff) ListRoleAliasesResponse
-listRoleAliases = Request.request serviceName "listRoleAliases" 
+listRoleAliases = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listRoleAliases"
 
 
 -- | <p>Lists all of the streams in your AWS account.</p>
 listStreams :: forall eff. ListStreamsRequest -> Aff (exception :: EXCEPTION | eff) ListStreamsResponse
-listStreams = Request.request serviceName "listStreams" 
+listStreams = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listStreams"
 
 
 -- | <p>List targets for the specified policy.</p>
 listTargetsForPolicy :: forall eff. ListTargetsForPolicyRequest -> Aff (exception :: EXCEPTION | eff) ListTargetsForPolicyResponse
-listTargetsForPolicy = Request.request serviceName "listTargetsForPolicy" 
+listTargetsForPolicy = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listTargetsForPolicy"
 
 
 -- | <p>List the thing groups in your account.</p>
 listThingGroups :: forall eff. ListThingGroupsRequest -> Aff (exception :: EXCEPTION | eff) ListThingGroupsResponse
-listThingGroups = Request.request serviceName "listThingGroups" 
+listThingGroups = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listThingGroups"
 
 
 -- | <p>List the thing groups to which the specified thing belongs.</p>
 listThingGroupsForThing :: forall eff. ListThingGroupsForThingRequest -> Aff (exception :: EXCEPTION | eff) ListThingGroupsForThingResponse
-listThingGroupsForThing = Request.request serviceName "listThingGroupsForThing" 
+listThingGroupsForThing = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listThingGroupsForThing"
 
 
 -- | <p>Lists the principals associated with the specified thing.</p>
 listThingPrincipals :: forall eff. ListThingPrincipalsRequest -> Aff (exception :: EXCEPTION | eff) ListThingPrincipalsResponse
-listThingPrincipals = Request.request serviceName "listThingPrincipals" 
+listThingPrincipals = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listThingPrincipals"
 
 
 -- | <p>Information about the thing registration tasks.</p>
 listThingRegistrationTaskReports :: forall eff. ListThingRegistrationTaskReportsRequest -> Aff (exception :: EXCEPTION | eff) ListThingRegistrationTaskReportsResponse
-listThingRegistrationTaskReports = Request.request serviceName "listThingRegistrationTaskReports" 
+listThingRegistrationTaskReports = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listThingRegistrationTaskReports"
 
 
 -- | <p>List bulk thing provisioning tasks.</p>
 listThingRegistrationTasks :: forall eff. ListThingRegistrationTasksRequest -> Aff (exception :: EXCEPTION | eff) ListThingRegistrationTasksResponse
-listThingRegistrationTasks = Request.request serviceName "listThingRegistrationTasks" 
+listThingRegistrationTasks = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listThingRegistrationTasks"
 
 
 -- | <p>Lists the existing thing types.</p>
 listThingTypes :: forall eff. ListThingTypesRequest -> Aff (exception :: EXCEPTION | eff) ListThingTypesResponse
-listThingTypes = Request.request serviceName "listThingTypes" 
+listThingTypes = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listThingTypes"
 
 
 -- | <p>Lists your things. Use the <b>attributeName</b> and <b>attributeValue</b> parameters to filter your things. For example, calling <code>ListThings</code> with attributeName=Color and attributeValue=Red retrieves all things in the registry that contain an attribute <b>Color</b> with the value <b>Red</b>. </p>
 listThings :: forall eff. ListThingsRequest -> Aff (exception :: EXCEPTION | eff) ListThingsResponse
-listThings = Request.request serviceName "listThings" 
+listThings = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listThings"
 
 
 -- | <p>Lists the things in the specified group.</p>
 listThingsInThingGroup :: forall eff. ListThingsInThingGroupRequest -> Aff (exception :: EXCEPTION | eff) ListThingsInThingGroupResponse
-listThingsInThingGroup = Request.request serviceName "listThingsInThingGroup" 
+listThingsInThingGroup = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listThingsInThingGroup"
 
 
 -- | <p>Lists the rules for the specific topic.</p>
 listTopicRules :: forall eff. ListTopicRulesRequest -> Aff (exception :: EXCEPTION | eff) ListTopicRulesResponse
-listTopicRules = Request.request serviceName "listTopicRules" 
+listTopicRules = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listTopicRules"
 
 
 -- | <p>Lists logging levels.</p>
 listV2LoggingLevels :: forall eff. ListV2LoggingLevelsRequest -> Aff (exception :: EXCEPTION | eff) ListV2LoggingLevelsResponse
-listV2LoggingLevels = Request.request serviceName "listV2LoggingLevels" 
+listV2LoggingLevels = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "listV2LoggingLevels"
 
 
 -- | <p>Registers a CA certificate with AWS IoT. This CA certificate can then be used to sign device certificates, which can be then registered with AWS IoT. You can register up to 10 CA certificates per AWS account that have the same subject field. This enables you to have up to 10 certificate authorities sign your device certificates. If you have more than one CA certificate registered, make sure you pass the CA certificate when you register your device certificates with the RegisterCertificate API.</p>
 registerCACertificate :: forall eff. RegisterCACertificateRequest -> Aff (exception :: EXCEPTION | eff) RegisterCACertificateResponse
-registerCACertificate = Request.request serviceName "registerCACertificate" 
+registerCACertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "registerCACertificate"
 
 
 -- | <p>Registers a device certificate with AWS IoT. If you have more than one CA certificate that has the same subject field, you must specify the CA certificate that was used to sign the device certificate being registered.</p>
 registerCertificate :: forall eff. RegisterCertificateRequest -> Aff (exception :: EXCEPTION | eff) RegisterCertificateResponse
-registerCertificate = Request.request serviceName "registerCertificate" 
+registerCertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "registerCertificate"
 
 
 -- | <p>Provisions a thing.</p>
 registerThing :: forall eff. RegisterThingRequest -> Aff (exception :: EXCEPTION | eff) RegisterThingResponse
-registerThing = Request.request serviceName "registerThing" 
+registerThing = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "registerThing"
 
 
 -- | <p>Rejects a pending certificate transfer. After AWS IoT rejects a certificate transfer, the certificate status changes from <b>PENDING_TRANSFER</b> to <b>INACTIVE</b>.</p> <p>To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your certificates.</p> <p>This operation can only be called by the transfer destination. After it is called, the certificate will be returned to the source's account in the INACTIVE state.</p>
 rejectCertificateTransfer :: forall eff. RejectCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-rejectCertificateTransfer = Request.request serviceName "rejectCertificateTransfer" 
+rejectCertificateTransfer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "rejectCertificateTransfer"
 
 
 -- | <p>Remove the specified thing from the specified group.</p>
 removeThingFromThingGroup :: forall eff. RemoveThingFromThingGroupRequest -> Aff (exception :: EXCEPTION | eff) RemoveThingFromThingGroupResponse
-removeThingFromThingGroup = Request.request serviceName "removeThingFromThingGroup" 
+removeThingFromThingGroup = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "removeThingFromThingGroup"
 
 
 -- | <p>Replaces the rule. You must specify all parameters for the new rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the rule.</p>
 replaceTopicRule :: forall eff. ReplaceTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-replaceTopicRule = Request.request serviceName "replaceTopicRule" 
+replaceTopicRule = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "replaceTopicRule"
 
 
 -- | <p>The query search index.</p>
 searchIndex :: forall eff. SearchIndexRequest -> Aff (exception :: EXCEPTION | eff) SearchIndexResponse
-searchIndex = Request.request serviceName "searchIndex" 
+searchIndex = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "searchIndex"
 
 
 -- | <p>Sets the default authorizer. This will be used if a websocket connection is made without specifying an authorizer.</p>
 setDefaultAuthorizer :: forall eff. SetDefaultAuthorizerRequest -> Aff (exception :: EXCEPTION | eff) SetDefaultAuthorizerResponse
-setDefaultAuthorizer = Request.request serviceName "setDefaultAuthorizer" 
+setDefaultAuthorizer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "setDefaultAuthorizer"
 
 
 -- | <p>Sets the specified version of the specified policy as the policy's default (operative) version. This action affects all certificates to which the policy is attached. To list the principals the policy is attached to, use the ListPrincipalPolicy API.</p>
 setDefaultPolicyVersion :: forall eff. SetDefaultPolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-setDefaultPolicyVersion = Request.request serviceName "setDefaultPolicyVersion" 
+setDefaultPolicyVersion = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "setDefaultPolicyVersion"
 
 
 -- | <p>Sets the logging options.</p>
 setLoggingOptions :: forall eff. SetLoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-setLoggingOptions = Request.request serviceName "setLoggingOptions" 
+setLoggingOptions = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "setLoggingOptions"
 
 
 -- | <p>Sets the logging level.</p>
 setV2LoggingLevel :: forall eff. SetV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-setV2LoggingLevel = Request.request serviceName "setV2LoggingLevel" 
+setV2LoggingLevel = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "setV2LoggingLevel"
 
 
 -- | <p>Sets the logging options for the V2 logging service.</p>
 setV2LoggingOptions :: forall eff. SetV2LoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-setV2LoggingOptions = Request.request serviceName "setV2LoggingOptions" 
+setV2LoggingOptions = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "setV2LoggingOptions"
 
 
 -- | <p>Creates a bulk thing provisioning task.</p>
 startThingRegistrationTask :: forall eff. StartThingRegistrationTaskRequest -> Aff (exception :: EXCEPTION | eff) StartThingRegistrationTaskResponse
-startThingRegistrationTask = Request.request serviceName "startThingRegistrationTask" 
+startThingRegistrationTask = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "startThingRegistrationTask"
 
 
 -- | <p>Cancels a bulk thing provisioning task.</p>
 stopThingRegistrationTask :: forall eff. StopThingRegistrationTaskRequest -> Aff (exception :: EXCEPTION | eff) StopThingRegistrationTaskResponse
-stopThingRegistrationTask = Request.request serviceName "stopThingRegistrationTask" 
+stopThingRegistrationTask = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "stopThingRegistrationTask"
 
 
 -- | <p>Test custom authorization.</p>
 testAuthorization :: forall eff. TestAuthorizationRequest -> Aff (exception :: EXCEPTION | eff) TestAuthorizationResponse
-testAuthorization = Request.request serviceName "testAuthorization" 
+testAuthorization = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "testAuthorization"
 
 
 -- | <p>Invoke the specified custom authorizer for testing purposes.</p>
 testInvokeAuthorizer :: forall eff. TestInvokeAuthorizerRequest -> Aff (exception :: EXCEPTION | eff) TestInvokeAuthorizerResponse
-testInvokeAuthorizer = Request.request serviceName "testInvokeAuthorizer" 
+testInvokeAuthorizer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "testInvokeAuthorizer"
 
 
 -- | <p>Transfers the specified certificate to the specified AWS account.</p> <p>You can cancel the transfer until it is acknowledged by the recipient.</p> <p>No notification is sent to the transfer destination's account. It is up to the caller to notify the transfer target.</p> <p>The certificate being transferred must not be in the ACTIVE state. You can use the UpdateCertificate API to deactivate it.</p> <p>The certificate must not have any policies attached to it. You can use the DetachPrincipalPolicy API to detach them.</p>
 transferCertificate :: forall eff. TransferCertificateRequest -> Aff (exception :: EXCEPTION | eff) TransferCertificateResponse
-transferCertificate = Request.request serviceName "transferCertificate" 
+transferCertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "transferCertificate"
 
 
 -- | <p>Updates an authorizer.</p>
 updateAuthorizer :: forall eff. UpdateAuthorizerRequest -> Aff (exception :: EXCEPTION | eff) UpdateAuthorizerResponse
-updateAuthorizer = Request.request serviceName "updateAuthorizer" 
+updateAuthorizer = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateAuthorizer"
 
 
 -- | <p>Updates a registered CA certificate.</p>
 updateCACertificate :: forall eff. UpdateCACertificateRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-updateCACertificate = Request.request serviceName "updateCACertificate" 
+updateCACertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateCACertificate"
 
 
 -- | <p>Updates the status of the specified certificate. This operation is idempotent.</p> <p>Moving a certificate from the ACTIVE state (including REVOKED) will not disconnect currently connected devices, but these devices will be unable to reconnect.</p> <p>The ACTIVE state is required to authenticate devices connecting to AWS IoT using a certificate.</p>
 updateCertificate :: forall eff. UpdateCertificateRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-updateCertificate = Request.request serviceName "updateCertificate" 
+updateCertificate = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateCertificate"
 
 
 -- | <p>Updates the event configurations.</p>
 updateEventConfigurations :: forall eff. UpdateEventConfigurationsRequest -> Aff (exception :: EXCEPTION | eff) UpdateEventConfigurationsResponse
-updateEventConfigurations = Request.request serviceName "updateEventConfigurations" 
+updateEventConfigurations = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateEventConfigurations"
 
 
 -- | <p>Updates the search configuration.</p>
 updateIndexingConfiguration :: forall eff. UpdateIndexingConfigurationRequest -> Aff (exception :: EXCEPTION | eff) UpdateIndexingConfigurationResponse
-updateIndexingConfiguration = Request.request serviceName "updateIndexingConfiguration" 
+updateIndexingConfiguration = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateIndexingConfiguration"
 
 
 -- | <p>Updates a role alias.</p>
 updateRoleAlias :: forall eff. UpdateRoleAliasRequest -> Aff (exception :: EXCEPTION | eff) UpdateRoleAliasResponse
-updateRoleAlias = Request.request serviceName "updateRoleAlias" 
+updateRoleAlias = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateRoleAlias"
 
 
 -- | <p>Updates an existing stream. The stream version will be incremented by one.</p>
 updateStream :: forall eff. UpdateStreamRequest -> Aff (exception :: EXCEPTION | eff) UpdateStreamResponse
-updateStream = Request.request serviceName "updateStream" 
+updateStream = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateStream"
 
 
 -- | <p>Updates the data for a thing.</p>
 updateThing :: forall eff. UpdateThingRequest -> Aff (exception :: EXCEPTION | eff) UpdateThingResponse
-updateThing = Request.request serviceName "updateThing" 
+updateThing = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateThing"
 
 
 -- | <p>Update a thing group.</p>
 updateThingGroup :: forall eff. UpdateThingGroupRequest -> Aff (exception :: EXCEPTION | eff) UpdateThingGroupResponse
-updateThingGroup = Request.request serviceName "updateThingGroup" 
+updateThingGroup = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateThingGroup"
 
 
 -- | <p>Updates the groups to which the thing belongs.</p>
 updateThingGroupsForThing :: forall eff. UpdateThingGroupsForThingRequest -> Aff (exception :: EXCEPTION | eff) UpdateThingGroupsForThingResponse
-updateThingGroupsForThing = Request.request serviceName "updateThingGroupsForThing" 
+updateThingGroupsForThing = Request.request service method  where
+    service = Request.ServiceName "Iot"
+    method = Request.MethodName "updateThingGroupsForThing"
 
 
 -- | <p>The input for the AcceptCertificateTransfer operation.</p>
