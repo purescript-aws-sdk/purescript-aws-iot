@@ -3,7 +3,7 @@
 #### `acceptCertificateTransfer`
 
 ``` purescript
-acceptCertificateTransfer :: forall eff. Service -> AcceptCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+acceptCertificateTransfer :: forall eff. Service -> AcceptCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Accepts a pending certificate transfer. The default state of the certificate is INACTIVE.</p> <p>To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your certificates.</p>
@@ -27,7 +27,7 @@ associateTargetsWithJob :: forall eff. Service -> AssociateTargetsWithJobRequest
 #### `attachPolicy`
 
 ``` purescript
-attachPolicy :: forall eff. Service -> AttachPolicyRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+attachPolicy :: forall eff. Service -> AttachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Attaches a policy to the specified target.</p>
@@ -35,7 +35,7 @@ attachPolicy :: forall eff. Service -> AttachPolicyRequest -> Aff (exception :: 
 #### `attachPrincipalPolicy`
 
 ``` purescript
-attachPrincipalPolicy :: forall eff. Service -> AttachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+attachPrincipalPolicy :: forall eff. Service -> AttachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Attaches the specified policy to the specified principal (certificate or other credential).</p> <p> <b>Note:</b> This API is deprecated. Please use <a>AttachPolicy</a> instead.</p>
@@ -51,7 +51,7 @@ attachThingPrincipal :: forall eff. Service -> AttachThingPrincipalRequest -> Af
 #### `cancelCertificateTransfer`
 
 ``` purescript
-cancelCertificateTransfer :: forall eff. Service -> CancelCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+cancelCertificateTransfer :: forall eff. Service -> CancelCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Cancels a pending transfer for the specified certificate.</p> <p> <b>Note</b> Only the transfer source account can use this operation to cancel a transfer. (Transfer destinations can use <a>RejectCertificateTransfer</a> instead.) After transfer, AWS IoT returns the certificate to the source account in the INACTIVE state. After the destination account has accepted the transfer, the transfer cannot be cancelled.</p> <p>After a certificate transfer is cancelled, the status of the certificate changes from PENDING_TRANSFER to INACTIVE.</p>
@@ -171,7 +171,7 @@ createThingType :: forall eff. Service -> CreateThingTypeRequest -> Aff (excepti
 #### `createTopicRule`
 
 ``` purescript
-createTopicRule :: forall eff. Service -> CreateTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+createTopicRule :: forall eff. Service -> CreateTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Creates a rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the rule.</p>
@@ -195,7 +195,7 @@ deleteCACertificate :: forall eff. Service -> DeleteCACertificateRequest -> Aff 
 #### `deleteCertificate`
 
 ``` purescript
-deleteCertificate :: forall eff. Service -> DeleteCertificateRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteCertificate :: forall eff. Service -> DeleteCertificateRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the specified certificate.</p> <p>A certificate cannot be deleted if it has a policy attached to it or if its status is set to ACTIVE. To delete a certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the <a>UpdateCertificate</a> API to set the certificate to the INACTIVE status.</p>
@@ -211,7 +211,7 @@ deleteOTAUpdate :: forall eff. Service -> DeleteOTAUpdateRequest -> Aff (excepti
 #### `deletePolicy`
 
 ``` purescript
-deletePolicy :: forall eff. Service -> DeletePolicyRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deletePolicy :: forall eff. Service -> DeletePolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the specified policy.</p> <p>A policy cannot be deleted if it has non-default versions or it is attached to any certificate.</p> <p>To delete a policy, use the DeletePolicyVersion API to delete all non-default versions of the policy; use the DetachPrincipalPolicy API to detach the policy from any certificate; and then use the DeletePolicy API to delete the policy.</p> <p>When a policy is deleted using DeletePolicy, its default version is deleted with it.</p>
@@ -219,7 +219,7 @@ deletePolicy :: forall eff. Service -> DeletePolicyRequest -> Aff (exception :: 
 #### `deletePolicyVersion`
 
 ``` purescript
-deletePolicyVersion :: forall eff. Service -> DeletePolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deletePolicyVersion :: forall eff. Service -> DeletePolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this API. To delete the default version of a policy, use <a>DeletePolicy</a>. To find out which version of a policy is marked as the default version, use ListPolicyVersions.</p>
@@ -275,7 +275,7 @@ deleteThingType :: forall eff. Service -> DeleteThingTypeRequest -> Aff (excepti
 #### `deleteTopicRule`
 
 ``` purescript
-deleteTopicRule :: forall eff. Service -> DeleteTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteTopicRule :: forall eff. Service -> DeleteTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the rule.</p>
@@ -283,7 +283,7 @@ deleteTopicRule :: forall eff. Service -> DeleteTopicRuleRequest -> Aff (excepti
 #### `deleteV2LoggingLevel`
 
 ``` purescript
-deleteV2LoggingLevel :: forall eff. Service -> DeleteV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteV2LoggingLevel :: forall eff. Service -> DeleteV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes a logging level.</p>
@@ -419,7 +419,7 @@ describeThingType :: forall eff. Service -> DescribeThingTypeRequest -> Aff (exc
 #### `detachPolicy`
 
 ``` purescript
-detachPolicy :: forall eff. Service -> DetachPolicyRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+detachPolicy :: forall eff. Service -> DetachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Detaches a policy from the specified target.</p>
@@ -427,7 +427,7 @@ detachPolicy :: forall eff. Service -> DetachPolicyRequest -> Aff (exception :: 
 #### `detachPrincipalPolicy`
 
 ``` purescript
-detachPrincipalPolicy :: forall eff. Service -> DetachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+detachPrincipalPolicy :: forall eff. Service -> DetachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Removes the specified policy from the specified certificate.</p> <p> <b>Note:</b> This API is deprecated. Please use <a>DetachPolicy</a> instead.</p>
@@ -443,7 +443,7 @@ detachThingPrincipal :: forall eff. Service -> DetachThingPrincipalRequest -> Af
 #### `disableTopicRule`
 
 ``` purescript
-disableTopicRule :: forall eff. Service -> DisableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+disableTopicRule :: forall eff. Service -> DisableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Disables the rule.</p>
@@ -451,7 +451,7 @@ disableTopicRule :: forall eff. Service -> DisableTopicRuleRequest -> Aff (excep
 #### `enableTopicRule`
 
 ``` purescript
-enableTopicRule :: forall eff. Service -> EnableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+enableTopicRule :: forall eff. Service -> EnableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Enables the rule.</p>
@@ -795,7 +795,7 @@ registerThing :: forall eff. Service -> RegisterThingRequest -> Aff (exception :
 #### `rejectCertificateTransfer`
 
 ``` purescript
-rejectCertificateTransfer :: forall eff. Service -> RejectCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+rejectCertificateTransfer :: forall eff. Service -> RejectCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Rejects a pending certificate transfer. After AWS IoT rejects a certificate transfer, the certificate status changes from <b>PENDING_TRANSFER</b> to <b>INACTIVE</b>.</p> <p>To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your certificates.</p> <p>This operation can only be called by the transfer destination. After it is called, the certificate will be returned to the source's account in the INACTIVE state.</p>
@@ -811,7 +811,7 @@ removeThingFromThingGroup :: forall eff. Service -> RemoveThingFromThingGroupReq
 #### `replaceTopicRule`
 
 ``` purescript
-replaceTopicRule :: forall eff. Service -> ReplaceTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+replaceTopicRule :: forall eff. Service -> ReplaceTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Replaces the rule. You must specify all parameters for the new rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the rule.</p>
@@ -835,7 +835,7 @@ setDefaultAuthorizer :: forall eff. Service -> SetDefaultAuthorizerRequest -> Af
 #### `setDefaultPolicyVersion`
 
 ``` purescript
-setDefaultPolicyVersion :: forall eff. Service -> SetDefaultPolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+setDefaultPolicyVersion :: forall eff. Service -> SetDefaultPolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Sets the specified version of the specified policy as the policy's default (operative) version. This action affects all certificates to which the policy is attached. To list the principals the policy is attached to, use the ListPrincipalPolicy API.</p>
@@ -843,7 +843,7 @@ setDefaultPolicyVersion :: forall eff. Service -> SetDefaultPolicyVersionRequest
 #### `setLoggingOptions`
 
 ``` purescript
-setLoggingOptions :: forall eff. Service -> SetLoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+setLoggingOptions :: forall eff. Service -> SetLoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Sets the logging options.</p>
@@ -851,7 +851,7 @@ setLoggingOptions :: forall eff. Service -> SetLoggingOptionsRequest -> Aff (exc
 #### `setV2LoggingLevel`
 
 ``` purescript
-setV2LoggingLevel :: forall eff. Service -> SetV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+setV2LoggingLevel :: forall eff. Service -> SetV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Sets the logging level.</p>
@@ -859,7 +859,7 @@ setV2LoggingLevel :: forall eff. Service -> SetV2LoggingLevelRequest -> Aff (exc
 #### `setV2LoggingOptions`
 
 ``` purescript
-setV2LoggingOptions :: forall eff. Service -> SetV2LoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+setV2LoggingOptions :: forall eff. Service -> SetV2LoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Sets the logging options for the V2 logging service.</p>
@@ -915,7 +915,7 @@ updateAuthorizer :: forall eff. Service -> UpdateAuthorizerRequest -> Aff (excep
 #### `updateCACertificate`
 
 ``` purescript
-updateCACertificate :: forall eff. Service -> UpdateCACertificateRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+updateCACertificate :: forall eff. Service -> UpdateCACertificateRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Updates a registered CA certificate.</p>
@@ -923,7 +923,7 @@ updateCACertificate :: forall eff. Service -> UpdateCACertificateRequest -> Aff 
 #### `updateCertificate`
 
 ``` purescript
-updateCertificate :: forall eff. Service -> UpdateCertificateRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+updateCertificate :: forall eff. Service -> UpdateCertificateRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Updates the status of the specified certificate. This operation is idempotent.</p> <p>Moving a certificate from the ACTIVE state (including REVOKED) will not disconnect currently connected devices, but these devices will be unable to reconnect.</p> <p>The ACTIVE state is required to authenticate devices connecting to AWS IoT using a certificate.</p>

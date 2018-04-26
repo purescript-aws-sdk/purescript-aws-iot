@@ -13,7 +13,7 @@ import AWS.Iot.Types as IotTypes
 
 
 -- | <p>Accepts a pending certificate transfer. The default state of the certificate is INACTIVE.</p> <p>To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your certificates.</p>
-acceptCertificateTransfer :: forall eff. Iot.Service -> IotTypes.AcceptCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+acceptCertificateTransfer :: forall eff. Iot.Service -> IotTypes.AcceptCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Unit
 acceptCertificateTransfer (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "acceptCertificateTransfer"
 
@@ -31,13 +31,13 @@ associateTargetsWithJob (Iot.Service serviceImpl) = AWS.request serviceImpl meth
 
 
 -- | <p>Attaches a policy to the specified target.</p>
-attachPolicy :: forall eff. Iot.Service -> IotTypes.AttachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+attachPolicy :: forall eff. Iot.Service -> IotTypes.AttachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 attachPolicy (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "attachPolicy"
 
 
 -- | <p>Attaches the specified policy to the specified principal (certificate or other credential).</p> <p> <b>Note:</b> This API is deprecated. Please use <a>AttachPolicy</a> instead.</p>
-attachPrincipalPolicy :: forall eff. Iot.Service -> IotTypes.AttachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+attachPrincipalPolicy :: forall eff. Iot.Service -> IotTypes.AttachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 attachPrincipalPolicy (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "attachPrincipalPolicy"
 
@@ -49,7 +49,7 @@ attachThingPrincipal (Iot.Service serviceImpl) = AWS.request serviceImpl method 
 
 
 -- | <p>Cancels a pending transfer for the specified certificate.</p> <p> <b>Note</b> Only the transfer source account can use this operation to cancel a transfer. (Transfer destinations can use <a>RejectCertificateTransfer</a> instead.) After transfer, AWS IoT returns the certificate to the source account in the INACTIVE state. After the destination account has accepted the transfer, the transfer cannot be cancelled.</p> <p>After a certificate transfer is cancelled, the status of the certificate changes from PENDING_TRANSFER to INACTIVE.</p>
-cancelCertificateTransfer :: forall eff. Iot.Service -> IotTypes.CancelCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+cancelCertificateTransfer :: forall eff. Iot.Service -> IotTypes.CancelCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Unit
 cancelCertificateTransfer (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "cancelCertificateTransfer"
 
@@ -139,7 +139,7 @@ createThingType (Iot.Service serviceImpl) = AWS.request serviceImpl method  wher
 
 
 -- | <p>Creates a rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the rule.</p>
-createTopicRule :: forall eff. Iot.Service -> IotTypes.CreateTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+createTopicRule :: forall eff. Iot.Service -> IotTypes.CreateTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 createTopicRule (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "createTopicRule"
 
@@ -157,7 +157,7 @@ deleteCACertificate (Iot.Service serviceImpl) = AWS.request serviceImpl method  
 
 
 -- | <p>Deletes the specified certificate.</p> <p>A certificate cannot be deleted if it has a policy attached to it or if its status is set to ACTIVE. To delete a certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the <a>UpdateCertificate</a> API to set the certificate to the INACTIVE status.</p>
-deleteCertificate :: forall eff. Iot.Service -> IotTypes.DeleteCertificateRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteCertificate :: forall eff. Iot.Service -> IotTypes.DeleteCertificateRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteCertificate (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteCertificate"
 
@@ -169,13 +169,13 @@ deleteOTAUpdate (Iot.Service serviceImpl) = AWS.request serviceImpl method  wher
 
 
 -- | <p>Deletes the specified policy.</p> <p>A policy cannot be deleted if it has non-default versions or it is attached to any certificate.</p> <p>To delete a policy, use the DeletePolicyVersion API to delete all non-default versions of the policy; use the DetachPrincipalPolicy API to detach the policy from any certificate; and then use the DeletePolicy API to delete the policy.</p> <p>When a policy is deleted using DeletePolicy, its default version is deleted with it.</p>
-deletePolicy :: forall eff. Iot.Service -> IotTypes.DeletePolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deletePolicy :: forall eff. Iot.Service -> IotTypes.DeletePolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deletePolicy (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deletePolicy"
 
 
 -- | <p>Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this API. To delete the default version of a policy, use <a>DeletePolicy</a>. To find out which version of a policy is marked as the default version, use ListPolicyVersions.</p>
-deletePolicyVersion :: forall eff. Iot.Service -> IotTypes.DeletePolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deletePolicyVersion :: forall eff. Iot.Service -> IotTypes.DeletePolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deletePolicyVersion (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deletePolicyVersion"
 
@@ -217,13 +217,13 @@ deleteThingType (Iot.Service serviceImpl) = AWS.request serviceImpl method  wher
 
 
 -- | <p>Deletes the rule.</p>
-deleteTopicRule :: forall eff. Iot.Service -> IotTypes.DeleteTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteTopicRule :: forall eff. Iot.Service -> IotTypes.DeleteTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteTopicRule (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteTopicRule"
 
 
 -- | <p>Deletes a logging level.</p>
-deleteV2LoggingLevel :: forall eff. Iot.Service -> IotTypes.DeleteV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteV2LoggingLevel :: forall eff. Iot.Service -> IotTypes.DeleteV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteV2LoggingLevel (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteV2LoggingLevel"
 
@@ -325,13 +325,13 @@ describeThingType (Iot.Service serviceImpl) = AWS.request serviceImpl method  wh
 
 
 -- | <p>Detaches a policy from the specified target.</p>
-detachPolicy :: forall eff. Iot.Service -> IotTypes.DetachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+detachPolicy :: forall eff. Iot.Service -> IotTypes.DetachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 detachPolicy (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "detachPolicy"
 
 
 -- | <p>Removes the specified policy from the specified certificate.</p> <p> <b>Note:</b> This API is deprecated. Please use <a>DetachPolicy</a> instead.</p>
-detachPrincipalPolicy :: forall eff. Iot.Service -> IotTypes.DetachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+detachPrincipalPolicy :: forall eff. Iot.Service -> IotTypes.DetachPrincipalPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 detachPrincipalPolicy (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "detachPrincipalPolicy"
 
@@ -343,13 +343,13 @@ detachThingPrincipal (Iot.Service serviceImpl) = AWS.request serviceImpl method 
 
 
 -- | <p>Disables the rule.</p>
-disableTopicRule :: forall eff. Iot.Service -> IotTypes.DisableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+disableTopicRule :: forall eff. Iot.Service -> IotTypes.DisableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 disableTopicRule (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "disableTopicRule"
 
 
 -- | <p>Enables the rule.</p>
-enableTopicRule :: forall eff. Iot.Service -> IotTypes.EnableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+enableTopicRule :: forall eff. Iot.Service -> IotTypes.EnableTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 enableTopicRule (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "enableTopicRule"
 
@@ -607,7 +607,7 @@ registerThing (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
 
 
 -- | <p>Rejects a pending certificate transfer. After AWS IoT rejects a certificate transfer, the certificate status changes from <b>PENDING_TRANSFER</b> to <b>INACTIVE</b>.</p> <p>To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your certificates.</p> <p>This operation can only be called by the transfer destination. After it is called, the certificate will be returned to the source's account in the INACTIVE state.</p>
-rejectCertificateTransfer :: forall eff. Iot.Service -> IotTypes.RejectCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+rejectCertificateTransfer :: forall eff. Iot.Service -> IotTypes.RejectCertificateTransferRequest -> Aff (exception :: EXCEPTION | eff) Unit
 rejectCertificateTransfer (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "rejectCertificateTransfer"
 
@@ -619,7 +619,7 @@ removeThingFromThingGroup (Iot.Service serviceImpl) = AWS.request serviceImpl me
 
 
 -- | <p>Replaces the rule. You must specify all parameters for the new rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the rule.</p>
-replaceTopicRule :: forall eff. Iot.Service -> IotTypes.ReplaceTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+replaceTopicRule :: forall eff. Iot.Service -> IotTypes.ReplaceTopicRuleRequest -> Aff (exception :: EXCEPTION | eff) Unit
 replaceTopicRule (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "replaceTopicRule"
 
@@ -637,25 +637,25 @@ setDefaultAuthorizer (Iot.Service serviceImpl) = AWS.request serviceImpl method 
 
 
 -- | <p>Sets the specified version of the specified policy as the policy's default (operative) version. This action affects all certificates to which the policy is attached. To list the principals the policy is attached to, use the ListPrincipalPolicy API.</p>
-setDefaultPolicyVersion :: forall eff. Iot.Service -> IotTypes.SetDefaultPolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+setDefaultPolicyVersion :: forall eff. Iot.Service -> IotTypes.SetDefaultPolicyVersionRequest -> Aff (exception :: EXCEPTION | eff) Unit
 setDefaultPolicyVersion (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "setDefaultPolicyVersion"
 
 
 -- | <p>Sets the logging options.</p>
-setLoggingOptions :: forall eff. Iot.Service -> IotTypes.SetLoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+setLoggingOptions :: forall eff. Iot.Service -> IotTypes.SetLoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) Unit
 setLoggingOptions (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "setLoggingOptions"
 
 
 -- | <p>Sets the logging level.</p>
-setV2LoggingLevel :: forall eff. Iot.Service -> IotTypes.SetV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+setV2LoggingLevel :: forall eff. Iot.Service -> IotTypes.SetV2LoggingLevelRequest -> Aff (exception :: EXCEPTION | eff) Unit
 setV2LoggingLevel (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "setV2LoggingLevel"
 
 
 -- | <p>Sets the logging options for the V2 logging service.</p>
-setV2LoggingOptions :: forall eff. Iot.Service -> IotTypes.SetV2LoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+setV2LoggingOptions :: forall eff. Iot.Service -> IotTypes.SetV2LoggingOptionsRequest -> Aff (exception :: EXCEPTION | eff) Unit
 setV2LoggingOptions (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "setV2LoggingOptions"
 
@@ -697,13 +697,13 @@ updateAuthorizer (Iot.Service serviceImpl) = AWS.request serviceImpl method  whe
 
 
 -- | <p>Updates a registered CA certificate.</p>
-updateCACertificate :: forall eff. Iot.Service -> IotTypes.UpdateCACertificateRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+updateCACertificate :: forall eff. Iot.Service -> IotTypes.UpdateCACertificateRequest -> Aff (exception :: EXCEPTION | eff) Unit
 updateCACertificate (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "updateCACertificate"
 
 
 -- | <p>Updates the status of the specified certificate. This operation is idempotent.</p> <p>Moving a certificate from the ACTIVE state (including REVOKED) will not disconnect currently connected devices, but these devices will be unable to reconnect.</p> <p>The ACTIVE state is required to authenticate devices connecting to AWS IoT using a certificate.</p>
-updateCertificate :: forall eff. Iot.Service -> IotTypes.UpdateCertificateRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+updateCertificate :: forall eff. Iot.Service -> IotTypes.UpdateCertificateRequest -> Aff (exception :: EXCEPTION | eff) Unit
 updateCertificate (Iot.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "updateCertificate"
 

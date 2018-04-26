@@ -10,7 +10,7 @@ options :: Options
 
 ``` purescript
 newtype AcceptCertificateTransferRequest
-  = AcceptCertificateTransferRequest { certificateId :: CertificateId, setAsActive :: NullOrUndefined (SetAsActive) }
+  = AcceptCertificateTransferRequest { certificateId :: CertificateId, setAsActive :: Maybe (SetAsActive) }
 ```
 
 <p>The input for the AcceptCertificateTransfer operation.</p>
@@ -35,7 +35,7 @@ Constructs AcceptCertificateTransferRequest from required parameters
 #### `newAcceptCertificateTransferRequest'`
 
 ``` purescript
-newAcceptCertificateTransferRequest' :: CertificateId -> ({ certificateId :: CertificateId, setAsActive :: NullOrUndefined (SetAsActive) } -> { certificateId :: CertificateId, setAsActive :: NullOrUndefined (SetAsActive) }) -> AcceptCertificateTransferRequest
+newAcceptCertificateTransferRequest' :: CertificateId -> ({ certificateId :: CertificateId, setAsActive :: Maybe (SetAsActive) } -> { certificateId :: CertificateId, setAsActive :: Maybe (SetAsActive) }) -> AcceptCertificateTransferRequest
 ```
 
 Constructs AcceptCertificateTransferRequest's fields from required parameters
@@ -44,7 +44,7 @@ Constructs AcceptCertificateTransferRequest's fields from required parameters
 
 ``` purescript
 newtype Action
-  = Action { dynamoDB :: NullOrUndefined (DynamoDBAction), dynamoDBv2 :: NullOrUndefined (DynamoDBv2Action), lambda :: NullOrUndefined (LambdaAction), sns :: NullOrUndefined (SnsAction), sqs :: NullOrUndefined (SqsAction), kinesis :: NullOrUndefined (KinesisAction), republish :: NullOrUndefined (RepublishAction), s3 :: NullOrUndefined (S3Action), firehose :: NullOrUndefined (FirehoseAction), cloudwatchMetric :: NullOrUndefined (CloudwatchMetricAction), cloudwatchAlarm :: NullOrUndefined (CloudwatchAlarmAction), elasticsearch :: NullOrUndefined (ElasticsearchAction), salesforce :: NullOrUndefined (SalesforceAction) }
+  = Action { dynamoDB :: Maybe (DynamoDBAction), dynamoDBv2 :: Maybe (DynamoDBv2Action), lambda :: Maybe (LambdaAction), sns :: Maybe (SnsAction), sqs :: Maybe (SqsAction), kinesis :: Maybe (KinesisAction), republish :: Maybe (RepublishAction), s3 :: Maybe (S3Action), firehose :: Maybe (FirehoseAction), cloudwatchMetric :: Maybe (CloudwatchMetricAction), cloudwatchAlarm :: Maybe (CloudwatchAlarmAction), elasticsearch :: Maybe (ElasticsearchAction), salesforce :: Maybe (SalesforceAction) }
 ```
 
 <p>Describes the actions associated with a rule.</p>
@@ -69,7 +69,7 @@ Constructs Action from required parameters
 #### `newAction'`
 
 ``` purescript
-newAction' :: ({ dynamoDB :: NullOrUndefined (DynamoDBAction), dynamoDBv2 :: NullOrUndefined (DynamoDBv2Action), lambda :: NullOrUndefined (LambdaAction), sns :: NullOrUndefined (SnsAction), sqs :: NullOrUndefined (SqsAction), kinesis :: NullOrUndefined (KinesisAction), republish :: NullOrUndefined (RepublishAction), s3 :: NullOrUndefined (S3Action), firehose :: NullOrUndefined (FirehoseAction), cloudwatchMetric :: NullOrUndefined (CloudwatchMetricAction), cloudwatchAlarm :: NullOrUndefined (CloudwatchAlarmAction), elasticsearch :: NullOrUndefined (ElasticsearchAction), salesforce :: NullOrUndefined (SalesforceAction) } -> { dynamoDB :: NullOrUndefined (DynamoDBAction), dynamoDBv2 :: NullOrUndefined (DynamoDBv2Action), lambda :: NullOrUndefined (LambdaAction), sns :: NullOrUndefined (SnsAction), sqs :: NullOrUndefined (SqsAction), kinesis :: NullOrUndefined (KinesisAction), republish :: NullOrUndefined (RepublishAction), s3 :: NullOrUndefined (S3Action), firehose :: NullOrUndefined (FirehoseAction), cloudwatchMetric :: NullOrUndefined (CloudwatchMetricAction), cloudwatchAlarm :: NullOrUndefined (CloudwatchAlarmAction), elasticsearch :: NullOrUndefined (ElasticsearchAction), salesforce :: NullOrUndefined (SalesforceAction) }) -> Action
+newAction' :: ({ dynamoDB :: Maybe (DynamoDBAction), dynamoDBv2 :: Maybe (DynamoDBv2Action), lambda :: Maybe (LambdaAction), sns :: Maybe (SnsAction), sqs :: Maybe (SqsAction), kinesis :: Maybe (KinesisAction), republish :: Maybe (RepublishAction), s3 :: Maybe (S3Action), firehose :: Maybe (FirehoseAction), cloudwatchMetric :: Maybe (CloudwatchMetricAction), cloudwatchAlarm :: Maybe (CloudwatchAlarmAction), elasticsearch :: Maybe (ElasticsearchAction), salesforce :: Maybe (SalesforceAction) } -> { dynamoDB :: Maybe (DynamoDBAction), dynamoDBv2 :: Maybe (DynamoDBv2Action), lambda :: Maybe (LambdaAction), sns :: Maybe (SnsAction), sqs :: Maybe (SqsAction), kinesis :: Maybe (KinesisAction), republish :: Maybe (RepublishAction), s3 :: Maybe (S3Action), firehose :: Maybe (FirehoseAction), cloudwatchMetric :: Maybe (CloudwatchMetricAction), cloudwatchAlarm :: Maybe (CloudwatchAlarmAction), elasticsearch :: Maybe (ElasticsearchAction), salesforce :: Maybe (SalesforceAction) }) -> Action
 ```
 
 Constructs Action's fields from required parameters
@@ -110,7 +110,7 @@ Encode ActionType
 
 ``` purescript
 newtype AddThingToThingGroupRequest
-  = AddThingToThingGroupRequest { thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn) }
+  = AddThingToThingGroupRequest { thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn) }
 ```
 
 ##### Instances
@@ -133,7 +133,7 @@ Constructs AddThingToThingGroupRequest from required parameters
 #### `newAddThingToThingGroupRequest'`
 
 ``` purescript
-newAddThingToThingGroupRequest' :: ({ thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn) } -> { thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn) }) -> AddThingToThingGroupRequest
+newAddThingToThingGroupRequest' :: ({ thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn) } -> { thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn) }) -> AddThingToThingGroupRequest
 ```
 
 Constructs AddThingToThingGroupRequest's fields from required parameters
@@ -206,7 +206,7 @@ Encode AllowAutoRegistration
 
 ``` purescript
 newtype Allowed
-  = Allowed { policies :: NullOrUndefined (Policies) }
+  = Allowed { policies :: Maybe (Policies) }
 ```
 
 <p>Contains information that allowed the authorization.</p>
@@ -231,7 +231,7 @@ Constructs Allowed from required parameters
 #### `newAllowed'`
 
 ``` purescript
-newAllowed' :: ({ policies :: NullOrUndefined (Policies) } -> { policies :: NullOrUndefined (Policies) }) -> Allowed
+newAllowed' :: ({ policies :: Maybe (Policies) } -> { policies :: Maybe (Policies) }) -> Allowed
 ```
 
 Constructs Allowed's fields from required parameters
@@ -256,7 +256,7 @@ Encode AscendingOrder
 
 ``` purescript
 newtype AssociateTargetsWithJobRequest
-  = AssociateTargetsWithJobRequest { targets :: JobTargets, jobId :: JobId, comment :: NullOrUndefined (Comment) }
+  = AssociateTargetsWithJobRequest { targets :: JobTargets, jobId :: JobId, comment :: Maybe (Comment) }
 ```
 
 ##### Instances
@@ -279,7 +279,7 @@ Constructs AssociateTargetsWithJobRequest from required parameters
 #### `newAssociateTargetsWithJobRequest'`
 
 ``` purescript
-newAssociateTargetsWithJobRequest' :: JobId -> JobTargets -> ({ targets :: JobTargets, jobId :: JobId, comment :: NullOrUndefined (Comment) } -> { targets :: JobTargets, jobId :: JobId, comment :: NullOrUndefined (Comment) }) -> AssociateTargetsWithJobRequest
+newAssociateTargetsWithJobRequest' :: JobId -> JobTargets -> ({ targets :: JobTargets, jobId :: JobId, comment :: Maybe (Comment) } -> { targets :: JobTargets, jobId :: JobId, comment :: Maybe (Comment) }) -> AssociateTargetsWithJobRequest
 ```
 
 Constructs AssociateTargetsWithJobRequest's fields from required parameters
@@ -288,7 +288,7 @@ Constructs AssociateTargetsWithJobRequest's fields from required parameters
 
 ``` purescript
 newtype AssociateTargetsWithJobResponse
-  = AssociateTargetsWithJobResponse { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) }
+  = AssociateTargetsWithJobResponse { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) }
 ```
 
 ##### Instances
@@ -311,7 +311,7 @@ Constructs AssociateTargetsWithJobResponse from required parameters
 #### `newAssociateTargetsWithJobResponse'`
 
 ``` purescript
-newAssociateTargetsWithJobResponse' :: ({ jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) } -> { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) }) -> AssociateTargetsWithJobResponse
+newAssociateTargetsWithJobResponse' :: ({ jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) } -> { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) }) -> AssociateTargetsWithJobResponse
 ```
 
 Constructs AssociateTargetsWithJobResponse's fields from required parameters
@@ -454,7 +454,7 @@ Encode AttributeName
 
 ``` purescript
 newtype AttributePayload
-  = AttributePayload { attributes :: NullOrUndefined (Attributes), merge :: NullOrUndefined (Flag) }
+  = AttributePayload { attributes :: Maybe (Attributes), merge :: Maybe (Flag) }
 ```
 
 <p>The attribute payload.</p>
@@ -479,7 +479,7 @@ Constructs AttributePayload from required parameters
 #### `newAttributePayload'`
 
 ``` purescript
-newAttributePayload' :: ({ attributes :: NullOrUndefined (Attributes), merge :: NullOrUndefined (Flag) } -> { attributes :: NullOrUndefined (Attributes), merge :: NullOrUndefined (Flag) }) -> AttributePayload
+newAttributePayload' :: ({ attributes :: Maybe (Attributes), merge :: Maybe (Flag) } -> { attributes :: Maybe (Attributes), merge :: Maybe (Flag) }) -> AttributePayload
 ```
 
 Constructs AttributePayload's fields from required parameters
@@ -552,7 +552,7 @@ Encode AuthDecision
 
 ``` purescript
 newtype AuthInfo
-  = AuthInfo { actionType :: NullOrUndefined (ActionType), resources :: NullOrUndefined (Resources) }
+  = AuthInfo { actionType :: Maybe (ActionType), resources :: Maybe (Resources) }
 ```
 
 <p>A collection of authorization information.</p>
@@ -577,7 +577,7 @@ Constructs AuthInfo from required parameters
 #### `newAuthInfo'`
 
 ``` purescript
-newAuthInfo' :: ({ actionType :: NullOrUndefined (ActionType), resources :: NullOrUndefined (Resources) } -> { actionType :: NullOrUndefined (ActionType), resources :: NullOrUndefined (Resources) }) -> AuthInfo
+newAuthInfo' :: ({ actionType :: Maybe (ActionType), resources :: Maybe (Resources) } -> { actionType :: Maybe (ActionType), resources :: Maybe (Resources) }) -> AuthInfo
 ```
 
 Constructs AuthInfo's fields from required parameters
@@ -602,7 +602,7 @@ Encode AuthInfos
 
 ``` purescript
 newtype AuthResult
-  = AuthResult { authInfo :: NullOrUndefined (AuthInfo), allowed :: NullOrUndefined (Allowed), denied :: NullOrUndefined (Denied), authDecision :: NullOrUndefined (AuthDecision), missingContextValues :: NullOrUndefined (MissingContextValues) }
+  = AuthResult { authInfo :: Maybe (AuthInfo), allowed :: Maybe (Allowed), denied :: Maybe (Denied), authDecision :: Maybe (AuthDecision), missingContextValues :: Maybe (MissingContextValues) }
 ```
 
 <p>The authorizer result.</p>
@@ -627,7 +627,7 @@ Constructs AuthResult from required parameters
 #### `newAuthResult'`
 
 ``` purescript
-newAuthResult' :: ({ authInfo :: NullOrUndefined (AuthInfo), allowed :: NullOrUndefined (Allowed), denied :: NullOrUndefined (Denied), authDecision :: NullOrUndefined (AuthDecision), missingContextValues :: NullOrUndefined (MissingContextValues) } -> { authInfo :: NullOrUndefined (AuthInfo), allowed :: NullOrUndefined (Allowed), denied :: NullOrUndefined (Denied), authDecision :: NullOrUndefined (AuthDecision), missingContextValues :: NullOrUndefined (MissingContextValues) }) -> AuthResult
+newAuthResult' :: ({ authInfo :: Maybe (AuthInfo), allowed :: Maybe (Allowed), denied :: Maybe (Denied), authDecision :: Maybe (AuthDecision), missingContextValues :: Maybe (MissingContextValues) } -> { authInfo :: Maybe (AuthInfo), allowed :: Maybe (Allowed), denied :: Maybe (Denied), authDecision :: Maybe (AuthDecision), missingContextValues :: Maybe (MissingContextValues) }) -> AuthResult
 ```
 
 Constructs AuthResult's fields from required parameters
@@ -668,7 +668,7 @@ Encode AuthorizerArn
 
 ``` purescript
 newtype AuthorizerDescription
-  = AuthorizerDescription { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn), authorizerFunctionArn :: NullOrUndefined (AuthorizerFunctionArn), tokenKeyName :: NullOrUndefined (TokenKeyName), tokenSigningPublicKeys :: NullOrUndefined (PublicKeyMap), status :: NullOrUndefined (AuthorizerStatus), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType) }
+  = AuthorizerDescription { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn), authorizerFunctionArn :: Maybe (AuthorizerFunctionArn), tokenKeyName :: Maybe (TokenKeyName), tokenSigningPublicKeys :: Maybe (PublicKeyMap), status :: Maybe (AuthorizerStatus), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType) }
 ```
 
 <p>The authorizer description.</p>
@@ -693,7 +693,7 @@ Constructs AuthorizerDescription from required parameters
 #### `newAuthorizerDescription'`
 
 ``` purescript
-newAuthorizerDescription' :: ({ authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn), authorizerFunctionArn :: NullOrUndefined (AuthorizerFunctionArn), tokenKeyName :: NullOrUndefined (TokenKeyName), tokenSigningPublicKeys :: NullOrUndefined (PublicKeyMap), status :: NullOrUndefined (AuthorizerStatus), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType) } -> { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn), authorizerFunctionArn :: NullOrUndefined (AuthorizerFunctionArn), tokenKeyName :: NullOrUndefined (TokenKeyName), tokenSigningPublicKeys :: NullOrUndefined (PublicKeyMap), status :: NullOrUndefined (AuthorizerStatus), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType) }) -> AuthorizerDescription
+newAuthorizerDescription' :: ({ authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn), authorizerFunctionArn :: Maybe (AuthorizerFunctionArn), tokenKeyName :: Maybe (TokenKeyName), tokenSigningPublicKeys :: Maybe (PublicKeyMap), status :: Maybe (AuthorizerStatus), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType) } -> { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn), authorizerFunctionArn :: Maybe (AuthorizerFunctionArn), tokenKeyName :: Maybe (TokenKeyName), tokenSigningPublicKeys :: Maybe (PublicKeyMap), status :: Maybe (AuthorizerStatus), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType) }) -> AuthorizerDescription
 ```
 
 Constructs AuthorizerDescription's fields from required parameters
@@ -750,7 +750,7 @@ Encode AuthorizerStatus
 
 ``` purescript
 newtype AuthorizerSummary
-  = AuthorizerSummary { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) }
+  = AuthorizerSummary { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) }
 ```
 
 <p>The authorizer summary.</p>
@@ -775,7 +775,7 @@ Constructs AuthorizerSummary from required parameters
 #### `newAuthorizerSummary'`
 
 ``` purescript
-newAuthorizerSummary' :: ({ authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) } -> { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) }) -> AuthorizerSummary
+newAuthorizerSummary' :: ({ authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) } -> { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) }) -> AuthorizerSummary
 ```
 
 Constructs AuthorizerSummary's fields from required parameters
@@ -912,7 +912,7 @@ Encode BucketName
 
 ``` purescript
 newtype CACertificate
-  = CACertificate { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CACertificateStatus), creationDate :: NullOrUndefined (DateType) }
+  = CACertificate { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CACertificateStatus), creationDate :: Maybe (DateType) }
 ```
 
 <p>A CA certificate.</p>
@@ -937,7 +937,7 @@ Constructs CACertificate from required parameters
 #### `newCACertificate'`
 
 ``` purescript
-newCACertificate' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CACertificateStatus), creationDate :: NullOrUndefined (DateType) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CACertificateStatus), creationDate :: NullOrUndefined (DateType) }) -> CACertificate
+newCACertificate' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CACertificateStatus), creationDate :: Maybe (DateType) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CACertificateStatus), creationDate :: Maybe (DateType) }) -> CACertificate
 ```
 
 Constructs CACertificate's fields from required parameters
@@ -946,7 +946,7 @@ Constructs CACertificate's fields from required parameters
 
 ``` purescript
 newtype CACertificateDescription
-  = CACertificateDescription { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CACertificateStatus), certificatePem :: NullOrUndefined (CertificatePem), ownedBy :: NullOrUndefined (AwsAccountId), creationDate :: NullOrUndefined (DateType), autoRegistrationStatus :: NullOrUndefined (AutoRegistrationStatus) }
+  = CACertificateDescription { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CACertificateStatus), certificatePem :: Maybe (CertificatePem), ownedBy :: Maybe (AwsAccountId), creationDate :: Maybe (DateType), autoRegistrationStatus :: Maybe (AutoRegistrationStatus) }
 ```
 
 <p>Describes a CA certificate.</p>
@@ -971,7 +971,7 @@ Constructs CACertificateDescription from required parameters
 #### `newCACertificateDescription'`
 
 ``` purescript
-newCACertificateDescription' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CACertificateStatus), certificatePem :: NullOrUndefined (CertificatePem), ownedBy :: NullOrUndefined (AwsAccountId), creationDate :: NullOrUndefined (DateType), autoRegistrationStatus :: NullOrUndefined (AutoRegistrationStatus) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CACertificateStatus), certificatePem :: NullOrUndefined (CertificatePem), ownedBy :: NullOrUndefined (AwsAccountId), creationDate :: NullOrUndefined (DateType), autoRegistrationStatus :: NullOrUndefined (AutoRegistrationStatus) }) -> CACertificateDescription
+newCACertificateDescription' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CACertificateStatus), certificatePem :: Maybe (CertificatePem), ownedBy :: Maybe (AwsAccountId), creationDate :: Maybe (DateType), autoRegistrationStatus :: Maybe (AutoRegistrationStatus) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CACertificateStatus), certificatePem :: Maybe (CertificatePem), ownedBy :: Maybe (AwsAccountId), creationDate :: Maybe (DateType), autoRegistrationStatus :: Maybe (AutoRegistrationStatus) }) -> CACertificateDescription
 ```
 
 Constructs CACertificateDescription's fields from required parameters
@@ -1046,7 +1046,7 @@ Constructs CancelCertificateTransferRequest's fields from required parameters
 
 ``` purescript
 newtype CancelJobRequest
-  = CancelJobRequest { jobId :: JobId, comment :: NullOrUndefined (Comment) }
+  = CancelJobRequest { jobId :: JobId, comment :: Maybe (Comment) }
 ```
 
 ##### Instances
@@ -1069,7 +1069,7 @@ Constructs CancelJobRequest from required parameters
 #### `newCancelJobRequest'`
 
 ``` purescript
-newCancelJobRequest' :: JobId -> ({ jobId :: JobId, comment :: NullOrUndefined (Comment) } -> { jobId :: JobId, comment :: NullOrUndefined (Comment) }) -> CancelJobRequest
+newCancelJobRequest' :: JobId -> ({ jobId :: JobId, comment :: Maybe (Comment) } -> { jobId :: JobId, comment :: Maybe (Comment) }) -> CancelJobRequest
 ```
 
 Constructs CancelJobRequest's fields from required parameters
@@ -1078,7 +1078,7 @@ Constructs CancelJobRequest's fields from required parameters
 
 ``` purescript
 newtype CancelJobResponse
-  = CancelJobResponse { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) }
+  = CancelJobResponse { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) }
 ```
 
 ##### Instances
@@ -1101,7 +1101,7 @@ Constructs CancelJobResponse from required parameters
 #### `newCancelJobResponse'`
 
 ``` purescript
-newCancelJobResponse' :: ({ jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) } -> { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) }) -> CancelJobResponse
+newCancelJobResponse' :: ({ jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) } -> { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) }) -> CancelJobResponse
 ```
 
 Constructs CancelJobResponse's fields from required parameters
@@ -1142,7 +1142,7 @@ Encode CannedAccessControlList
 
 ``` purescript
 newtype Certificate
-  = Certificate { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CertificateStatus), creationDate :: NullOrUndefined (DateType) }
+  = Certificate { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CertificateStatus), creationDate :: Maybe (DateType) }
 ```
 
 <p>Information about a certificate.</p>
@@ -1167,7 +1167,7 @@ Constructs Certificate from required parameters
 #### `newCertificate'`
 
 ``` purescript
-newCertificate' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CertificateStatus), creationDate :: NullOrUndefined (DateType) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CertificateStatus), creationDate :: NullOrUndefined (DateType) }) -> Certificate
+newCertificate' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CertificateStatus), creationDate :: Maybe (DateType) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), status :: Maybe (CertificateStatus), creationDate :: Maybe (DateType) }) -> Certificate
 ```
 
 Constructs Certificate's fields from required parameters
@@ -1192,7 +1192,7 @@ Encode CertificateArn
 
 ``` purescript
 newtype CertificateConflictException
-  = CertificateConflictException { message :: NullOrUndefined (ErrorMessage') }
+  = CertificateConflictException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>Unable to verify the CA certificate used to sign the device certificate you are attempting to register. This is happens when you have registered more than one CA certificate that has the same subject field and public key.</p>
@@ -1217,7 +1217,7 @@ Constructs CertificateConflictException from required parameters
 #### `newCertificateConflictException'`
 
 ``` purescript
-newCertificateConflictException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> CertificateConflictException
+newCertificateConflictException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> CertificateConflictException
 ```
 
 Constructs CertificateConflictException's fields from required parameters
@@ -1226,7 +1226,7 @@ Constructs CertificateConflictException's fields from required parameters
 
 ``` purescript
 newtype CertificateDescription
-  = CertificateDescription { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), caCertificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CertificateStatus), certificatePem :: NullOrUndefined (CertificatePem), ownedBy :: NullOrUndefined (AwsAccountId), previousOwnedBy :: NullOrUndefined (AwsAccountId), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType), transferData :: NullOrUndefined (TransferData) }
+  = CertificateDescription { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), caCertificateId :: Maybe (CertificateId), status :: Maybe (CertificateStatus), certificatePem :: Maybe (CertificatePem), ownedBy :: Maybe (AwsAccountId), previousOwnedBy :: Maybe (AwsAccountId), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType), transferData :: Maybe (TransferData) }
 ```
 
 <p>Describes a certificate.</p>
@@ -1251,7 +1251,7 @@ Constructs CertificateDescription from required parameters
 #### `newCertificateDescription'`
 
 ``` purescript
-newCertificateDescription' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), caCertificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CertificateStatus), certificatePem :: NullOrUndefined (CertificatePem), ownedBy :: NullOrUndefined (AwsAccountId), previousOwnedBy :: NullOrUndefined (AwsAccountId), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType), transferData :: NullOrUndefined (TransferData) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), caCertificateId :: NullOrUndefined (CertificateId), status :: NullOrUndefined (CertificateStatus), certificatePem :: NullOrUndefined (CertificatePem), ownedBy :: NullOrUndefined (AwsAccountId), previousOwnedBy :: NullOrUndefined (AwsAccountId), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType), transferData :: NullOrUndefined (TransferData) }) -> CertificateDescription
+newCertificateDescription' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), caCertificateId :: Maybe (CertificateId), status :: Maybe (CertificateStatus), certificatePem :: Maybe (CertificatePem), ownedBy :: Maybe (AwsAccountId), previousOwnedBy :: Maybe (AwsAccountId), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType), transferData :: Maybe (TransferData) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), caCertificateId :: Maybe (CertificateId), status :: Maybe (CertificateStatus), certificatePem :: Maybe (CertificatePem), ownedBy :: Maybe (AwsAccountId), previousOwnedBy :: Maybe (AwsAccountId), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType), transferData :: Maybe (TransferData) }) -> CertificateDescription
 ```
 
 Constructs CertificateDescription's fields from required parameters
@@ -1326,7 +1326,7 @@ Encode CertificateSigningRequest
 
 ``` purescript
 newtype CertificateStateException
-  = CertificateStateException { message :: NullOrUndefined (ErrorMessage') }
+  = CertificateStateException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The certificate operation is not allowed.</p>
@@ -1351,7 +1351,7 @@ Constructs CertificateStateException from required parameters
 #### `newCertificateStateException'`
 
 ``` purescript
-newCertificateStateException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> CertificateStateException
+newCertificateStateException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> CertificateStateException
 ```
 
 Constructs CertificateStateException's fields from required parameters
@@ -1376,7 +1376,7 @@ Encode CertificateStatus
 
 ``` purescript
 newtype CertificateValidationException
-  = CertificateValidationException { message :: NullOrUndefined (ErrorMessage') }
+  = CertificateValidationException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The certificate is invalid.</p>
@@ -1401,7 +1401,7 @@ Constructs CertificateValidationException from required parameters
 #### `newCertificateValidationException'`
 
 ``` purescript
-newCertificateValidationException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> CertificateValidationException
+newCertificateValidationException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> CertificateValidationException
 ```
 
 Constructs CertificateValidationException's fields from required parameters
@@ -1508,7 +1508,7 @@ Constructs CloudwatchAlarmAction's fields from required parameters
 
 ``` purescript
 newtype CloudwatchMetricAction
-  = CloudwatchMetricAction { roleArn :: AwsArn, metricNamespace :: MetricNamespace, metricName :: MetricName, metricValue :: MetricValue, metricUnit :: MetricUnit, metricTimestamp :: NullOrUndefined (MetricTimestamp) }
+  = CloudwatchMetricAction { roleArn :: AwsArn, metricNamespace :: MetricNamespace, metricName :: MetricName, metricValue :: MetricValue, metricUnit :: MetricUnit, metricTimestamp :: Maybe (MetricTimestamp) }
 ```
 
 <p>Describes an action that captures a CloudWatch metric.</p>
@@ -1533,7 +1533,7 @@ Constructs CloudwatchMetricAction from required parameters
 #### `newCloudwatchMetricAction'`
 
 ``` purescript
-newCloudwatchMetricAction' :: MetricName -> MetricNamespace -> MetricUnit -> MetricValue -> AwsArn -> ({ roleArn :: AwsArn, metricNamespace :: MetricNamespace, metricName :: MetricName, metricValue :: MetricValue, metricUnit :: MetricUnit, metricTimestamp :: NullOrUndefined (MetricTimestamp) } -> { roleArn :: AwsArn, metricNamespace :: MetricNamespace, metricName :: MetricName, metricValue :: MetricValue, metricUnit :: MetricUnit, metricTimestamp :: NullOrUndefined (MetricTimestamp) }) -> CloudwatchMetricAction
+newCloudwatchMetricAction' :: MetricName -> MetricNamespace -> MetricUnit -> MetricValue -> AwsArn -> ({ roleArn :: AwsArn, metricNamespace :: MetricNamespace, metricName :: MetricName, metricValue :: MetricValue, metricUnit :: MetricUnit, metricTimestamp :: Maybe (MetricTimestamp) } -> { roleArn :: AwsArn, metricNamespace :: MetricNamespace, metricName :: MetricName, metricValue :: MetricValue, metricUnit :: MetricUnit, metricTimestamp :: Maybe (MetricTimestamp) }) -> CloudwatchMetricAction
 ```
 
 Constructs CloudwatchMetricAction's fields from required parameters
@@ -1558,7 +1558,7 @@ Encode Code
 
 ``` purescript
 newtype CodeSigning
-  = CodeSigning { awsSignerJobId :: NullOrUndefined (SigningJobId), customCodeSigning :: NullOrUndefined (CustomCodeSigning) }
+  = CodeSigning { awsSignerJobId :: Maybe (SigningJobId), customCodeSigning :: Maybe (CustomCodeSigning) }
 ```
 
 <p>Describes the method to use when code signing a file.</p>
@@ -1583,7 +1583,7 @@ Constructs CodeSigning from required parameters
 #### `newCodeSigning'`
 
 ``` purescript
-newCodeSigning' :: ({ awsSignerJobId :: NullOrUndefined (SigningJobId), customCodeSigning :: NullOrUndefined (CustomCodeSigning) } -> { awsSignerJobId :: NullOrUndefined (SigningJobId), customCodeSigning :: NullOrUndefined (CustomCodeSigning) }) -> CodeSigning
+newCodeSigning' :: ({ awsSignerJobId :: Maybe (SigningJobId), customCodeSigning :: Maybe (CustomCodeSigning) } -> { awsSignerJobId :: Maybe (SigningJobId), customCodeSigning :: Maybe (CustomCodeSigning) }) -> CodeSigning
 ```
 
 Constructs CodeSigning's fields from required parameters
@@ -1592,7 +1592,7 @@ Constructs CodeSigning's fields from required parameters
 
 ``` purescript
 newtype CodeSigningCertificateChain
-  = CodeSigningCertificateChain { stream :: NullOrUndefined (Stream), certificateName :: NullOrUndefined (CertificateName), inlineDocument :: NullOrUndefined (InlineDocument) }
+  = CodeSigningCertificateChain { stream :: Maybe (Stream), certificateName :: Maybe (CertificateName), inlineDocument :: Maybe (InlineDocument) }
 ```
 
 <p>Describes the certificate chain being used when code signing a file.</p>
@@ -1617,7 +1617,7 @@ Constructs CodeSigningCertificateChain from required parameters
 #### `newCodeSigningCertificateChain'`
 
 ``` purescript
-newCodeSigningCertificateChain' :: ({ stream :: NullOrUndefined (Stream), certificateName :: NullOrUndefined (CertificateName), inlineDocument :: NullOrUndefined (InlineDocument) } -> { stream :: NullOrUndefined (Stream), certificateName :: NullOrUndefined (CertificateName), inlineDocument :: NullOrUndefined (InlineDocument) }) -> CodeSigningCertificateChain
+newCodeSigningCertificateChain' :: ({ stream :: Maybe (Stream), certificateName :: Maybe (CertificateName), inlineDocument :: Maybe (InlineDocument) } -> { stream :: Maybe (Stream), certificateName :: Maybe (CertificateName), inlineDocument :: Maybe (InlineDocument) }) -> CodeSigningCertificateChain
 ```
 
 Constructs CodeSigningCertificateChain's fields from required parameters
@@ -1626,7 +1626,7 @@ Constructs CodeSigningCertificateChain's fields from required parameters
 
 ``` purescript
 newtype CodeSigningSignature
-  = CodeSigningSignature { stream :: NullOrUndefined (Stream), inlineDocument :: NullOrUndefined (Signature) }
+  = CodeSigningSignature { stream :: Maybe (Stream), inlineDocument :: Maybe (Signature) }
 ```
 
 <p>Describes the signature for a file.</p>
@@ -1651,7 +1651,7 @@ Constructs CodeSigningSignature from required parameters
 #### `newCodeSigningSignature'`
 
 ``` purescript
-newCodeSigningSignature' :: ({ stream :: NullOrUndefined (Stream), inlineDocument :: NullOrUndefined (Signature) } -> { stream :: NullOrUndefined (Stream), inlineDocument :: NullOrUndefined (Signature) }) -> CodeSigningSignature
+newCodeSigningSignature' :: ({ stream :: Maybe (Stream), inlineDocument :: Maybe (Signature) } -> { stream :: Maybe (Stream), inlineDocument :: Maybe (Signature) }) -> CodeSigningSignature
 ```
 
 Constructs CodeSigningSignature's fields from required parameters
@@ -1692,7 +1692,7 @@ Encode Comment
 
 ``` purescript
 newtype Configuration
-  = Configuration { "Enabled" :: NullOrUndefined (Enabled) }
+  = Configuration { "Enabled" :: Maybe (Enabled) }
 ```
 
 <p>Configuration.</p>
@@ -1717,7 +1717,7 @@ Constructs Configuration from required parameters
 #### `newConfiguration'`
 
 ``` purescript
-newConfiguration' :: ({ "Enabled" :: NullOrUndefined (Enabled) } -> { "Enabled" :: NullOrUndefined (Enabled) }) -> Configuration
+newConfiguration' :: ({ "Enabled" :: Maybe (Enabled) } -> { "Enabled" :: Maybe (Enabled) }) -> Configuration
 ```
 
 Constructs Configuration's fields from required parameters
@@ -1726,7 +1726,7 @@ Constructs Configuration's fields from required parameters
 
 ``` purescript
 newtype ConflictingResourceUpdateException
-  = ConflictingResourceUpdateException { message :: NullOrUndefined (ErrorMessage') }
+  = ConflictingResourceUpdateException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>A conflicting resource update exception. This exception is thrown when two pending updates cause a conflict.</p>
@@ -1751,7 +1751,7 @@ Constructs ConflictingResourceUpdateException from required parameters
 #### `newConflictingResourceUpdateException'`
 
 ``` purescript
-newConflictingResourceUpdateException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> ConflictingResourceUpdateException
+newConflictingResourceUpdateException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> ConflictingResourceUpdateException
 ```
 
 Constructs ConflictingResourceUpdateException's fields from required parameters
@@ -1776,7 +1776,7 @@ Encode Count
 
 ``` purescript
 newtype CreateAuthorizerRequest
-  = CreateAuthorizerRequest { authorizerName :: AuthorizerName, authorizerFunctionArn :: AuthorizerFunctionArn, tokenKeyName :: TokenKeyName, tokenSigningPublicKeys :: PublicKeyMap, status :: NullOrUndefined (AuthorizerStatus) }
+  = CreateAuthorizerRequest { authorizerName :: AuthorizerName, authorizerFunctionArn :: AuthorizerFunctionArn, tokenKeyName :: TokenKeyName, tokenSigningPublicKeys :: PublicKeyMap, status :: Maybe (AuthorizerStatus) }
 ```
 
 ##### Instances
@@ -1799,7 +1799,7 @@ Constructs CreateAuthorizerRequest from required parameters
 #### `newCreateAuthorizerRequest'`
 
 ``` purescript
-newCreateAuthorizerRequest' :: AuthorizerFunctionArn -> AuthorizerName -> TokenKeyName -> PublicKeyMap -> ({ authorizerName :: AuthorizerName, authorizerFunctionArn :: AuthorizerFunctionArn, tokenKeyName :: TokenKeyName, tokenSigningPublicKeys :: PublicKeyMap, status :: NullOrUndefined (AuthorizerStatus) } -> { authorizerName :: AuthorizerName, authorizerFunctionArn :: AuthorizerFunctionArn, tokenKeyName :: TokenKeyName, tokenSigningPublicKeys :: PublicKeyMap, status :: NullOrUndefined (AuthorizerStatus) }) -> CreateAuthorizerRequest
+newCreateAuthorizerRequest' :: AuthorizerFunctionArn -> AuthorizerName -> TokenKeyName -> PublicKeyMap -> ({ authorizerName :: AuthorizerName, authorizerFunctionArn :: AuthorizerFunctionArn, tokenKeyName :: TokenKeyName, tokenSigningPublicKeys :: PublicKeyMap, status :: Maybe (AuthorizerStatus) } -> { authorizerName :: AuthorizerName, authorizerFunctionArn :: AuthorizerFunctionArn, tokenKeyName :: TokenKeyName, tokenSigningPublicKeys :: PublicKeyMap, status :: Maybe (AuthorizerStatus) }) -> CreateAuthorizerRequest
 ```
 
 Constructs CreateAuthorizerRequest's fields from required parameters
@@ -1808,7 +1808,7 @@ Constructs CreateAuthorizerRequest's fields from required parameters
 
 ``` purescript
 newtype CreateAuthorizerResponse
-  = CreateAuthorizerResponse { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) }
+  = CreateAuthorizerResponse { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) }
 ```
 
 ##### Instances
@@ -1831,7 +1831,7 @@ Constructs CreateAuthorizerResponse from required parameters
 #### `newCreateAuthorizerResponse'`
 
 ``` purescript
-newCreateAuthorizerResponse' :: ({ authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) } -> { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) }) -> CreateAuthorizerResponse
+newCreateAuthorizerResponse' :: ({ authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) } -> { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) }) -> CreateAuthorizerResponse
 ```
 
 Constructs CreateAuthorizerResponse's fields from required parameters
@@ -1840,7 +1840,7 @@ Constructs CreateAuthorizerResponse's fields from required parameters
 
 ``` purescript
 newtype CreateCertificateFromCsrRequest
-  = CreateCertificateFromCsrRequest { certificateSigningRequest :: CertificateSigningRequest, setAsActive :: NullOrUndefined (SetAsActive) }
+  = CreateCertificateFromCsrRequest { certificateSigningRequest :: CertificateSigningRequest, setAsActive :: Maybe (SetAsActive) }
 ```
 
 <p>The input for the CreateCertificateFromCsr operation.</p>
@@ -1865,7 +1865,7 @@ Constructs CreateCertificateFromCsrRequest from required parameters
 #### `newCreateCertificateFromCsrRequest'`
 
 ``` purescript
-newCreateCertificateFromCsrRequest' :: CertificateSigningRequest -> ({ certificateSigningRequest :: CertificateSigningRequest, setAsActive :: NullOrUndefined (SetAsActive) } -> { certificateSigningRequest :: CertificateSigningRequest, setAsActive :: NullOrUndefined (SetAsActive) }) -> CreateCertificateFromCsrRequest
+newCreateCertificateFromCsrRequest' :: CertificateSigningRequest -> ({ certificateSigningRequest :: CertificateSigningRequest, setAsActive :: Maybe (SetAsActive) } -> { certificateSigningRequest :: CertificateSigningRequest, setAsActive :: Maybe (SetAsActive) }) -> CreateCertificateFromCsrRequest
 ```
 
 Constructs CreateCertificateFromCsrRequest's fields from required parameters
@@ -1874,7 +1874,7 @@ Constructs CreateCertificateFromCsrRequest's fields from required parameters
 
 ``` purescript
 newtype CreateCertificateFromCsrResponse
-  = CreateCertificateFromCsrResponse { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), certificatePem :: NullOrUndefined (CertificatePem) }
+  = CreateCertificateFromCsrResponse { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), certificatePem :: Maybe (CertificatePem) }
 ```
 
 <p>The output from the CreateCertificateFromCsr operation.</p>
@@ -1899,7 +1899,7 @@ Constructs CreateCertificateFromCsrResponse from required parameters
 #### `newCreateCertificateFromCsrResponse'`
 
 ``` purescript
-newCreateCertificateFromCsrResponse' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), certificatePem :: NullOrUndefined (CertificatePem) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), certificatePem :: NullOrUndefined (CertificatePem) }) -> CreateCertificateFromCsrResponse
+newCreateCertificateFromCsrResponse' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), certificatePem :: Maybe (CertificatePem) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), certificatePem :: Maybe (CertificatePem) }) -> CreateCertificateFromCsrResponse
 ```
 
 Constructs CreateCertificateFromCsrResponse's fields from required parameters
@@ -1908,7 +1908,7 @@ Constructs CreateCertificateFromCsrResponse's fields from required parameters
 
 ``` purescript
 newtype CreateJobRequest
-  = CreateJobRequest { jobId :: JobId, targets :: JobTargets, documentSource :: NullOrUndefined (JobDocumentSource), document :: NullOrUndefined (JobDocument), description :: NullOrUndefined (JobDescription), presignedUrlConfig :: NullOrUndefined (PresignedUrlConfig), targetSelection :: NullOrUndefined (TargetSelection), jobExecutionsRolloutConfig :: NullOrUndefined (JobExecutionsRolloutConfig), documentParameters :: NullOrUndefined (JobDocumentParameters) }
+  = CreateJobRequest { jobId :: JobId, targets :: JobTargets, documentSource :: Maybe (JobDocumentSource), document :: Maybe (JobDocument), description :: Maybe (JobDescription), presignedUrlConfig :: Maybe (PresignedUrlConfig), targetSelection :: Maybe (TargetSelection), jobExecutionsRolloutConfig :: Maybe (JobExecutionsRolloutConfig), documentParameters :: Maybe (JobDocumentParameters) }
 ```
 
 ##### Instances
@@ -1931,7 +1931,7 @@ Constructs CreateJobRequest from required parameters
 #### `newCreateJobRequest'`
 
 ``` purescript
-newCreateJobRequest' :: JobId -> JobTargets -> ({ jobId :: JobId, targets :: JobTargets, documentSource :: NullOrUndefined (JobDocumentSource), document :: NullOrUndefined (JobDocument), description :: NullOrUndefined (JobDescription), presignedUrlConfig :: NullOrUndefined (PresignedUrlConfig), targetSelection :: NullOrUndefined (TargetSelection), jobExecutionsRolloutConfig :: NullOrUndefined (JobExecutionsRolloutConfig), documentParameters :: NullOrUndefined (JobDocumentParameters) } -> { jobId :: JobId, targets :: JobTargets, documentSource :: NullOrUndefined (JobDocumentSource), document :: NullOrUndefined (JobDocument), description :: NullOrUndefined (JobDescription), presignedUrlConfig :: NullOrUndefined (PresignedUrlConfig), targetSelection :: NullOrUndefined (TargetSelection), jobExecutionsRolloutConfig :: NullOrUndefined (JobExecutionsRolloutConfig), documentParameters :: NullOrUndefined (JobDocumentParameters) }) -> CreateJobRequest
+newCreateJobRequest' :: JobId -> JobTargets -> ({ jobId :: JobId, targets :: JobTargets, documentSource :: Maybe (JobDocumentSource), document :: Maybe (JobDocument), description :: Maybe (JobDescription), presignedUrlConfig :: Maybe (PresignedUrlConfig), targetSelection :: Maybe (TargetSelection), jobExecutionsRolloutConfig :: Maybe (JobExecutionsRolloutConfig), documentParameters :: Maybe (JobDocumentParameters) } -> { jobId :: JobId, targets :: JobTargets, documentSource :: Maybe (JobDocumentSource), document :: Maybe (JobDocument), description :: Maybe (JobDescription), presignedUrlConfig :: Maybe (PresignedUrlConfig), targetSelection :: Maybe (TargetSelection), jobExecutionsRolloutConfig :: Maybe (JobExecutionsRolloutConfig), documentParameters :: Maybe (JobDocumentParameters) }) -> CreateJobRequest
 ```
 
 Constructs CreateJobRequest's fields from required parameters
@@ -1940,7 +1940,7 @@ Constructs CreateJobRequest's fields from required parameters
 
 ``` purescript
 newtype CreateJobResponse
-  = CreateJobResponse { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) }
+  = CreateJobResponse { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) }
 ```
 
 ##### Instances
@@ -1963,7 +1963,7 @@ Constructs CreateJobResponse from required parameters
 #### `newCreateJobResponse'`
 
 ``` purescript
-newCreateJobResponse' :: ({ jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) } -> { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), description :: NullOrUndefined (JobDescription) }) -> CreateJobResponse
+newCreateJobResponse' :: ({ jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) } -> { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), description :: Maybe (JobDescription) }) -> CreateJobResponse
 ```
 
 Constructs CreateJobResponse's fields from required parameters
@@ -1972,7 +1972,7 @@ Constructs CreateJobResponse's fields from required parameters
 
 ``` purescript
 newtype CreateKeysAndCertificateRequest
-  = CreateKeysAndCertificateRequest { setAsActive :: NullOrUndefined (SetAsActive) }
+  = CreateKeysAndCertificateRequest { setAsActive :: Maybe (SetAsActive) }
 ```
 
 <p>The input for the CreateKeysAndCertificate operation.</p>
@@ -1997,7 +1997,7 @@ Constructs CreateKeysAndCertificateRequest from required parameters
 #### `newCreateKeysAndCertificateRequest'`
 
 ``` purescript
-newCreateKeysAndCertificateRequest' :: ({ setAsActive :: NullOrUndefined (SetAsActive) } -> { setAsActive :: NullOrUndefined (SetAsActive) }) -> CreateKeysAndCertificateRequest
+newCreateKeysAndCertificateRequest' :: ({ setAsActive :: Maybe (SetAsActive) } -> { setAsActive :: Maybe (SetAsActive) }) -> CreateKeysAndCertificateRequest
 ```
 
 Constructs CreateKeysAndCertificateRequest's fields from required parameters
@@ -2006,7 +2006,7 @@ Constructs CreateKeysAndCertificateRequest's fields from required parameters
 
 ``` purescript
 newtype CreateKeysAndCertificateResponse
-  = CreateKeysAndCertificateResponse { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), certificatePem :: NullOrUndefined (CertificatePem), keyPair :: NullOrUndefined (KeyPair) }
+  = CreateKeysAndCertificateResponse { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), certificatePem :: Maybe (CertificatePem), keyPair :: Maybe (KeyPair) }
 ```
 
 <p>The output of the CreateKeysAndCertificate operation.</p>
@@ -2031,7 +2031,7 @@ Constructs CreateKeysAndCertificateResponse from required parameters
 #### `newCreateKeysAndCertificateResponse'`
 
 ``` purescript
-newCreateKeysAndCertificateResponse' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), certificatePem :: NullOrUndefined (CertificatePem), keyPair :: NullOrUndefined (KeyPair) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), certificatePem :: NullOrUndefined (CertificatePem), keyPair :: NullOrUndefined (KeyPair) }) -> CreateKeysAndCertificateResponse
+newCreateKeysAndCertificateResponse' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), certificatePem :: Maybe (CertificatePem), keyPair :: Maybe (KeyPair) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), certificatePem :: Maybe (CertificatePem), keyPair :: Maybe (KeyPair) }) -> CreateKeysAndCertificateResponse
 ```
 
 Constructs CreateKeysAndCertificateResponse's fields from required parameters
@@ -2040,7 +2040,7 @@ Constructs CreateKeysAndCertificateResponse's fields from required parameters
 
 ``` purescript
 newtype CreateOTAUpdateRequest
-  = CreateOTAUpdateRequest { otaUpdateId :: OTAUpdateId, description :: NullOrUndefined (OTAUpdateDescription), targets :: Targets, targetSelection :: NullOrUndefined (TargetSelection), files :: OTAUpdateFiles, roleArn :: RoleArn, additionalParameters :: NullOrUndefined (AdditionalParameterMap) }
+  = CreateOTAUpdateRequest { otaUpdateId :: OTAUpdateId, description :: Maybe (OTAUpdateDescription), targets :: Targets, targetSelection :: Maybe (TargetSelection), files :: OTAUpdateFiles, roleArn :: RoleArn, additionalParameters :: Maybe (AdditionalParameterMap) }
 ```
 
 ##### Instances
@@ -2063,7 +2063,7 @@ Constructs CreateOTAUpdateRequest from required parameters
 #### `newCreateOTAUpdateRequest'`
 
 ``` purescript
-newCreateOTAUpdateRequest' :: OTAUpdateFiles -> OTAUpdateId -> RoleArn -> Targets -> ({ otaUpdateId :: OTAUpdateId, description :: NullOrUndefined (OTAUpdateDescription), targets :: Targets, targetSelection :: NullOrUndefined (TargetSelection), files :: OTAUpdateFiles, roleArn :: RoleArn, additionalParameters :: NullOrUndefined (AdditionalParameterMap) } -> { otaUpdateId :: OTAUpdateId, description :: NullOrUndefined (OTAUpdateDescription), targets :: Targets, targetSelection :: NullOrUndefined (TargetSelection), files :: OTAUpdateFiles, roleArn :: RoleArn, additionalParameters :: NullOrUndefined (AdditionalParameterMap) }) -> CreateOTAUpdateRequest
+newCreateOTAUpdateRequest' :: OTAUpdateFiles -> OTAUpdateId -> RoleArn -> Targets -> ({ otaUpdateId :: OTAUpdateId, description :: Maybe (OTAUpdateDescription), targets :: Targets, targetSelection :: Maybe (TargetSelection), files :: OTAUpdateFiles, roleArn :: RoleArn, additionalParameters :: Maybe (AdditionalParameterMap) } -> { otaUpdateId :: OTAUpdateId, description :: Maybe (OTAUpdateDescription), targets :: Targets, targetSelection :: Maybe (TargetSelection), files :: OTAUpdateFiles, roleArn :: RoleArn, additionalParameters :: Maybe (AdditionalParameterMap) }) -> CreateOTAUpdateRequest
 ```
 
 Constructs CreateOTAUpdateRequest's fields from required parameters
@@ -2072,7 +2072,7 @@ Constructs CreateOTAUpdateRequest's fields from required parameters
 
 ``` purescript
 newtype CreateOTAUpdateResponse
-  = CreateOTAUpdateResponse { otaUpdateId :: NullOrUndefined (OTAUpdateId), awsIotJobId :: NullOrUndefined (AwsIotJobId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), awsIotJobArn :: NullOrUndefined (AwsIotJobArn), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus) }
+  = CreateOTAUpdateResponse { otaUpdateId :: Maybe (OTAUpdateId), awsIotJobId :: Maybe (AwsIotJobId), otaUpdateArn :: Maybe (OTAUpdateArn), awsIotJobArn :: Maybe (AwsIotJobArn), otaUpdateStatus :: Maybe (OTAUpdateStatus) }
 ```
 
 ##### Instances
@@ -2095,7 +2095,7 @@ Constructs CreateOTAUpdateResponse from required parameters
 #### `newCreateOTAUpdateResponse'`
 
 ``` purescript
-newCreateOTAUpdateResponse' :: ({ otaUpdateId :: NullOrUndefined (OTAUpdateId), awsIotJobId :: NullOrUndefined (AwsIotJobId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), awsIotJobArn :: NullOrUndefined (AwsIotJobArn), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus) } -> { otaUpdateId :: NullOrUndefined (OTAUpdateId), awsIotJobId :: NullOrUndefined (AwsIotJobId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), awsIotJobArn :: NullOrUndefined (AwsIotJobArn), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus) }) -> CreateOTAUpdateResponse
+newCreateOTAUpdateResponse' :: ({ otaUpdateId :: Maybe (OTAUpdateId), awsIotJobId :: Maybe (AwsIotJobId), otaUpdateArn :: Maybe (OTAUpdateArn), awsIotJobArn :: Maybe (AwsIotJobArn), otaUpdateStatus :: Maybe (OTAUpdateStatus) } -> { otaUpdateId :: Maybe (OTAUpdateId), awsIotJobId :: Maybe (AwsIotJobId), otaUpdateArn :: Maybe (OTAUpdateArn), awsIotJobArn :: Maybe (AwsIotJobArn), otaUpdateStatus :: Maybe (OTAUpdateStatus) }) -> CreateOTAUpdateResponse
 ```
 
 Constructs CreateOTAUpdateResponse's fields from required parameters
@@ -2138,7 +2138,7 @@ Constructs CreatePolicyRequest's fields from required parameters
 
 ``` purescript
 newtype CreatePolicyResponse
-  = CreatePolicyResponse { policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId) }
+  = CreatePolicyResponse { policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId) }
 ```
 
 <p>The output from the CreatePolicy operation.</p>
@@ -2163,7 +2163,7 @@ Constructs CreatePolicyResponse from required parameters
 #### `newCreatePolicyResponse'`
 
 ``` purescript
-newCreatePolicyResponse' :: ({ policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId) } -> { policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId) }) -> CreatePolicyResponse
+newCreatePolicyResponse' :: ({ policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId) } -> { policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId) }) -> CreatePolicyResponse
 ```
 
 Constructs CreatePolicyResponse's fields from required parameters
@@ -2172,7 +2172,7 @@ Constructs CreatePolicyResponse's fields from required parameters
 
 ``` purescript
 newtype CreatePolicyVersionRequest
-  = CreatePolicyVersionRequest { policyName :: PolicyName, policyDocument :: PolicyDocument, setAsDefault :: NullOrUndefined (SetAsDefault) }
+  = CreatePolicyVersionRequest { policyName :: PolicyName, policyDocument :: PolicyDocument, setAsDefault :: Maybe (SetAsDefault) }
 ```
 
 <p>The input for the CreatePolicyVersion operation.</p>
@@ -2197,7 +2197,7 @@ Constructs CreatePolicyVersionRequest from required parameters
 #### `newCreatePolicyVersionRequest'`
 
 ``` purescript
-newCreatePolicyVersionRequest' :: PolicyDocument -> PolicyName -> ({ policyName :: PolicyName, policyDocument :: PolicyDocument, setAsDefault :: NullOrUndefined (SetAsDefault) } -> { policyName :: PolicyName, policyDocument :: PolicyDocument, setAsDefault :: NullOrUndefined (SetAsDefault) }) -> CreatePolicyVersionRequest
+newCreatePolicyVersionRequest' :: PolicyDocument -> PolicyName -> ({ policyName :: PolicyName, policyDocument :: PolicyDocument, setAsDefault :: Maybe (SetAsDefault) } -> { policyName :: PolicyName, policyDocument :: PolicyDocument, setAsDefault :: Maybe (SetAsDefault) }) -> CreatePolicyVersionRequest
 ```
 
 Constructs CreatePolicyVersionRequest's fields from required parameters
@@ -2206,7 +2206,7 @@ Constructs CreatePolicyVersionRequest's fields from required parameters
 
 ``` purescript
 newtype CreatePolicyVersionResponse
-  = CreatePolicyVersionResponse { policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion) }
+  = CreatePolicyVersionResponse { policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion) }
 ```
 
 <p>The output of the CreatePolicyVersion operation.</p>
@@ -2231,7 +2231,7 @@ Constructs CreatePolicyVersionResponse from required parameters
 #### `newCreatePolicyVersionResponse'`
 
 ``` purescript
-newCreatePolicyVersionResponse' :: ({ policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion) } -> { policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion) }) -> CreatePolicyVersionResponse
+newCreatePolicyVersionResponse' :: ({ policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion) } -> { policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion) }) -> CreatePolicyVersionResponse
 ```
 
 Constructs CreatePolicyVersionResponse's fields from required parameters
@@ -2240,7 +2240,7 @@ Constructs CreatePolicyVersionResponse's fields from required parameters
 
 ``` purescript
 newtype CreateRoleAliasRequest
-  = CreateRoleAliasRequest { roleAlias :: RoleAlias, roleArn :: RoleArn, credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds) }
+  = CreateRoleAliasRequest { roleAlias :: RoleAlias, roleArn :: RoleArn, credentialDurationSeconds :: Maybe (CredentialDurationSeconds) }
 ```
 
 ##### Instances
@@ -2263,7 +2263,7 @@ Constructs CreateRoleAliasRequest from required parameters
 #### `newCreateRoleAliasRequest'`
 
 ``` purescript
-newCreateRoleAliasRequest' :: RoleAlias -> RoleArn -> ({ roleAlias :: RoleAlias, roleArn :: RoleArn, credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds) } -> { roleAlias :: RoleAlias, roleArn :: RoleArn, credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds) }) -> CreateRoleAliasRequest
+newCreateRoleAliasRequest' :: RoleAlias -> RoleArn -> ({ roleAlias :: RoleAlias, roleArn :: RoleArn, credentialDurationSeconds :: Maybe (CredentialDurationSeconds) } -> { roleAlias :: RoleAlias, roleArn :: RoleArn, credentialDurationSeconds :: Maybe (CredentialDurationSeconds) }) -> CreateRoleAliasRequest
 ```
 
 Constructs CreateRoleAliasRequest's fields from required parameters
@@ -2272,7 +2272,7 @@ Constructs CreateRoleAliasRequest's fields from required parameters
 
 ``` purescript
 newtype CreateRoleAliasResponse
-  = CreateRoleAliasResponse { roleAlias :: NullOrUndefined (RoleAlias), roleAliasArn :: NullOrUndefined (RoleAliasArn) }
+  = CreateRoleAliasResponse { roleAlias :: Maybe (RoleAlias), roleAliasArn :: Maybe (RoleAliasArn) }
 ```
 
 ##### Instances
@@ -2295,7 +2295,7 @@ Constructs CreateRoleAliasResponse from required parameters
 #### `newCreateRoleAliasResponse'`
 
 ``` purescript
-newCreateRoleAliasResponse' :: ({ roleAlias :: NullOrUndefined (RoleAlias), roleAliasArn :: NullOrUndefined (RoleAliasArn) } -> { roleAlias :: NullOrUndefined (RoleAlias), roleAliasArn :: NullOrUndefined (RoleAliasArn) }) -> CreateRoleAliasResponse
+newCreateRoleAliasResponse' :: ({ roleAlias :: Maybe (RoleAlias), roleAliasArn :: Maybe (RoleAliasArn) } -> { roleAlias :: Maybe (RoleAlias), roleAliasArn :: Maybe (RoleAliasArn) }) -> CreateRoleAliasResponse
 ```
 
 Constructs CreateRoleAliasResponse's fields from required parameters
@@ -2304,7 +2304,7 @@ Constructs CreateRoleAliasResponse's fields from required parameters
 
 ``` purescript
 newtype CreateStreamRequest
-  = CreateStreamRequest { streamId :: StreamId, description :: NullOrUndefined (StreamDescription), files :: StreamFiles, roleArn :: RoleArn }
+  = CreateStreamRequest { streamId :: StreamId, description :: Maybe (StreamDescription), files :: StreamFiles, roleArn :: RoleArn }
 ```
 
 ##### Instances
@@ -2327,7 +2327,7 @@ Constructs CreateStreamRequest from required parameters
 #### `newCreateStreamRequest'`
 
 ``` purescript
-newCreateStreamRequest' :: StreamFiles -> RoleArn -> StreamId -> ({ streamId :: StreamId, description :: NullOrUndefined (StreamDescription), files :: StreamFiles, roleArn :: RoleArn } -> { streamId :: StreamId, description :: NullOrUndefined (StreamDescription), files :: StreamFiles, roleArn :: RoleArn }) -> CreateStreamRequest
+newCreateStreamRequest' :: StreamFiles -> RoleArn -> StreamId -> ({ streamId :: StreamId, description :: Maybe (StreamDescription), files :: StreamFiles, roleArn :: RoleArn } -> { streamId :: StreamId, description :: Maybe (StreamDescription), files :: StreamFiles, roleArn :: RoleArn }) -> CreateStreamRequest
 ```
 
 Constructs CreateStreamRequest's fields from required parameters
@@ -2336,7 +2336,7 @@ Constructs CreateStreamRequest's fields from required parameters
 
 ``` purescript
 newtype CreateStreamResponse
-  = CreateStreamResponse { streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), description :: NullOrUndefined (StreamDescription), streamVersion :: NullOrUndefined (StreamVersion) }
+  = CreateStreamResponse { streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), description :: Maybe (StreamDescription), streamVersion :: Maybe (StreamVersion) }
 ```
 
 ##### Instances
@@ -2359,7 +2359,7 @@ Constructs CreateStreamResponse from required parameters
 #### `newCreateStreamResponse'`
 
 ``` purescript
-newCreateStreamResponse' :: ({ streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), description :: NullOrUndefined (StreamDescription), streamVersion :: NullOrUndefined (StreamVersion) } -> { streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), description :: NullOrUndefined (StreamDescription), streamVersion :: NullOrUndefined (StreamVersion) }) -> CreateStreamResponse
+newCreateStreamResponse' :: ({ streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), description :: Maybe (StreamDescription), streamVersion :: Maybe (StreamVersion) } -> { streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), description :: Maybe (StreamDescription), streamVersion :: Maybe (StreamVersion) }) -> CreateStreamResponse
 ```
 
 Constructs CreateStreamResponse's fields from required parameters
@@ -2368,7 +2368,7 @@ Constructs CreateStreamResponse's fields from required parameters
 
 ``` purescript
 newtype CreateThingGroupRequest
-  = CreateThingGroupRequest { thingGroupName :: ThingGroupName, parentGroupName :: NullOrUndefined (ThingGroupName), thingGroupProperties :: NullOrUndefined (ThingGroupProperties) }
+  = CreateThingGroupRequest { thingGroupName :: ThingGroupName, parentGroupName :: Maybe (ThingGroupName), thingGroupProperties :: Maybe (ThingGroupProperties) }
 ```
 
 ##### Instances
@@ -2391,7 +2391,7 @@ Constructs CreateThingGroupRequest from required parameters
 #### `newCreateThingGroupRequest'`
 
 ``` purescript
-newCreateThingGroupRequest' :: ThingGroupName -> ({ thingGroupName :: ThingGroupName, parentGroupName :: NullOrUndefined (ThingGroupName), thingGroupProperties :: NullOrUndefined (ThingGroupProperties) } -> { thingGroupName :: ThingGroupName, parentGroupName :: NullOrUndefined (ThingGroupName), thingGroupProperties :: NullOrUndefined (ThingGroupProperties) }) -> CreateThingGroupRequest
+newCreateThingGroupRequest' :: ThingGroupName -> ({ thingGroupName :: ThingGroupName, parentGroupName :: Maybe (ThingGroupName), thingGroupProperties :: Maybe (ThingGroupProperties) } -> { thingGroupName :: ThingGroupName, parentGroupName :: Maybe (ThingGroupName), thingGroupProperties :: Maybe (ThingGroupProperties) }) -> CreateThingGroupRequest
 ```
 
 Constructs CreateThingGroupRequest's fields from required parameters
@@ -2400,7 +2400,7 @@ Constructs CreateThingGroupRequest's fields from required parameters
 
 ``` purescript
 newtype CreateThingGroupResponse
-  = CreateThingGroupResponse { thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingGroupId :: NullOrUndefined (ThingGroupId) }
+  = CreateThingGroupResponse { thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingGroupId :: Maybe (ThingGroupId) }
 ```
 
 ##### Instances
@@ -2423,7 +2423,7 @@ Constructs CreateThingGroupResponse from required parameters
 #### `newCreateThingGroupResponse'`
 
 ``` purescript
-newCreateThingGroupResponse' :: ({ thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingGroupId :: NullOrUndefined (ThingGroupId) } -> { thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingGroupId :: NullOrUndefined (ThingGroupId) }) -> CreateThingGroupResponse
+newCreateThingGroupResponse' :: ({ thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingGroupId :: Maybe (ThingGroupId) } -> { thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingGroupId :: Maybe (ThingGroupId) }) -> CreateThingGroupResponse
 ```
 
 Constructs CreateThingGroupResponse's fields from required parameters
@@ -2432,7 +2432,7 @@ Constructs CreateThingGroupResponse's fields from required parameters
 
 ``` purescript
 newtype CreateThingRequest
-  = CreateThingRequest { thingName :: ThingName, thingTypeName :: NullOrUndefined (ThingTypeName), attributePayload :: NullOrUndefined (AttributePayload) }
+  = CreateThingRequest { thingName :: ThingName, thingTypeName :: Maybe (ThingTypeName), attributePayload :: Maybe (AttributePayload) }
 ```
 
 <p>The input for the CreateThing operation.</p>
@@ -2457,7 +2457,7 @@ Constructs CreateThingRequest from required parameters
 #### `newCreateThingRequest'`
 
 ``` purescript
-newCreateThingRequest' :: ThingName -> ({ thingName :: ThingName, thingTypeName :: NullOrUndefined (ThingTypeName), attributePayload :: NullOrUndefined (AttributePayload) } -> { thingName :: ThingName, thingTypeName :: NullOrUndefined (ThingTypeName), attributePayload :: NullOrUndefined (AttributePayload) }) -> CreateThingRequest
+newCreateThingRequest' :: ThingName -> ({ thingName :: ThingName, thingTypeName :: Maybe (ThingTypeName), attributePayload :: Maybe (AttributePayload) } -> { thingName :: ThingName, thingTypeName :: Maybe (ThingTypeName), attributePayload :: Maybe (AttributePayload) }) -> CreateThingRequest
 ```
 
 Constructs CreateThingRequest's fields from required parameters
@@ -2466,7 +2466,7 @@ Constructs CreateThingRequest's fields from required parameters
 
 ``` purescript
 newtype CreateThingResponse
-  = CreateThingResponse { thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn), thingId :: NullOrUndefined (ThingId) }
+  = CreateThingResponse { thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn), thingId :: Maybe (ThingId) }
 ```
 
 <p>The output of the CreateThing operation.</p>
@@ -2491,7 +2491,7 @@ Constructs CreateThingResponse from required parameters
 #### `newCreateThingResponse'`
 
 ``` purescript
-newCreateThingResponse' :: ({ thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn), thingId :: NullOrUndefined (ThingId) } -> { thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn), thingId :: NullOrUndefined (ThingId) }) -> CreateThingResponse
+newCreateThingResponse' :: ({ thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn), thingId :: Maybe (ThingId) } -> { thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn), thingId :: Maybe (ThingId) }) -> CreateThingResponse
 ```
 
 Constructs CreateThingResponse's fields from required parameters
@@ -2500,7 +2500,7 @@ Constructs CreateThingResponse's fields from required parameters
 
 ``` purescript
 newtype CreateThingTypeRequest
-  = CreateThingTypeRequest { thingTypeName :: ThingTypeName, thingTypeProperties :: NullOrUndefined (ThingTypeProperties) }
+  = CreateThingTypeRequest { thingTypeName :: ThingTypeName, thingTypeProperties :: Maybe (ThingTypeProperties) }
 ```
 
 <p>The input for the CreateThingType operation.</p>
@@ -2525,7 +2525,7 @@ Constructs CreateThingTypeRequest from required parameters
 #### `newCreateThingTypeRequest'`
 
 ``` purescript
-newCreateThingTypeRequest' :: ThingTypeName -> ({ thingTypeName :: ThingTypeName, thingTypeProperties :: NullOrUndefined (ThingTypeProperties) } -> { thingTypeName :: ThingTypeName, thingTypeProperties :: NullOrUndefined (ThingTypeProperties) }) -> CreateThingTypeRequest
+newCreateThingTypeRequest' :: ThingTypeName -> ({ thingTypeName :: ThingTypeName, thingTypeProperties :: Maybe (ThingTypeProperties) } -> { thingTypeName :: ThingTypeName, thingTypeProperties :: Maybe (ThingTypeProperties) }) -> CreateThingTypeRequest
 ```
 
 Constructs CreateThingTypeRequest's fields from required parameters
@@ -2534,7 +2534,7 @@ Constructs CreateThingTypeRequest's fields from required parameters
 
 ``` purescript
 newtype CreateThingTypeResponse
-  = CreateThingTypeResponse { thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeId :: NullOrUndefined (ThingTypeId) }
+  = CreateThingTypeResponse { thingTypeName :: Maybe (ThingTypeName), thingTypeArn :: Maybe (ThingTypeArn), thingTypeId :: Maybe (ThingTypeId) }
 ```
 
 <p>The output of the CreateThingType operation.</p>
@@ -2559,7 +2559,7 @@ Constructs CreateThingTypeResponse from required parameters
 #### `newCreateThingTypeResponse'`
 
 ``` purescript
-newCreateThingTypeResponse' :: ({ thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeId :: NullOrUndefined (ThingTypeId) } -> { thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeId :: NullOrUndefined (ThingTypeId) }) -> CreateThingTypeResponse
+newCreateThingTypeResponse' :: ({ thingTypeName :: Maybe (ThingTypeName), thingTypeArn :: Maybe (ThingTypeArn), thingTypeId :: Maybe (ThingTypeId) } -> { thingTypeName :: Maybe (ThingTypeName), thingTypeArn :: Maybe (ThingTypeArn), thingTypeId :: Maybe (ThingTypeId) }) -> CreateThingTypeResponse
 ```
 
 Constructs CreateThingTypeResponse's fields from required parameters
@@ -2650,7 +2650,7 @@ Encode CredentialDurationSeconds
 
 ``` purescript
 newtype CustomCodeSigning
-  = CustomCodeSigning { signature :: NullOrUndefined (CodeSigningSignature), certificateChain :: NullOrUndefined (CodeSigningCertificateChain), hashAlgorithm :: NullOrUndefined (HashAlgorithm), signatureAlgorithm :: NullOrUndefined (SignatureAlgorithm) }
+  = CustomCodeSigning { signature :: Maybe (CodeSigningSignature), certificateChain :: Maybe (CodeSigningCertificateChain), hashAlgorithm :: Maybe (HashAlgorithm), signatureAlgorithm :: Maybe (SignatureAlgorithm) }
 ```
 
 <p>Describes a custom method used to code sign a file.</p>
@@ -2675,7 +2675,7 @@ Constructs CustomCodeSigning from required parameters
 #### `newCustomCodeSigning'`
 
 ``` purescript
-newCustomCodeSigning' :: ({ signature :: NullOrUndefined (CodeSigningSignature), certificateChain :: NullOrUndefined (CodeSigningCertificateChain), hashAlgorithm :: NullOrUndefined (HashAlgorithm), signatureAlgorithm :: NullOrUndefined (SignatureAlgorithm) } -> { signature :: NullOrUndefined (CodeSigningSignature), certificateChain :: NullOrUndefined (CodeSigningCertificateChain), hashAlgorithm :: NullOrUndefined (HashAlgorithm), signatureAlgorithm :: NullOrUndefined (SignatureAlgorithm) }) -> CustomCodeSigning
+newCustomCodeSigning' :: ({ signature :: Maybe (CodeSigningSignature), certificateChain :: Maybe (CodeSigningCertificateChain), hashAlgorithm :: Maybe (HashAlgorithm), signatureAlgorithm :: Maybe (SignatureAlgorithm) } -> { signature :: Maybe (CodeSigningSignature), certificateChain :: Maybe (CodeSigningCertificateChain), hashAlgorithm :: Maybe (HashAlgorithm), signatureAlgorithm :: Maybe (SignatureAlgorithm) }) -> CustomCodeSigning
 ```
 
 Constructs CustomCodeSigning's fields from required parameters
@@ -2800,7 +2800,7 @@ Encode DeleteCACertificateResponse
 
 ``` purescript
 newtype DeleteCertificateRequest
-  = DeleteCertificateRequest { certificateId :: CertificateId, forceDelete :: NullOrUndefined (ForceDelete) }
+  = DeleteCertificateRequest { certificateId :: CertificateId, forceDelete :: Maybe (ForceDelete) }
 ```
 
 <p>The input for the DeleteCertificate operation.</p>
@@ -2825,7 +2825,7 @@ Constructs DeleteCertificateRequest from required parameters
 #### `newDeleteCertificateRequest'`
 
 ``` purescript
-newDeleteCertificateRequest' :: CertificateId -> ({ certificateId :: CertificateId, forceDelete :: NullOrUndefined (ForceDelete) } -> { certificateId :: CertificateId, forceDelete :: NullOrUndefined (ForceDelete) }) -> DeleteCertificateRequest
+newDeleteCertificateRequest' :: CertificateId -> ({ certificateId :: CertificateId, forceDelete :: Maybe (ForceDelete) } -> { certificateId :: CertificateId, forceDelete :: Maybe (ForceDelete) }) -> DeleteCertificateRequest
 ```
 
 Constructs DeleteCertificateRequest's fields from required parameters
@@ -2834,7 +2834,7 @@ Constructs DeleteCertificateRequest's fields from required parameters
 
 ``` purescript
 newtype DeleteConflictException
-  = DeleteConflictException { message :: NullOrUndefined (ErrorMessage') }
+  = DeleteConflictException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>You can't delete the resource because it is attached to one or more resources.</p>
@@ -2859,7 +2859,7 @@ Constructs DeleteConflictException from required parameters
 #### `newDeleteConflictException'`
 
 ``` purescript
-newDeleteConflictException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> DeleteConflictException
+newDeleteConflictException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> DeleteConflictException
 ```
 
 Constructs DeleteConflictException's fields from required parameters
@@ -3116,7 +3116,7 @@ Encode DeleteStreamResponse
 
 ``` purescript
 newtype DeleteThingGroupRequest
-  = DeleteThingGroupRequest { thingGroupName :: ThingGroupName, expectedVersion :: NullOrUndefined (OptionalVersion) }
+  = DeleteThingGroupRequest { thingGroupName :: ThingGroupName, expectedVersion :: Maybe (OptionalVersion) }
 ```
 
 ##### Instances
@@ -3139,7 +3139,7 @@ Constructs DeleteThingGroupRequest from required parameters
 #### `newDeleteThingGroupRequest'`
 
 ``` purescript
-newDeleteThingGroupRequest' :: ThingGroupName -> ({ thingGroupName :: ThingGroupName, expectedVersion :: NullOrUndefined (OptionalVersion) } -> { thingGroupName :: ThingGroupName, expectedVersion :: NullOrUndefined (OptionalVersion) }) -> DeleteThingGroupRequest
+newDeleteThingGroupRequest' :: ThingGroupName -> ({ thingGroupName :: ThingGroupName, expectedVersion :: Maybe (OptionalVersion) } -> { thingGroupName :: ThingGroupName, expectedVersion :: Maybe (OptionalVersion) }) -> DeleteThingGroupRequest
 ```
 
 Constructs DeleteThingGroupRequest's fields from required parameters
@@ -3164,7 +3164,7 @@ Encode DeleteThingGroupResponse
 
 ``` purescript
 newtype DeleteThingRequest
-  = DeleteThingRequest { thingName :: ThingName, expectedVersion :: NullOrUndefined (OptionalVersion) }
+  = DeleteThingRequest { thingName :: ThingName, expectedVersion :: Maybe (OptionalVersion) }
 ```
 
 <p>The input for the DeleteThing operation.</p>
@@ -3189,7 +3189,7 @@ Constructs DeleteThingRequest from required parameters
 #### `newDeleteThingRequest'`
 
 ``` purescript
-newDeleteThingRequest' :: ThingName -> ({ thingName :: ThingName, expectedVersion :: NullOrUndefined (OptionalVersion) } -> { thingName :: ThingName, expectedVersion :: NullOrUndefined (OptionalVersion) }) -> DeleteThingRequest
+newDeleteThingRequest' :: ThingName -> ({ thingName :: ThingName, expectedVersion :: Maybe (OptionalVersion) } -> { thingName :: ThingName, expectedVersion :: Maybe (OptionalVersion) }) -> DeleteThingRequest
 ```
 
 Constructs DeleteThingRequest's fields from required parameters
@@ -3350,7 +3350,7 @@ Encode DeliveryStreamName
 
 ``` purescript
 newtype Denied
-  = Denied { implicitDeny :: NullOrUndefined (ImplicitDeny), explicitDeny :: NullOrUndefined (ExplicitDeny) }
+  = Denied { implicitDeny :: Maybe (ImplicitDeny), explicitDeny :: Maybe (ExplicitDeny) }
 ```
 
 <p>Contains information that denied the authorization.</p>
@@ -3375,7 +3375,7 @@ Constructs Denied from required parameters
 #### `newDenied'`
 
 ``` purescript
-newDenied' :: ({ implicitDeny :: NullOrUndefined (ImplicitDeny), explicitDeny :: NullOrUndefined (ExplicitDeny) } -> { implicitDeny :: NullOrUndefined (ImplicitDeny), explicitDeny :: NullOrUndefined (ExplicitDeny) }) -> Denied
+newDenied' :: ({ implicitDeny :: Maybe (ImplicitDeny), explicitDeny :: Maybe (ExplicitDeny) } -> { implicitDeny :: Maybe (ImplicitDeny), explicitDeny :: Maybe (ExplicitDeny) }) -> Denied
 ```
 
 Constructs Denied's fields from required parameters
@@ -3384,7 +3384,7 @@ Constructs Denied's fields from required parameters
 
 ``` purescript
 newtype DeprecateThingTypeRequest
-  = DeprecateThingTypeRequest { thingTypeName :: ThingTypeName, undoDeprecate :: NullOrUndefined (UndoDeprecate) }
+  = DeprecateThingTypeRequest { thingTypeName :: ThingTypeName, undoDeprecate :: Maybe (UndoDeprecate) }
 ```
 
 <p>The input for the DeprecateThingType operation.</p>
@@ -3409,7 +3409,7 @@ Constructs DeprecateThingTypeRequest from required parameters
 #### `newDeprecateThingTypeRequest'`
 
 ``` purescript
-newDeprecateThingTypeRequest' :: ThingTypeName -> ({ thingTypeName :: ThingTypeName, undoDeprecate :: NullOrUndefined (UndoDeprecate) } -> { thingTypeName :: ThingTypeName, undoDeprecate :: NullOrUndefined (UndoDeprecate) }) -> DeprecateThingTypeRequest
+newDeprecateThingTypeRequest' :: ThingTypeName -> ({ thingTypeName :: ThingTypeName, undoDeprecate :: Maybe (UndoDeprecate) } -> { thingTypeName :: ThingTypeName, undoDeprecate :: Maybe (UndoDeprecate) }) -> DeprecateThingTypeRequest
 ```
 
 Constructs DeprecateThingTypeRequest's fields from required parameters
@@ -3484,7 +3484,7 @@ Constructs DescribeAuthorizerRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeAuthorizerResponse
-  = DescribeAuthorizerResponse { authorizerDescription :: NullOrUndefined (AuthorizerDescription) }
+  = DescribeAuthorizerResponse { authorizerDescription :: Maybe (AuthorizerDescription) }
 ```
 
 ##### Instances
@@ -3507,7 +3507,7 @@ Constructs DescribeAuthorizerResponse from required parameters
 #### `newDescribeAuthorizerResponse'`
 
 ``` purescript
-newDescribeAuthorizerResponse' :: ({ authorizerDescription :: NullOrUndefined (AuthorizerDescription) } -> { authorizerDescription :: NullOrUndefined (AuthorizerDescription) }) -> DescribeAuthorizerResponse
+newDescribeAuthorizerResponse' :: ({ authorizerDescription :: Maybe (AuthorizerDescription) } -> { authorizerDescription :: Maybe (AuthorizerDescription) }) -> DescribeAuthorizerResponse
 ```
 
 Constructs DescribeAuthorizerResponse's fields from required parameters
@@ -3550,7 +3550,7 @@ Constructs DescribeCACertificateRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeCACertificateResponse
-  = DescribeCACertificateResponse { certificateDescription :: NullOrUndefined (CACertificateDescription), registrationConfig :: NullOrUndefined (RegistrationConfig) }
+  = DescribeCACertificateResponse { certificateDescription :: Maybe (CACertificateDescription), registrationConfig :: Maybe (RegistrationConfig) }
 ```
 
 <p>The output from the DescribeCACertificate operation.</p>
@@ -3575,7 +3575,7 @@ Constructs DescribeCACertificateResponse from required parameters
 #### `newDescribeCACertificateResponse'`
 
 ``` purescript
-newDescribeCACertificateResponse' :: ({ certificateDescription :: NullOrUndefined (CACertificateDescription), registrationConfig :: NullOrUndefined (RegistrationConfig) } -> { certificateDescription :: NullOrUndefined (CACertificateDescription), registrationConfig :: NullOrUndefined (RegistrationConfig) }) -> DescribeCACertificateResponse
+newDescribeCACertificateResponse' :: ({ certificateDescription :: Maybe (CACertificateDescription), registrationConfig :: Maybe (RegistrationConfig) } -> { certificateDescription :: Maybe (CACertificateDescription), registrationConfig :: Maybe (RegistrationConfig) }) -> DescribeCACertificateResponse
 ```
 
 Constructs DescribeCACertificateResponse's fields from required parameters
@@ -3618,7 +3618,7 @@ Constructs DescribeCertificateRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeCertificateResponse
-  = DescribeCertificateResponse { certificateDescription :: NullOrUndefined (CertificateDescription) }
+  = DescribeCertificateResponse { certificateDescription :: Maybe (CertificateDescription) }
 ```
 
 <p>The output of the DescribeCertificate operation.</p>
@@ -3643,7 +3643,7 @@ Constructs DescribeCertificateResponse from required parameters
 #### `newDescribeCertificateResponse'`
 
 ``` purescript
-newDescribeCertificateResponse' :: ({ certificateDescription :: NullOrUndefined (CertificateDescription) } -> { certificateDescription :: NullOrUndefined (CertificateDescription) }) -> DescribeCertificateResponse
+newDescribeCertificateResponse' :: ({ certificateDescription :: Maybe (CertificateDescription) } -> { certificateDescription :: Maybe (CertificateDescription) }) -> DescribeCertificateResponse
 ```
 
 Constructs DescribeCertificateResponse's fields from required parameters
@@ -3668,7 +3668,7 @@ Encode DescribeDefaultAuthorizerRequest
 
 ``` purescript
 newtype DescribeDefaultAuthorizerResponse
-  = DescribeDefaultAuthorizerResponse { authorizerDescription :: NullOrUndefined (AuthorizerDescription) }
+  = DescribeDefaultAuthorizerResponse { authorizerDescription :: Maybe (AuthorizerDescription) }
 ```
 
 ##### Instances
@@ -3691,7 +3691,7 @@ Constructs DescribeDefaultAuthorizerResponse from required parameters
 #### `newDescribeDefaultAuthorizerResponse'`
 
 ``` purescript
-newDescribeDefaultAuthorizerResponse' :: ({ authorizerDescription :: NullOrUndefined (AuthorizerDescription) } -> { authorizerDescription :: NullOrUndefined (AuthorizerDescription) }) -> DescribeDefaultAuthorizerResponse
+newDescribeDefaultAuthorizerResponse' :: ({ authorizerDescription :: Maybe (AuthorizerDescription) } -> { authorizerDescription :: Maybe (AuthorizerDescription) }) -> DescribeDefaultAuthorizerResponse
 ```
 
 Constructs DescribeDefaultAuthorizerResponse's fields from required parameters
@@ -3700,7 +3700,7 @@ Constructs DescribeDefaultAuthorizerResponse's fields from required parameters
 
 ``` purescript
 newtype DescribeEndpointRequest
-  = DescribeEndpointRequest { endpointType :: NullOrUndefined (EndpointType) }
+  = DescribeEndpointRequest { endpointType :: Maybe (EndpointType) }
 ```
 
 <p>The input for the DescribeEndpoint operation.</p>
@@ -3725,7 +3725,7 @@ Constructs DescribeEndpointRequest from required parameters
 #### `newDescribeEndpointRequest'`
 
 ``` purescript
-newDescribeEndpointRequest' :: ({ endpointType :: NullOrUndefined (EndpointType) } -> { endpointType :: NullOrUndefined (EndpointType) }) -> DescribeEndpointRequest
+newDescribeEndpointRequest' :: ({ endpointType :: Maybe (EndpointType) } -> { endpointType :: Maybe (EndpointType) }) -> DescribeEndpointRequest
 ```
 
 Constructs DescribeEndpointRequest's fields from required parameters
@@ -3734,7 +3734,7 @@ Constructs DescribeEndpointRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeEndpointResponse
-  = DescribeEndpointResponse { endpointAddress :: NullOrUndefined (EndpointAddress) }
+  = DescribeEndpointResponse { endpointAddress :: Maybe (EndpointAddress) }
 ```
 
 <p>The output from the DescribeEndpoint operation.</p>
@@ -3759,7 +3759,7 @@ Constructs DescribeEndpointResponse from required parameters
 #### `newDescribeEndpointResponse'`
 
 ``` purescript
-newDescribeEndpointResponse' :: ({ endpointAddress :: NullOrUndefined (EndpointAddress) } -> { endpointAddress :: NullOrUndefined (EndpointAddress) }) -> DescribeEndpointResponse
+newDescribeEndpointResponse' :: ({ endpointAddress :: Maybe (EndpointAddress) } -> { endpointAddress :: Maybe (EndpointAddress) }) -> DescribeEndpointResponse
 ```
 
 Constructs DescribeEndpointResponse's fields from required parameters
@@ -3784,7 +3784,7 @@ Encode DescribeEventConfigurationsRequest
 
 ``` purescript
 newtype DescribeEventConfigurationsResponse
-  = DescribeEventConfigurationsResponse { eventConfigurations :: NullOrUndefined (EventConfigurations), creationDate :: NullOrUndefined (CreationDate), lastModifiedDate :: NullOrUndefined (LastModifiedDate) }
+  = DescribeEventConfigurationsResponse { eventConfigurations :: Maybe (EventConfigurations), creationDate :: Maybe (CreationDate), lastModifiedDate :: Maybe (LastModifiedDate) }
 ```
 
 ##### Instances
@@ -3807,7 +3807,7 @@ Constructs DescribeEventConfigurationsResponse from required parameters
 #### `newDescribeEventConfigurationsResponse'`
 
 ``` purescript
-newDescribeEventConfigurationsResponse' :: ({ eventConfigurations :: NullOrUndefined (EventConfigurations), creationDate :: NullOrUndefined (CreationDate), lastModifiedDate :: NullOrUndefined (LastModifiedDate) } -> { eventConfigurations :: NullOrUndefined (EventConfigurations), creationDate :: NullOrUndefined (CreationDate), lastModifiedDate :: NullOrUndefined (LastModifiedDate) }) -> DescribeEventConfigurationsResponse
+newDescribeEventConfigurationsResponse' :: ({ eventConfigurations :: Maybe (EventConfigurations), creationDate :: Maybe (CreationDate), lastModifiedDate :: Maybe (LastModifiedDate) } -> { eventConfigurations :: Maybe (EventConfigurations), creationDate :: Maybe (CreationDate), lastModifiedDate :: Maybe (LastModifiedDate) }) -> DescribeEventConfigurationsResponse
 ```
 
 Constructs DescribeEventConfigurationsResponse's fields from required parameters
@@ -3848,7 +3848,7 @@ Constructs DescribeIndexRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeIndexResponse
-  = DescribeIndexResponse { indexName :: NullOrUndefined (IndexName), indexStatus :: NullOrUndefined (IndexStatus), schema :: NullOrUndefined (IndexSchema) }
+  = DescribeIndexResponse { indexName :: Maybe (IndexName), indexStatus :: Maybe (IndexStatus), schema :: Maybe (IndexSchema) }
 ```
 
 ##### Instances
@@ -3871,7 +3871,7 @@ Constructs DescribeIndexResponse from required parameters
 #### `newDescribeIndexResponse'`
 
 ``` purescript
-newDescribeIndexResponse' :: ({ indexName :: NullOrUndefined (IndexName), indexStatus :: NullOrUndefined (IndexStatus), schema :: NullOrUndefined (IndexSchema) } -> { indexName :: NullOrUndefined (IndexName), indexStatus :: NullOrUndefined (IndexStatus), schema :: NullOrUndefined (IndexSchema) }) -> DescribeIndexResponse
+newDescribeIndexResponse' :: ({ indexName :: Maybe (IndexName), indexStatus :: Maybe (IndexStatus), schema :: Maybe (IndexSchema) } -> { indexName :: Maybe (IndexName), indexStatus :: Maybe (IndexStatus), schema :: Maybe (IndexSchema) }) -> DescribeIndexResponse
 ```
 
 Constructs DescribeIndexResponse's fields from required parameters
@@ -3880,7 +3880,7 @@ Constructs DescribeIndexResponse's fields from required parameters
 
 ``` purescript
 newtype DescribeJobExecutionRequest
-  = DescribeJobExecutionRequest { jobId :: JobId, thingName :: ThingName, executionNumber :: NullOrUndefined (ExecutionNumber) }
+  = DescribeJobExecutionRequest { jobId :: JobId, thingName :: ThingName, executionNumber :: Maybe (ExecutionNumber) }
 ```
 
 ##### Instances
@@ -3903,7 +3903,7 @@ Constructs DescribeJobExecutionRequest from required parameters
 #### `newDescribeJobExecutionRequest'`
 
 ``` purescript
-newDescribeJobExecutionRequest' :: JobId -> ThingName -> ({ jobId :: JobId, thingName :: ThingName, executionNumber :: NullOrUndefined (ExecutionNumber) } -> { jobId :: JobId, thingName :: ThingName, executionNumber :: NullOrUndefined (ExecutionNumber) }) -> DescribeJobExecutionRequest
+newDescribeJobExecutionRequest' :: JobId -> ThingName -> ({ jobId :: JobId, thingName :: ThingName, executionNumber :: Maybe (ExecutionNumber) } -> { jobId :: JobId, thingName :: ThingName, executionNumber :: Maybe (ExecutionNumber) }) -> DescribeJobExecutionRequest
 ```
 
 Constructs DescribeJobExecutionRequest's fields from required parameters
@@ -3912,7 +3912,7 @@ Constructs DescribeJobExecutionRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeJobExecutionResponse
-  = DescribeJobExecutionResponse { execution :: NullOrUndefined (JobExecution) }
+  = DescribeJobExecutionResponse { execution :: Maybe (JobExecution) }
 ```
 
 ##### Instances
@@ -3935,7 +3935,7 @@ Constructs DescribeJobExecutionResponse from required parameters
 #### `newDescribeJobExecutionResponse'`
 
 ``` purescript
-newDescribeJobExecutionResponse' :: ({ execution :: NullOrUndefined (JobExecution) } -> { execution :: NullOrUndefined (JobExecution) }) -> DescribeJobExecutionResponse
+newDescribeJobExecutionResponse' :: ({ execution :: Maybe (JobExecution) } -> { execution :: Maybe (JobExecution) }) -> DescribeJobExecutionResponse
 ```
 
 Constructs DescribeJobExecutionResponse's fields from required parameters
@@ -3976,7 +3976,7 @@ Constructs DescribeJobRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeJobResponse
-  = DescribeJobResponse { documentSource :: NullOrUndefined (JobDocumentSource), job :: NullOrUndefined (Job) }
+  = DescribeJobResponse { documentSource :: Maybe (JobDocumentSource), job :: Maybe (Job) }
 ```
 
 ##### Instances
@@ -3999,7 +3999,7 @@ Constructs DescribeJobResponse from required parameters
 #### `newDescribeJobResponse'`
 
 ``` purescript
-newDescribeJobResponse' :: ({ documentSource :: NullOrUndefined (JobDocumentSource), job :: NullOrUndefined (Job) } -> { documentSource :: NullOrUndefined (JobDocumentSource), job :: NullOrUndefined (Job) }) -> DescribeJobResponse
+newDescribeJobResponse' :: ({ documentSource :: Maybe (JobDocumentSource), job :: Maybe (Job) } -> { documentSource :: Maybe (JobDocumentSource), job :: Maybe (Job) }) -> DescribeJobResponse
 ```
 
 Constructs DescribeJobResponse's fields from required parameters
@@ -4040,7 +4040,7 @@ Constructs DescribeRoleAliasRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeRoleAliasResponse
-  = DescribeRoleAliasResponse { roleAliasDescription :: NullOrUndefined (RoleAliasDescription) }
+  = DescribeRoleAliasResponse { roleAliasDescription :: Maybe (RoleAliasDescription) }
 ```
 
 ##### Instances
@@ -4063,7 +4063,7 @@ Constructs DescribeRoleAliasResponse from required parameters
 #### `newDescribeRoleAliasResponse'`
 
 ``` purescript
-newDescribeRoleAliasResponse' :: ({ roleAliasDescription :: NullOrUndefined (RoleAliasDescription) } -> { roleAliasDescription :: NullOrUndefined (RoleAliasDescription) }) -> DescribeRoleAliasResponse
+newDescribeRoleAliasResponse' :: ({ roleAliasDescription :: Maybe (RoleAliasDescription) } -> { roleAliasDescription :: Maybe (RoleAliasDescription) }) -> DescribeRoleAliasResponse
 ```
 
 Constructs DescribeRoleAliasResponse's fields from required parameters
@@ -4104,7 +4104,7 @@ Constructs DescribeStreamRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeStreamResponse
-  = DescribeStreamResponse { streamInfo :: NullOrUndefined (StreamInfo) }
+  = DescribeStreamResponse { streamInfo :: Maybe (StreamInfo) }
 ```
 
 ##### Instances
@@ -4127,7 +4127,7 @@ Constructs DescribeStreamResponse from required parameters
 #### `newDescribeStreamResponse'`
 
 ``` purescript
-newDescribeStreamResponse' :: ({ streamInfo :: NullOrUndefined (StreamInfo) } -> { streamInfo :: NullOrUndefined (StreamInfo) }) -> DescribeStreamResponse
+newDescribeStreamResponse' :: ({ streamInfo :: Maybe (StreamInfo) } -> { streamInfo :: Maybe (StreamInfo) }) -> DescribeStreamResponse
 ```
 
 Constructs DescribeStreamResponse's fields from required parameters
@@ -4168,7 +4168,7 @@ Constructs DescribeThingGroupRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeThingGroupResponse
-  = DescribeThingGroupResponse { thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupId :: NullOrUndefined (ThingGroupId), thingGroupArn :: NullOrUndefined (ThingGroupArn), version :: NullOrUndefined (Version), thingGroupProperties :: NullOrUndefined (ThingGroupProperties), thingGroupMetadata :: NullOrUndefined (ThingGroupMetadata) }
+  = DescribeThingGroupResponse { thingGroupName :: Maybe (ThingGroupName), thingGroupId :: Maybe (ThingGroupId), thingGroupArn :: Maybe (ThingGroupArn), version :: Maybe (Version), thingGroupProperties :: Maybe (ThingGroupProperties), thingGroupMetadata :: Maybe (ThingGroupMetadata) }
 ```
 
 ##### Instances
@@ -4191,7 +4191,7 @@ Constructs DescribeThingGroupResponse from required parameters
 #### `newDescribeThingGroupResponse'`
 
 ``` purescript
-newDescribeThingGroupResponse' :: ({ thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupId :: NullOrUndefined (ThingGroupId), thingGroupArn :: NullOrUndefined (ThingGroupArn), version :: NullOrUndefined (Version), thingGroupProperties :: NullOrUndefined (ThingGroupProperties), thingGroupMetadata :: NullOrUndefined (ThingGroupMetadata) } -> { thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupId :: NullOrUndefined (ThingGroupId), thingGroupArn :: NullOrUndefined (ThingGroupArn), version :: NullOrUndefined (Version), thingGroupProperties :: NullOrUndefined (ThingGroupProperties), thingGroupMetadata :: NullOrUndefined (ThingGroupMetadata) }) -> DescribeThingGroupResponse
+newDescribeThingGroupResponse' :: ({ thingGroupName :: Maybe (ThingGroupName), thingGroupId :: Maybe (ThingGroupId), thingGroupArn :: Maybe (ThingGroupArn), version :: Maybe (Version), thingGroupProperties :: Maybe (ThingGroupProperties), thingGroupMetadata :: Maybe (ThingGroupMetadata) } -> { thingGroupName :: Maybe (ThingGroupName), thingGroupId :: Maybe (ThingGroupId), thingGroupArn :: Maybe (ThingGroupArn), version :: Maybe (Version), thingGroupProperties :: Maybe (ThingGroupProperties), thingGroupMetadata :: Maybe (ThingGroupMetadata) }) -> DescribeThingGroupResponse
 ```
 
 Constructs DescribeThingGroupResponse's fields from required parameters
@@ -4232,7 +4232,7 @@ Constructs DescribeThingRegistrationTaskRequest's fields from required parameter
 
 ``` purescript
 newtype DescribeThingRegistrationTaskResponse
-  = DescribeThingRegistrationTaskResponse { taskId :: NullOrUndefined (TaskId), creationDate :: NullOrUndefined (CreationDate), lastModifiedDate :: NullOrUndefined (LastModifiedDate), templateBody :: NullOrUndefined (TemplateBody), inputFileBucket :: NullOrUndefined (RegistryS3BucketName), inputFileKey :: NullOrUndefined (RegistryS3KeyName), roleArn :: NullOrUndefined (RoleArn), status :: NullOrUndefined (Status), message :: NullOrUndefined (ErrorMessage), successCount :: NullOrUndefined (Count), failureCount :: NullOrUndefined (Count), percentageProgress :: NullOrUndefined (Percentage) }
+  = DescribeThingRegistrationTaskResponse { taskId :: Maybe (TaskId), creationDate :: Maybe (CreationDate), lastModifiedDate :: Maybe (LastModifiedDate), templateBody :: Maybe (TemplateBody), inputFileBucket :: Maybe (RegistryS3BucketName), inputFileKey :: Maybe (RegistryS3KeyName), roleArn :: Maybe (RoleArn), status :: Maybe (Status), message :: Maybe (ErrorMessage), successCount :: Maybe (Count), failureCount :: Maybe (Count), percentageProgress :: Maybe (Percentage) }
 ```
 
 ##### Instances
@@ -4255,7 +4255,7 @@ Constructs DescribeThingRegistrationTaskResponse from required parameters
 #### `newDescribeThingRegistrationTaskResponse'`
 
 ``` purescript
-newDescribeThingRegistrationTaskResponse' :: ({ taskId :: NullOrUndefined (TaskId), creationDate :: NullOrUndefined (CreationDate), lastModifiedDate :: NullOrUndefined (LastModifiedDate), templateBody :: NullOrUndefined (TemplateBody), inputFileBucket :: NullOrUndefined (RegistryS3BucketName), inputFileKey :: NullOrUndefined (RegistryS3KeyName), roleArn :: NullOrUndefined (RoleArn), status :: NullOrUndefined (Status), message :: NullOrUndefined (ErrorMessage), successCount :: NullOrUndefined (Count), failureCount :: NullOrUndefined (Count), percentageProgress :: NullOrUndefined (Percentage) } -> { taskId :: NullOrUndefined (TaskId), creationDate :: NullOrUndefined (CreationDate), lastModifiedDate :: NullOrUndefined (LastModifiedDate), templateBody :: NullOrUndefined (TemplateBody), inputFileBucket :: NullOrUndefined (RegistryS3BucketName), inputFileKey :: NullOrUndefined (RegistryS3KeyName), roleArn :: NullOrUndefined (RoleArn), status :: NullOrUndefined (Status), message :: NullOrUndefined (ErrorMessage), successCount :: NullOrUndefined (Count), failureCount :: NullOrUndefined (Count), percentageProgress :: NullOrUndefined (Percentage) }) -> DescribeThingRegistrationTaskResponse
+newDescribeThingRegistrationTaskResponse' :: ({ taskId :: Maybe (TaskId), creationDate :: Maybe (CreationDate), lastModifiedDate :: Maybe (LastModifiedDate), templateBody :: Maybe (TemplateBody), inputFileBucket :: Maybe (RegistryS3BucketName), inputFileKey :: Maybe (RegistryS3KeyName), roleArn :: Maybe (RoleArn), status :: Maybe (Status), message :: Maybe (ErrorMessage), successCount :: Maybe (Count), failureCount :: Maybe (Count), percentageProgress :: Maybe (Percentage) } -> { taskId :: Maybe (TaskId), creationDate :: Maybe (CreationDate), lastModifiedDate :: Maybe (LastModifiedDate), templateBody :: Maybe (TemplateBody), inputFileBucket :: Maybe (RegistryS3BucketName), inputFileKey :: Maybe (RegistryS3KeyName), roleArn :: Maybe (RoleArn), status :: Maybe (Status), message :: Maybe (ErrorMessage), successCount :: Maybe (Count), failureCount :: Maybe (Count), percentageProgress :: Maybe (Percentage) }) -> DescribeThingRegistrationTaskResponse
 ```
 
 Constructs DescribeThingRegistrationTaskResponse's fields from required parameters
@@ -4298,7 +4298,7 @@ Constructs DescribeThingRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeThingResponse
-  = DescribeThingResponse { defaultClientId :: NullOrUndefined (ClientId), thingName :: NullOrUndefined (ThingName), thingId :: NullOrUndefined (ThingId), thingArn :: NullOrUndefined (ThingArn), thingTypeName :: NullOrUndefined (ThingTypeName), attributes :: NullOrUndefined (Attributes), version :: NullOrUndefined (Version) }
+  = DescribeThingResponse { defaultClientId :: Maybe (ClientId), thingName :: Maybe (ThingName), thingId :: Maybe (ThingId), thingArn :: Maybe (ThingArn), thingTypeName :: Maybe (ThingTypeName), attributes :: Maybe (Attributes), version :: Maybe (Version) }
 ```
 
 <p>The output from the DescribeThing operation.</p>
@@ -4323,7 +4323,7 @@ Constructs DescribeThingResponse from required parameters
 #### `newDescribeThingResponse'`
 
 ``` purescript
-newDescribeThingResponse' :: ({ defaultClientId :: NullOrUndefined (ClientId), thingName :: NullOrUndefined (ThingName), thingId :: NullOrUndefined (ThingId), thingArn :: NullOrUndefined (ThingArn), thingTypeName :: NullOrUndefined (ThingTypeName), attributes :: NullOrUndefined (Attributes), version :: NullOrUndefined (Version) } -> { defaultClientId :: NullOrUndefined (ClientId), thingName :: NullOrUndefined (ThingName), thingId :: NullOrUndefined (ThingId), thingArn :: NullOrUndefined (ThingArn), thingTypeName :: NullOrUndefined (ThingTypeName), attributes :: NullOrUndefined (Attributes), version :: NullOrUndefined (Version) }) -> DescribeThingResponse
+newDescribeThingResponse' :: ({ defaultClientId :: Maybe (ClientId), thingName :: Maybe (ThingName), thingId :: Maybe (ThingId), thingArn :: Maybe (ThingArn), thingTypeName :: Maybe (ThingTypeName), attributes :: Maybe (Attributes), version :: Maybe (Version) } -> { defaultClientId :: Maybe (ClientId), thingName :: Maybe (ThingName), thingId :: Maybe (ThingId), thingArn :: Maybe (ThingArn), thingTypeName :: Maybe (ThingTypeName), attributes :: Maybe (Attributes), version :: Maybe (Version) }) -> DescribeThingResponse
 ```
 
 Constructs DescribeThingResponse's fields from required parameters
@@ -4366,7 +4366,7 @@ Constructs DescribeThingTypeRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeThingTypeResponse
-  = DescribeThingTypeResponse { thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeId :: NullOrUndefined (ThingTypeId), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeProperties :: NullOrUndefined (ThingTypeProperties), thingTypeMetadata :: NullOrUndefined (ThingTypeMetadata) }
+  = DescribeThingTypeResponse { thingTypeName :: Maybe (ThingTypeName), thingTypeId :: Maybe (ThingTypeId), thingTypeArn :: Maybe (ThingTypeArn), thingTypeProperties :: Maybe (ThingTypeProperties), thingTypeMetadata :: Maybe (ThingTypeMetadata) }
 ```
 
 <p>The output for the DescribeThingType operation.</p>
@@ -4391,7 +4391,7 @@ Constructs DescribeThingTypeResponse from required parameters
 #### `newDescribeThingTypeResponse'`
 
 ``` purescript
-newDescribeThingTypeResponse' :: ({ thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeId :: NullOrUndefined (ThingTypeId), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeProperties :: NullOrUndefined (ThingTypeProperties), thingTypeMetadata :: NullOrUndefined (ThingTypeMetadata) } -> { thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeId :: NullOrUndefined (ThingTypeId), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeProperties :: NullOrUndefined (ThingTypeProperties), thingTypeMetadata :: NullOrUndefined (ThingTypeMetadata) }) -> DescribeThingTypeResponse
+newDescribeThingTypeResponse' :: ({ thingTypeName :: Maybe (ThingTypeName), thingTypeId :: Maybe (ThingTypeId), thingTypeArn :: Maybe (ThingTypeArn), thingTypeProperties :: Maybe (ThingTypeProperties), thingTypeMetadata :: Maybe (ThingTypeMetadata) } -> { thingTypeName :: Maybe (ThingTypeName), thingTypeId :: Maybe (ThingTypeId), thingTypeArn :: Maybe (ThingTypeArn), thingTypeProperties :: Maybe (ThingTypeProperties), thingTypeMetadata :: Maybe (ThingTypeMetadata) }) -> DescribeThingTypeResponse
 ```
 
 Constructs DescribeThingTypeResponse's fields from required parameters
@@ -4632,7 +4632,7 @@ Constructs DisableTopicRuleRequest's fields from required parameters
 
 ``` purescript
 newtype DynamoDBAction
-  = DynamoDBAction { tableName :: TableName, roleArn :: AwsArn, operation :: NullOrUndefined (DynamoOperation), hashKeyField :: HashKeyField, hashKeyValue :: HashKeyValue, hashKeyType :: NullOrUndefined (DynamoKeyType), rangeKeyField :: NullOrUndefined (RangeKeyField), rangeKeyValue :: NullOrUndefined (RangeKeyValue), rangeKeyType :: NullOrUndefined (DynamoKeyType), payloadField :: NullOrUndefined (PayloadField) }
+  = DynamoDBAction { tableName :: TableName, roleArn :: AwsArn, operation :: Maybe (DynamoOperation), hashKeyField :: HashKeyField, hashKeyValue :: HashKeyValue, hashKeyType :: Maybe (DynamoKeyType), rangeKeyField :: Maybe (RangeKeyField), rangeKeyValue :: Maybe (RangeKeyValue), rangeKeyType :: Maybe (DynamoKeyType), payloadField :: Maybe (PayloadField) }
 ```
 
 <p>Describes an action to write to a DynamoDB table.</p> <p>The <code>tableName</code>, <code>hashKeyField</code>, and <code>rangeKeyField</code> values must match the values used when you created the table.</p> <p>The <code>hashKeyValue</code> and <code>rangeKeyvalue</code> fields use a substitution template syntax. These templates provide data at runtime. The syntax is as follows: ${<i>sql-expression</i>}.</p> <p>You can specify any valid expression in a WHERE or SELECT clause, including JSON properties, comparisons, calculations, and functions. For example, the following field uses the third level of the topic:</p> <p> <code>"hashKeyValue": "${topic(3)}"</code> </p> <p>The following field uses the timestamp:</p> <p> <code>"rangeKeyValue": "${timestamp()}"</code> </p>
@@ -4657,7 +4657,7 @@ Constructs DynamoDBAction from required parameters
 #### `newDynamoDBAction'`
 
 ``` purescript
-newDynamoDBAction' :: HashKeyField -> HashKeyValue -> AwsArn -> TableName -> ({ tableName :: TableName, roleArn :: AwsArn, operation :: NullOrUndefined (DynamoOperation), hashKeyField :: HashKeyField, hashKeyValue :: HashKeyValue, hashKeyType :: NullOrUndefined (DynamoKeyType), rangeKeyField :: NullOrUndefined (RangeKeyField), rangeKeyValue :: NullOrUndefined (RangeKeyValue), rangeKeyType :: NullOrUndefined (DynamoKeyType), payloadField :: NullOrUndefined (PayloadField) } -> { tableName :: TableName, roleArn :: AwsArn, operation :: NullOrUndefined (DynamoOperation), hashKeyField :: HashKeyField, hashKeyValue :: HashKeyValue, hashKeyType :: NullOrUndefined (DynamoKeyType), rangeKeyField :: NullOrUndefined (RangeKeyField), rangeKeyValue :: NullOrUndefined (RangeKeyValue), rangeKeyType :: NullOrUndefined (DynamoKeyType), payloadField :: NullOrUndefined (PayloadField) }) -> DynamoDBAction
+newDynamoDBAction' :: HashKeyField -> HashKeyValue -> AwsArn -> TableName -> ({ tableName :: TableName, roleArn :: AwsArn, operation :: Maybe (DynamoOperation), hashKeyField :: HashKeyField, hashKeyValue :: HashKeyValue, hashKeyType :: Maybe (DynamoKeyType), rangeKeyField :: Maybe (RangeKeyField), rangeKeyValue :: Maybe (RangeKeyValue), rangeKeyType :: Maybe (DynamoKeyType), payloadField :: Maybe (PayloadField) } -> { tableName :: TableName, roleArn :: AwsArn, operation :: Maybe (DynamoOperation), hashKeyField :: HashKeyField, hashKeyValue :: HashKeyValue, hashKeyType :: Maybe (DynamoKeyType), rangeKeyField :: Maybe (RangeKeyField), rangeKeyValue :: Maybe (RangeKeyValue), rangeKeyType :: Maybe (DynamoKeyType), payloadField :: Maybe (PayloadField) }) -> DynamoDBAction
 ```
 
 Constructs DynamoDBAction's fields from required parameters
@@ -4666,7 +4666,7 @@ Constructs DynamoDBAction's fields from required parameters
 
 ``` purescript
 newtype DynamoDBv2Action
-  = DynamoDBv2Action { roleArn :: NullOrUndefined (AwsArn), putItem :: NullOrUndefined (PutItemInput) }
+  = DynamoDBv2Action { roleArn :: Maybe (AwsArn), putItem :: Maybe (PutItemInput) }
 ```
 
 <p>Describes an action to write to a DynamoDB table.</p> <p>This DynamoDB action writes each attribute in the message payload into it's own column in the DynamoDB table.</p>
@@ -4691,7 +4691,7 @@ Constructs DynamoDBv2Action from required parameters
 #### `newDynamoDBv2Action'`
 
 ``` purescript
-newDynamoDBv2Action' :: ({ roleArn :: NullOrUndefined (AwsArn), putItem :: NullOrUndefined (PutItemInput) } -> { roleArn :: NullOrUndefined (AwsArn), putItem :: NullOrUndefined (PutItemInput) }) -> DynamoDBv2Action
+newDynamoDBv2Action' :: ({ roleArn :: Maybe (AwsArn), putItem :: Maybe (PutItemInput) } -> { roleArn :: Maybe (AwsArn), putItem :: Maybe (PutItemInput) }) -> DynamoDBv2Action
 ```
 
 Constructs DynamoDBv2Action's fields from required parameters
@@ -4748,7 +4748,7 @@ Encode EffectivePolicies
 
 ``` purescript
 newtype EffectivePolicy
-  = EffectivePolicy { policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument) }
+  = EffectivePolicy { policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument) }
 ```
 
 <p>The policy that has the effect on the authorization results.</p>
@@ -4773,7 +4773,7 @@ Constructs EffectivePolicy from required parameters
 #### `newEffectivePolicy'`
 
 ``` purescript
-newEffectivePolicy' :: ({ policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument) } -> { policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument) }) -> EffectivePolicy
+newEffectivePolicy' :: ({ policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument) } -> { policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument) }) -> EffectivePolicy
 ```
 
 Constructs EffectivePolicy's fields from required parameters
@@ -4962,7 +4962,7 @@ Encode EndpointType
 
 ``` purescript
 newtype ErrorInfo
-  = ErrorInfo { code :: NullOrUndefined (Code), message :: NullOrUndefined (OTAUpdateErrorMessage) }
+  = ErrorInfo { code :: Maybe (Code), message :: Maybe (OTAUpdateErrorMessage) }
 ```
 
 <p>Error information.</p>
@@ -4987,7 +4987,7 @@ Constructs ErrorInfo from required parameters
 #### `newErrorInfo'`
 
 ``` purescript
-newErrorInfo' :: ({ code :: NullOrUndefined (Code), message :: NullOrUndefined (OTAUpdateErrorMessage) } -> { code :: NullOrUndefined (Code), message :: NullOrUndefined (OTAUpdateErrorMessage) }) -> ErrorInfo
+newErrorInfo' :: ({ code :: Maybe (Code), message :: Maybe (OTAUpdateErrorMessage) } -> { code :: Maybe (Code), message :: Maybe (OTAUpdateErrorMessage) }) -> ErrorInfo
 ```
 
 Constructs ErrorInfo's fields from required parameters
@@ -5076,7 +5076,7 @@ Encode ExpiresInSec
 
 ``` purescript
 newtype ExplicitDeny
-  = ExplicitDeny { policies :: NullOrUndefined (Policies) }
+  = ExplicitDeny { policies :: Maybe (Policies) }
 ```
 
 <p>Information that explicitly denies authorization.</p>
@@ -5101,7 +5101,7 @@ Constructs ExplicitDeny from required parameters
 #### `newExplicitDeny'`
 
 ``` purescript
-newExplicitDeny' :: ({ policies :: NullOrUndefined (Policies) } -> { policies :: NullOrUndefined (Policies) }) -> ExplicitDeny
+newExplicitDeny' :: ({ policies :: Maybe (Policies) } -> { policies :: Maybe (Policies) }) -> ExplicitDeny
 ```
 
 Constructs ExplicitDeny's fields from required parameters
@@ -5158,7 +5158,7 @@ Encode FileName
 
 ``` purescript
 newtype FirehoseAction
-  = FirehoseAction { roleArn :: AwsArn, deliveryStreamName :: DeliveryStreamName, separator :: NullOrUndefined (FirehoseSeparator) }
+  = FirehoseAction { roleArn :: AwsArn, deliveryStreamName :: DeliveryStreamName, separator :: Maybe (FirehoseSeparator) }
 ```
 
 <p>Describes an action that writes data to an Amazon Kinesis Firehose stream.</p>
@@ -5183,7 +5183,7 @@ Constructs FirehoseAction from required parameters
 #### `newFirehoseAction'`
 
 ``` purescript
-newFirehoseAction' :: DeliveryStreamName -> AwsArn -> ({ roleArn :: AwsArn, deliveryStreamName :: DeliveryStreamName, separator :: NullOrUndefined (FirehoseSeparator) } -> { roleArn :: AwsArn, deliveryStreamName :: DeliveryStreamName, separator :: NullOrUndefined (FirehoseSeparator) }) -> FirehoseAction
+newFirehoseAction' :: DeliveryStreamName -> AwsArn -> ({ roleArn :: AwsArn, deliveryStreamName :: DeliveryStreamName, separator :: Maybe (FirehoseSeparator) } -> { roleArn :: AwsArn, deliveryStreamName :: DeliveryStreamName, separator :: Maybe (FirehoseSeparator) }) -> FirehoseAction
 ```
 
 Constructs FirehoseAction's fields from required parameters
@@ -5272,7 +5272,7 @@ Encode GEMaxResults
 
 ``` purescript
 newtype GetEffectivePoliciesRequest
-  = GetEffectivePoliciesRequest { principal :: NullOrUndefined (Principal), cognitoIdentityPoolId :: NullOrUndefined (CognitoIdentityPoolId), thingName :: NullOrUndefined (ThingName) }
+  = GetEffectivePoliciesRequest { principal :: Maybe (Principal), cognitoIdentityPoolId :: Maybe (CognitoIdentityPoolId), thingName :: Maybe (ThingName) }
 ```
 
 ##### Instances
@@ -5295,7 +5295,7 @@ Constructs GetEffectivePoliciesRequest from required parameters
 #### `newGetEffectivePoliciesRequest'`
 
 ``` purescript
-newGetEffectivePoliciesRequest' :: ({ principal :: NullOrUndefined (Principal), cognitoIdentityPoolId :: NullOrUndefined (CognitoIdentityPoolId), thingName :: NullOrUndefined (ThingName) } -> { principal :: NullOrUndefined (Principal), cognitoIdentityPoolId :: NullOrUndefined (CognitoIdentityPoolId), thingName :: NullOrUndefined (ThingName) }) -> GetEffectivePoliciesRequest
+newGetEffectivePoliciesRequest' :: ({ principal :: Maybe (Principal), cognitoIdentityPoolId :: Maybe (CognitoIdentityPoolId), thingName :: Maybe (ThingName) } -> { principal :: Maybe (Principal), cognitoIdentityPoolId :: Maybe (CognitoIdentityPoolId), thingName :: Maybe (ThingName) }) -> GetEffectivePoliciesRequest
 ```
 
 Constructs GetEffectivePoliciesRequest's fields from required parameters
@@ -5304,7 +5304,7 @@ Constructs GetEffectivePoliciesRequest's fields from required parameters
 
 ``` purescript
 newtype GetEffectivePoliciesResponse
-  = GetEffectivePoliciesResponse { effectivePolicies :: NullOrUndefined (EffectivePolicies) }
+  = GetEffectivePoliciesResponse { effectivePolicies :: Maybe (EffectivePolicies) }
 ```
 
 ##### Instances
@@ -5327,7 +5327,7 @@ Constructs GetEffectivePoliciesResponse from required parameters
 #### `newGetEffectivePoliciesResponse'`
 
 ``` purescript
-newGetEffectivePoliciesResponse' :: ({ effectivePolicies :: NullOrUndefined (EffectivePolicies) } -> { effectivePolicies :: NullOrUndefined (EffectivePolicies) }) -> GetEffectivePoliciesResponse
+newGetEffectivePoliciesResponse' :: ({ effectivePolicies :: Maybe (EffectivePolicies) } -> { effectivePolicies :: Maybe (EffectivePolicies) }) -> GetEffectivePoliciesResponse
 ```
 
 Constructs GetEffectivePoliciesResponse's fields from required parameters
@@ -5352,7 +5352,7 @@ Encode GetIndexingConfigurationRequest
 
 ``` purescript
 newtype GetIndexingConfigurationResponse
-  = GetIndexingConfigurationResponse { thingIndexingConfiguration :: NullOrUndefined (ThingIndexingConfiguration) }
+  = GetIndexingConfigurationResponse { thingIndexingConfiguration :: Maybe (ThingIndexingConfiguration) }
 ```
 
 ##### Instances
@@ -5375,7 +5375,7 @@ Constructs GetIndexingConfigurationResponse from required parameters
 #### `newGetIndexingConfigurationResponse'`
 
 ``` purescript
-newGetIndexingConfigurationResponse' :: ({ thingIndexingConfiguration :: NullOrUndefined (ThingIndexingConfiguration) } -> { thingIndexingConfiguration :: NullOrUndefined (ThingIndexingConfiguration) }) -> GetIndexingConfigurationResponse
+newGetIndexingConfigurationResponse' :: ({ thingIndexingConfiguration :: Maybe (ThingIndexingConfiguration) } -> { thingIndexingConfiguration :: Maybe (ThingIndexingConfiguration) }) -> GetIndexingConfigurationResponse
 ```
 
 Constructs GetIndexingConfigurationResponse's fields from required parameters
@@ -5416,7 +5416,7 @@ Constructs GetJobDocumentRequest's fields from required parameters
 
 ``` purescript
 newtype GetJobDocumentResponse
-  = GetJobDocumentResponse { document :: NullOrUndefined (JobDocument) }
+  = GetJobDocumentResponse { document :: Maybe (JobDocument) }
 ```
 
 ##### Instances
@@ -5439,7 +5439,7 @@ Constructs GetJobDocumentResponse from required parameters
 #### `newGetJobDocumentResponse'`
 
 ``` purescript
-newGetJobDocumentResponse' :: ({ document :: NullOrUndefined (JobDocument) } -> { document :: NullOrUndefined (JobDocument) }) -> GetJobDocumentResponse
+newGetJobDocumentResponse' :: ({ document :: Maybe (JobDocument) } -> { document :: Maybe (JobDocument) }) -> GetJobDocumentResponse
 ```
 
 Constructs GetJobDocumentResponse's fields from required parameters
@@ -5466,7 +5466,7 @@ Encode GetLoggingOptionsRequest
 
 ``` purescript
 newtype GetLoggingOptionsResponse
-  = GetLoggingOptionsResponse { roleArn :: NullOrUndefined (AwsArn), logLevel :: NullOrUndefined (LogLevel) }
+  = GetLoggingOptionsResponse { roleArn :: Maybe (AwsArn), logLevel :: Maybe (LogLevel) }
 ```
 
 <p>The output from the GetLoggingOptions operation.</p>
@@ -5491,7 +5491,7 @@ Constructs GetLoggingOptionsResponse from required parameters
 #### `newGetLoggingOptionsResponse'`
 
 ``` purescript
-newGetLoggingOptionsResponse' :: ({ roleArn :: NullOrUndefined (AwsArn), logLevel :: NullOrUndefined (LogLevel) } -> { roleArn :: NullOrUndefined (AwsArn), logLevel :: NullOrUndefined (LogLevel) }) -> GetLoggingOptionsResponse
+newGetLoggingOptionsResponse' :: ({ roleArn :: Maybe (AwsArn), logLevel :: Maybe (LogLevel) } -> { roleArn :: Maybe (AwsArn), logLevel :: Maybe (LogLevel) }) -> GetLoggingOptionsResponse
 ```
 
 Constructs GetLoggingOptionsResponse's fields from required parameters
@@ -5532,7 +5532,7 @@ Constructs GetOTAUpdateRequest's fields from required parameters
 
 ``` purescript
 newtype GetOTAUpdateResponse
-  = GetOTAUpdateResponse { otaUpdateInfo :: NullOrUndefined (OTAUpdateInfo) }
+  = GetOTAUpdateResponse { otaUpdateInfo :: Maybe (OTAUpdateInfo) }
 ```
 
 ##### Instances
@@ -5555,7 +5555,7 @@ Constructs GetOTAUpdateResponse from required parameters
 #### `newGetOTAUpdateResponse'`
 
 ``` purescript
-newGetOTAUpdateResponse' :: ({ otaUpdateInfo :: NullOrUndefined (OTAUpdateInfo) } -> { otaUpdateInfo :: NullOrUndefined (OTAUpdateInfo) }) -> GetOTAUpdateResponse
+newGetOTAUpdateResponse' :: ({ otaUpdateInfo :: Maybe (OTAUpdateInfo) } -> { otaUpdateInfo :: Maybe (OTAUpdateInfo) }) -> GetOTAUpdateResponse
 ```
 
 Constructs GetOTAUpdateResponse's fields from required parameters
@@ -5598,7 +5598,7 @@ Constructs GetPolicyRequest's fields from required parameters
 
 ``` purescript
 newtype GetPolicyResponse
-  = GetPolicyResponse { policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), defaultVersionId :: NullOrUndefined (PolicyVersionId) }
+  = GetPolicyResponse { policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), defaultVersionId :: Maybe (PolicyVersionId) }
 ```
 
 <p>The output from the GetPolicy operation.</p>
@@ -5623,7 +5623,7 @@ Constructs GetPolicyResponse from required parameters
 #### `newGetPolicyResponse'`
 
 ``` purescript
-newGetPolicyResponse' :: ({ policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), defaultVersionId :: NullOrUndefined (PolicyVersionId) } -> { policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn), policyDocument :: NullOrUndefined (PolicyDocument), defaultVersionId :: NullOrUndefined (PolicyVersionId) }) -> GetPolicyResponse
+newGetPolicyResponse' :: ({ policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), defaultVersionId :: Maybe (PolicyVersionId) } -> { policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn), policyDocument :: Maybe (PolicyDocument), defaultVersionId :: Maybe (PolicyVersionId) }) -> GetPolicyResponse
 ```
 
 Constructs GetPolicyResponse's fields from required parameters
@@ -5666,7 +5666,7 @@ Constructs GetPolicyVersionRequest's fields from required parameters
 
 ``` purescript
 newtype GetPolicyVersionResponse
-  = GetPolicyVersionResponse { policyArn :: NullOrUndefined (PolicyArn), policyName :: NullOrUndefined (PolicyName), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion) }
+  = GetPolicyVersionResponse { policyArn :: Maybe (PolicyArn), policyName :: Maybe (PolicyName), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion) }
 ```
 
 <p>The output from the GetPolicyVersion operation.</p>
@@ -5691,7 +5691,7 @@ Constructs GetPolicyVersionResponse from required parameters
 #### `newGetPolicyVersionResponse'`
 
 ``` purescript
-newGetPolicyVersionResponse' :: ({ policyArn :: NullOrUndefined (PolicyArn), policyName :: NullOrUndefined (PolicyName), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion) } -> { policyArn :: NullOrUndefined (PolicyArn), policyName :: NullOrUndefined (PolicyName), policyDocument :: NullOrUndefined (PolicyDocument), policyVersionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion) }) -> GetPolicyVersionResponse
+newGetPolicyVersionResponse' :: ({ policyArn :: Maybe (PolicyArn), policyName :: Maybe (PolicyName), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion) } -> { policyArn :: Maybe (PolicyArn), policyName :: Maybe (PolicyName), policyDocument :: Maybe (PolicyDocument), policyVersionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion) }) -> GetPolicyVersionResponse
 ```
 
 Constructs GetPolicyVersionResponse's fields from required parameters
@@ -5718,7 +5718,7 @@ Encode GetRegistrationCodeRequest
 
 ``` purescript
 newtype GetRegistrationCodeResponse
-  = GetRegistrationCodeResponse { registrationCode :: NullOrUndefined (RegistrationCode) }
+  = GetRegistrationCodeResponse { registrationCode :: Maybe (RegistrationCode) }
 ```
 
 <p>The output from the GetRegistrationCode operation.</p>
@@ -5743,7 +5743,7 @@ Constructs GetRegistrationCodeResponse from required parameters
 #### `newGetRegistrationCodeResponse'`
 
 ``` purescript
-newGetRegistrationCodeResponse' :: ({ registrationCode :: NullOrUndefined (RegistrationCode) } -> { registrationCode :: NullOrUndefined (RegistrationCode) }) -> GetRegistrationCodeResponse
+newGetRegistrationCodeResponse' :: ({ registrationCode :: Maybe (RegistrationCode) } -> { registrationCode :: Maybe (RegistrationCode) }) -> GetRegistrationCodeResponse
 ```
 
 Constructs GetRegistrationCodeResponse's fields from required parameters
@@ -5786,7 +5786,7 @@ Constructs GetTopicRuleRequest's fields from required parameters
 
 ``` purescript
 newtype GetTopicRuleResponse
-  = GetTopicRuleResponse { ruleArn :: NullOrUndefined (RuleArn), rule :: NullOrUndefined (TopicRule) }
+  = GetTopicRuleResponse { ruleArn :: Maybe (RuleArn), rule :: Maybe (TopicRule) }
 ```
 
 <p>The output from the GetTopicRule operation.</p>
@@ -5811,7 +5811,7 @@ Constructs GetTopicRuleResponse from required parameters
 #### `newGetTopicRuleResponse'`
 
 ``` purescript
-newGetTopicRuleResponse' :: ({ ruleArn :: NullOrUndefined (RuleArn), rule :: NullOrUndefined (TopicRule) } -> { ruleArn :: NullOrUndefined (RuleArn), rule :: NullOrUndefined (TopicRule) }) -> GetTopicRuleResponse
+newGetTopicRuleResponse' :: ({ ruleArn :: Maybe (RuleArn), rule :: Maybe (TopicRule) } -> { ruleArn :: Maybe (RuleArn), rule :: Maybe (TopicRule) }) -> GetTopicRuleResponse
 ```
 
 Constructs GetTopicRuleResponse's fields from required parameters
@@ -5836,7 +5836,7 @@ Encode GetV2LoggingOptionsRequest
 
 ``` purescript
 newtype GetV2LoggingOptionsResponse
-  = GetV2LoggingOptionsResponse { roleArn :: NullOrUndefined (AwsArn), defaultLogLevel :: NullOrUndefined (LogLevel), disableAllLogs :: NullOrUndefined (DisableAllLogs) }
+  = GetV2LoggingOptionsResponse { roleArn :: Maybe (AwsArn), defaultLogLevel :: Maybe (LogLevel), disableAllLogs :: Maybe (DisableAllLogs) }
 ```
 
 ##### Instances
@@ -5859,7 +5859,7 @@ Constructs GetV2LoggingOptionsResponse from required parameters
 #### `newGetV2LoggingOptionsResponse'`
 
 ``` purescript
-newGetV2LoggingOptionsResponse' :: ({ roleArn :: NullOrUndefined (AwsArn), defaultLogLevel :: NullOrUndefined (LogLevel), disableAllLogs :: NullOrUndefined (DisableAllLogs) } -> { roleArn :: NullOrUndefined (AwsArn), defaultLogLevel :: NullOrUndefined (LogLevel), disableAllLogs :: NullOrUndefined (DisableAllLogs) }) -> GetV2LoggingOptionsResponse
+newGetV2LoggingOptionsResponse' :: ({ roleArn :: Maybe (AwsArn), defaultLogLevel :: Maybe (LogLevel), disableAllLogs :: Maybe (DisableAllLogs) } -> { roleArn :: Maybe (AwsArn), defaultLogLevel :: Maybe (LogLevel), disableAllLogs :: Maybe (DisableAllLogs) }) -> GetV2LoggingOptionsResponse
 ```
 
 Constructs GetV2LoggingOptionsResponse's fields from required parameters
@@ -5868,7 +5868,7 @@ Constructs GetV2LoggingOptionsResponse's fields from required parameters
 
 ``` purescript
 newtype GroupNameAndArn
-  = GroupNameAndArn { groupName :: NullOrUndefined (ThingGroupName), groupArn :: NullOrUndefined (ThingGroupArn) }
+  = GroupNameAndArn { groupName :: Maybe (ThingGroupName), groupArn :: Maybe (ThingGroupArn) }
 ```
 
 <p>The name and ARN of a group.</p>
@@ -5893,7 +5893,7 @@ Constructs GroupNameAndArn from required parameters
 #### `newGroupNameAndArn'`
 
 ``` purescript
-newGroupNameAndArn' :: ({ groupName :: NullOrUndefined (ThingGroupName), groupArn :: NullOrUndefined (ThingGroupArn) } -> { groupName :: NullOrUndefined (ThingGroupName), groupArn :: NullOrUndefined (ThingGroupArn) }) -> GroupNameAndArn
+newGroupNameAndArn' :: ({ groupName :: Maybe (ThingGroupName), groupArn :: Maybe (ThingGroupArn) } -> { groupName :: Maybe (ThingGroupName), groupArn :: Maybe (ThingGroupArn) }) -> GroupNameAndArn
 ```
 
 Constructs GroupNameAndArn's fields from required parameters
@@ -5950,7 +5950,7 @@ Encode HashKeyValue
 
 ``` purescript
 newtype ImplicitDeny
-  = ImplicitDeny { policies :: NullOrUndefined (Policies) }
+  = ImplicitDeny { policies :: Maybe (Policies) }
 ```
 
 <p>Information that implicitly denies authorization. When policy doesn't explicitly deny or allow an action on a resource it is considered an implicit deny.</p>
@@ -5975,7 +5975,7 @@ Constructs ImplicitDeny from required parameters
 #### `newImplicitDeny'`
 
 ``` purescript
-newImplicitDeny' :: ({ policies :: NullOrUndefined (Policies) } -> { policies :: NullOrUndefined (Policies) }) -> ImplicitDeny
+newImplicitDeny' :: ({ policies :: Maybe (Policies) } -> { policies :: Maybe (Policies) }) -> ImplicitDeny
 ```
 
 Constructs ImplicitDeny's fields from required parameters
@@ -6032,7 +6032,7 @@ Encode IndexNamesList
 
 ``` purescript
 newtype IndexNotReadyException
-  = IndexNotReadyException { message :: NullOrUndefined (ErrorMessage') }
+  = IndexNotReadyException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The index is not ready.</p>
@@ -6057,7 +6057,7 @@ Constructs IndexNotReadyException from required parameters
 #### `newIndexNotReadyException'`
 
 ``` purescript
-newIndexNotReadyException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> IndexNotReadyException
+newIndexNotReadyException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> IndexNotReadyException
 ```
 
 Constructs IndexNotReadyException's fields from required parameters
@@ -6114,7 +6114,7 @@ Encode InlineDocument
 
 ``` purescript
 newtype InternalException
-  = InternalException { message :: NullOrUndefined (ErrorMessage') }
+  = InternalException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>An unexpected error has occurred.</p>
@@ -6139,7 +6139,7 @@ Constructs InternalException from required parameters
 #### `newInternalException'`
 
 ``` purescript
-newInternalException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> InternalException
+newInternalException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> InternalException
 ```
 
 Constructs InternalException's fields from required parameters
@@ -6148,7 +6148,7 @@ Constructs InternalException's fields from required parameters
 
 ``` purescript
 newtype InternalFailureException
-  = InternalFailureException { message :: NullOrUndefined (ErrorMessage') }
+  = InternalFailureException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>An unexpected error has occurred.</p>
@@ -6173,7 +6173,7 @@ Constructs InternalFailureException from required parameters
 #### `newInternalFailureException'`
 
 ``` purescript
-newInternalFailureException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> InternalFailureException
+newInternalFailureException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> InternalFailureException
 ```
 
 Constructs InternalFailureException's fields from required parameters
@@ -6182,7 +6182,7 @@ Constructs InternalFailureException's fields from required parameters
 
 ``` purescript
 newtype InvalidQueryException
-  = InvalidQueryException { message :: NullOrUndefined (ErrorMessage') }
+  = InvalidQueryException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The query is invalid.</p>
@@ -6207,7 +6207,7 @@ Constructs InvalidQueryException from required parameters
 #### `newInvalidQueryException'`
 
 ``` purescript
-newInvalidQueryException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> InvalidQueryException
+newInvalidQueryException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> InvalidQueryException
 ```
 
 Constructs InvalidQueryException's fields from required parameters
@@ -6216,7 +6216,7 @@ Constructs InvalidQueryException's fields from required parameters
 
 ``` purescript
 newtype InvalidRequestException
-  = InvalidRequestException { message :: NullOrUndefined (ErrorMessage') }
+  = InvalidRequestException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The request is not valid.</p>
@@ -6241,7 +6241,7 @@ Constructs InvalidRequestException from required parameters
 #### `newInvalidRequestException'`
 
 ``` purescript
-newInvalidRequestException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> InvalidRequestException
+newInvalidRequestException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> InvalidRequestException
 ```
 
 Constructs InvalidRequestException's fields from required parameters
@@ -6250,7 +6250,7 @@ Constructs InvalidRequestException's fields from required parameters
 
 ``` purescript
 newtype InvalidResponseException
-  = InvalidResponseException { message :: NullOrUndefined (ErrorMessage') }
+  = InvalidResponseException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The response is invalid.</p>
@@ -6275,7 +6275,7 @@ Constructs InvalidResponseException from required parameters
 #### `newInvalidResponseException'`
 
 ``` purescript
-newInvalidResponseException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> InvalidResponseException
+newInvalidResponseException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> InvalidResponseException
 ```
 
 Constructs InvalidResponseException's fields from required parameters
@@ -6332,7 +6332,7 @@ Encode IsDisabled
 
 ``` purescript
 newtype Job
-  = Job { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), targetSelection :: NullOrUndefined (TargetSelection), status :: NullOrUndefined (JobStatus), comment :: NullOrUndefined (Comment), targets :: NullOrUndefined (JobTargets), description :: NullOrUndefined (JobDescription), presignedUrlConfig :: NullOrUndefined (PresignedUrlConfig), jobExecutionsRolloutConfig :: NullOrUndefined (JobExecutionsRolloutConfig), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), completedAt :: NullOrUndefined (DateType), jobProcessDetails :: NullOrUndefined (JobProcessDetails), documentParameters :: NullOrUndefined (JobDocumentParameters) }
+  = Job { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), targetSelection :: Maybe (TargetSelection), status :: Maybe (JobStatus), comment :: Maybe (Comment), targets :: Maybe (JobTargets), description :: Maybe (JobDescription), presignedUrlConfig :: Maybe (PresignedUrlConfig), jobExecutionsRolloutConfig :: Maybe (JobExecutionsRolloutConfig), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), completedAt :: Maybe (DateType), jobProcessDetails :: Maybe (JobProcessDetails), documentParameters :: Maybe (JobDocumentParameters) }
 ```
 
 <p>The <code>Job</code> object contains details about a job.</p>
@@ -6357,7 +6357,7 @@ Constructs Job from required parameters
 #### `newJob'`
 
 ``` purescript
-newJob' :: ({ jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), targetSelection :: NullOrUndefined (TargetSelection), status :: NullOrUndefined (JobStatus), comment :: NullOrUndefined (Comment), targets :: NullOrUndefined (JobTargets), description :: NullOrUndefined (JobDescription), presignedUrlConfig :: NullOrUndefined (PresignedUrlConfig), jobExecutionsRolloutConfig :: NullOrUndefined (JobExecutionsRolloutConfig), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), completedAt :: NullOrUndefined (DateType), jobProcessDetails :: NullOrUndefined (JobProcessDetails), documentParameters :: NullOrUndefined (JobDocumentParameters) } -> { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), targetSelection :: NullOrUndefined (TargetSelection), status :: NullOrUndefined (JobStatus), comment :: NullOrUndefined (Comment), targets :: NullOrUndefined (JobTargets), description :: NullOrUndefined (JobDescription), presignedUrlConfig :: NullOrUndefined (PresignedUrlConfig), jobExecutionsRolloutConfig :: NullOrUndefined (JobExecutionsRolloutConfig), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), completedAt :: NullOrUndefined (DateType), jobProcessDetails :: NullOrUndefined (JobProcessDetails), documentParameters :: NullOrUndefined (JobDocumentParameters) }) -> Job
+newJob' :: ({ jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), targetSelection :: Maybe (TargetSelection), status :: Maybe (JobStatus), comment :: Maybe (Comment), targets :: Maybe (JobTargets), description :: Maybe (JobDescription), presignedUrlConfig :: Maybe (PresignedUrlConfig), jobExecutionsRolloutConfig :: Maybe (JobExecutionsRolloutConfig), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), completedAt :: Maybe (DateType), jobProcessDetails :: Maybe (JobProcessDetails), documentParameters :: Maybe (JobDocumentParameters) } -> { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), targetSelection :: Maybe (TargetSelection), status :: Maybe (JobStatus), comment :: Maybe (Comment), targets :: Maybe (JobTargets), description :: Maybe (JobDescription), presignedUrlConfig :: Maybe (PresignedUrlConfig), jobExecutionsRolloutConfig :: Maybe (JobExecutionsRolloutConfig), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), completedAt :: Maybe (DateType), jobProcessDetails :: Maybe (JobProcessDetails), documentParameters :: Maybe (JobDocumentParameters) }) -> Job
 ```
 
 Constructs Job's fields from required parameters
@@ -6446,7 +6446,7 @@ Encode JobDocumentSource
 
 ``` purescript
 newtype JobExecution
-  = JobExecution { jobId :: NullOrUndefined (JobId), status :: NullOrUndefined (JobExecutionStatus), statusDetails :: NullOrUndefined (JobExecutionStatusDetails), thingArn :: NullOrUndefined (ThingArn), queuedAt :: NullOrUndefined (DateType), startedAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), executionNumber :: NullOrUndefined (ExecutionNumber) }
+  = JobExecution { jobId :: Maybe (JobId), status :: Maybe (JobExecutionStatus), statusDetails :: Maybe (JobExecutionStatusDetails), thingArn :: Maybe (ThingArn), queuedAt :: Maybe (DateType), startedAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), executionNumber :: Maybe (ExecutionNumber) }
 ```
 
 <p>The job execution object represents the execution of a job on a particular device.</p>
@@ -6471,7 +6471,7 @@ Constructs JobExecution from required parameters
 #### `newJobExecution'`
 
 ``` purescript
-newJobExecution' :: ({ jobId :: NullOrUndefined (JobId), status :: NullOrUndefined (JobExecutionStatus), statusDetails :: NullOrUndefined (JobExecutionStatusDetails), thingArn :: NullOrUndefined (ThingArn), queuedAt :: NullOrUndefined (DateType), startedAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), executionNumber :: NullOrUndefined (ExecutionNumber) } -> { jobId :: NullOrUndefined (JobId), status :: NullOrUndefined (JobExecutionStatus), statusDetails :: NullOrUndefined (JobExecutionStatusDetails), thingArn :: NullOrUndefined (ThingArn), queuedAt :: NullOrUndefined (DateType), startedAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), executionNumber :: NullOrUndefined (ExecutionNumber) }) -> JobExecution
+newJobExecution' :: ({ jobId :: Maybe (JobId), status :: Maybe (JobExecutionStatus), statusDetails :: Maybe (JobExecutionStatusDetails), thingArn :: Maybe (ThingArn), queuedAt :: Maybe (DateType), startedAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), executionNumber :: Maybe (ExecutionNumber) } -> { jobId :: Maybe (JobId), status :: Maybe (JobExecutionStatus), statusDetails :: Maybe (JobExecutionStatusDetails), thingArn :: Maybe (ThingArn), queuedAt :: Maybe (DateType), startedAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), executionNumber :: Maybe (ExecutionNumber) }) -> JobExecution
 ```
 
 Constructs JobExecution's fields from required parameters
@@ -6496,7 +6496,7 @@ Encode JobExecutionStatus
 
 ``` purescript
 newtype JobExecutionStatusDetails
-  = JobExecutionStatusDetails { detailsMap :: NullOrUndefined (DetailsMap) }
+  = JobExecutionStatusDetails { detailsMap :: Maybe (DetailsMap) }
 ```
 
 <p>Details of the job execution status.</p>
@@ -6521,7 +6521,7 @@ Constructs JobExecutionStatusDetails from required parameters
 #### `newJobExecutionStatusDetails'`
 
 ``` purescript
-newJobExecutionStatusDetails' :: ({ detailsMap :: NullOrUndefined (DetailsMap) } -> { detailsMap :: NullOrUndefined (DetailsMap) }) -> JobExecutionStatusDetails
+newJobExecutionStatusDetails' :: ({ detailsMap :: Maybe (DetailsMap) } -> { detailsMap :: Maybe (DetailsMap) }) -> JobExecutionStatusDetails
 ```
 
 Constructs JobExecutionStatusDetails's fields from required parameters
@@ -6530,7 +6530,7 @@ Constructs JobExecutionStatusDetails's fields from required parameters
 
 ``` purescript
 newtype JobExecutionSummary
-  = JobExecutionSummary { status :: NullOrUndefined (JobExecutionStatus), queuedAt :: NullOrUndefined (DateType), startedAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), executionNumber :: NullOrUndefined (ExecutionNumber) }
+  = JobExecutionSummary { status :: Maybe (JobExecutionStatus), queuedAt :: Maybe (DateType), startedAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), executionNumber :: Maybe (ExecutionNumber) }
 ```
 
 <p>The job execution summary.</p>
@@ -6555,7 +6555,7 @@ Constructs JobExecutionSummary from required parameters
 #### `newJobExecutionSummary'`
 
 ``` purescript
-newJobExecutionSummary' :: ({ status :: NullOrUndefined (JobExecutionStatus), queuedAt :: NullOrUndefined (DateType), startedAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), executionNumber :: NullOrUndefined (ExecutionNumber) } -> { status :: NullOrUndefined (JobExecutionStatus), queuedAt :: NullOrUndefined (DateType), startedAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), executionNumber :: NullOrUndefined (ExecutionNumber) }) -> JobExecutionSummary
+newJobExecutionSummary' :: ({ status :: Maybe (JobExecutionStatus), queuedAt :: Maybe (DateType), startedAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), executionNumber :: Maybe (ExecutionNumber) } -> { status :: Maybe (JobExecutionStatus), queuedAt :: Maybe (DateType), startedAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), executionNumber :: Maybe (ExecutionNumber) }) -> JobExecutionSummary
 ```
 
 Constructs JobExecutionSummary's fields from required parameters
@@ -6564,7 +6564,7 @@ Constructs JobExecutionSummary's fields from required parameters
 
 ``` purescript
 newtype JobExecutionSummaryForJob
-  = JobExecutionSummaryForJob { thingArn :: NullOrUndefined (ThingArn), jobExecutionSummary :: NullOrUndefined (JobExecutionSummary) }
+  = JobExecutionSummaryForJob { thingArn :: Maybe (ThingArn), jobExecutionSummary :: Maybe (JobExecutionSummary) }
 ```
 
 <p>Contains a summary of information about job executions for a specific job.</p>
@@ -6589,7 +6589,7 @@ Constructs JobExecutionSummaryForJob from required parameters
 #### `newJobExecutionSummaryForJob'`
 
 ``` purescript
-newJobExecutionSummaryForJob' :: ({ thingArn :: NullOrUndefined (ThingArn), jobExecutionSummary :: NullOrUndefined (JobExecutionSummary) } -> { thingArn :: NullOrUndefined (ThingArn), jobExecutionSummary :: NullOrUndefined (JobExecutionSummary) }) -> JobExecutionSummaryForJob
+newJobExecutionSummaryForJob' :: ({ thingArn :: Maybe (ThingArn), jobExecutionSummary :: Maybe (JobExecutionSummary) } -> { thingArn :: Maybe (ThingArn), jobExecutionSummary :: Maybe (JobExecutionSummary) }) -> JobExecutionSummaryForJob
 ```
 
 Constructs JobExecutionSummaryForJob's fields from required parameters
@@ -6614,7 +6614,7 @@ Encode JobExecutionSummaryForJobList
 
 ``` purescript
 newtype JobExecutionSummaryForThing
-  = JobExecutionSummaryForThing { jobId :: NullOrUndefined (JobId), jobExecutionSummary :: NullOrUndefined (JobExecutionSummary) }
+  = JobExecutionSummaryForThing { jobId :: Maybe (JobId), jobExecutionSummary :: Maybe (JobExecutionSummary) }
 ```
 
 <p>The job execution summary for a thing.</p>
@@ -6639,7 +6639,7 @@ Constructs JobExecutionSummaryForThing from required parameters
 #### `newJobExecutionSummaryForThing'`
 
 ``` purescript
-newJobExecutionSummaryForThing' :: ({ jobId :: NullOrUndefined (JobId), jobExecutionSummary :: NullOrUndefined (JobExecutionSummary) } -> { jobId :: NullOrUndefined (JobId), jobExecutionSummary :: NullOrUndefined (JobExecutionSummary) }) -> JobExecutionSummaryForThing
+newJobExecutionSummaryForThing' :: ({ jobId :: Maybe (JobId), jobExecutionSummary :: Maybe (JobExecutionSummary) } -> { jobId :: Maybe (JobId), jobExecutionSummary :: Maybe (JobExecutionSummary) }) -> JobExecutionSummaryForThing
 ```
 
 Constructs JobExecutionSummaryForThing's fields from required parameters
@@ -6664,7 +6664,7 @@ Encode JobExecutionSummaryForThingList
 
 ``` purescript
 newtype JobExecutionsRolloutConfig
-  = JobExecutionsRolloutConfig { maximumPerMinute :: NullOrUndefined (MaxJobExecutionsPerMin) }
+  = JobExecutionsRolloutConfig { maximumPerMinute :: Maybe (MaxJobExecutionsPerMin) }
 ```
 
 <p>Allows you to create a staged rollout of a job.</p>
@@ -6689,7 +6689,7 @@ Constructs JobExecutionsRolloutConfig from required parameters
 #### `newJobExecutionsRolloutConfig'`
 
 ``` purescript
-newJobExecutionsRolloutConfig' :: ({ maximumPerMinute :: NullOrUndefined (MaxJobExecutionsPerMin) } -> { maximumPerMinute :: NullOrUndefined (MaxJobExecutionsPerMin) }) -> JobExecutionsRolloutConfig
+newJobExecutionsRolloutConfig' :: ({ maximumPerMinute :: Maybe (MaxJobExecutionsPerMin) } -> { maximumPerMinute :: Maybe (MaxJobExecutionsPerMin) }) -> JobExecutionsRolloutConfig
 ```
 
 Constructs JobExecutionsRolloutConfig's fields from required parameters
@@ -6714,7 +6714,7 @@ Encode JobId
 
 ``` purescript
 newtype JobProcessDetails
-  = JobProcessDetails { processingTargets :: NullOrUndefined (ProcessingTargetNameList), numberOfCanceledThings :: NullOrUndefined (CanceledThings), numberOfSucceededThings :: NullOrUndefined (SucceededThings), numberOfFailedThings :: NullOrUndefined (FailedThings), numberOfRejectedThings :: NullOrUndefined (RejectedThings), numberOfQueuedThings :: NullOrUndefined (QueuedThings), numberOfInProgressThings :: NullOrUndefined (InProgressThings), numberOfRemovedThings :: NullOrUndefined (RemovedThings) }
+  = JobProcessDetails { processingTargets :: Maybe (ProcessingTargetNameList), numberOfCanceledThings :: Maybe (CanceledThings), numberOfSucceededThings :: Maybe (SucceededThings), numberOfFailedThings :: Maybe (FailedThings), numberOfRejectedThings :: Maybe (RejectedThings), numberOfQueuedThings :: Maybe (QueuedThings), numberOfInProgressThings :: Maybe (InProgressThings), numberOfRemovedThings :: Maybe (RemovedThings) }
 ```
 
 <p>The job process details.</p>
@@ -6739,7 +6739,7 @@ Constructs JobProcessDetails from required parameters
 #### `newJobProcessDetails'`
 
 ``` purescript
-newJobProcessDetails' :: ({ processingTargets :: NullOrUndefined (ProcessingTargetNameList), numberOfCanceledThings :: NullOrUndefined (CanceledThings), numberOfSucceededThings :: NullOrUndefined (SucceededThings), numberOfFailedThings :: NullOrUndefined (FailedThings), numberOfRejectedThings :: NullOrUndefined (RejectedThings), numberOfQueuedThings :: NullOrUndefined (QueuedThings), numberOfInProgressThings :: NullOrUndefined (InProgressThings), numberOfRemovedThings :: NullOrUndefined (RemovedThings) } -> { processingTargets :: NullOrUndefined (ProcessingTargetNameList), numberOfCanceledThings :: NullOrUndefined (CanceledThings), numberOfSucceededThings :: NullOrUndefined (SucceededThings), numberOfFailedThings :: NullOrUndefined (FailedThings), numberOfRejectedThings :: NullOrUndefined (RejectedThings), numberOfQueuedThings :: NullOrUndefined (QueuedThings), numberOfInProgressThings :: NullOrUndefined (InProgressThings), numberOfRemovedThings :: NullOrUndefined (RemovedThings) }) -> JobProcessDetails
+newJobProcessDetails' :: ({ processingTargets :: Maybe (ProcessingTargetNameList), numberOfCanceledThings :: Maybe (CanceledThings), numberOfSucceededThings :: Maybe (SucceededThings), numberOfFailedThings :: Maybe (FailedThings), numberOfRejectedThings :: Maybe (RejectedThings), numberOfQueuedThings :: Maybe (QueuedThings), numberOfInProgressThings :: Maybe (InProgressThings), numberOfRemovedThings :: Maybe (RemovedThings) } -> { processingTargets :: Maybe (ProcessingTargetNameList), numberOfCanceledThings :: Maybe (CanceledThings), numberOfSucceededThings :: Maybe (SucceededThings), numberOfFailedThings :: Maybe (FailedThings), numberOfRejectedThings :: Maybe (RejectedThings), numberOfQueuedThings :: Maybe (QueuedThings), numberOfInProgressThings :: Maybe (InProgressThings), numberOfRemovedThings :: Maybe (RemovedThings) }) -> JobProcessDetails
 ```
 
 Constructs JobProcessDetails's fields from required parameters
@@ -6764,7 +6764,7 @@ Encode JobStatus
 
 ``` purescript
 newtype JobSummary
-  = JobSummary { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), thingGroupId :: NullOrUndefined (ThingGroupId), targetSelection :: NullOrUndefined (TargetSelection), status :: NullOrUndefined (JobStatus), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), completedAt :: NullOrUndefined (DateType) }
+  = JobSummary { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), thingGroupId :: Maybe (ThingGroupId), targetSelection :: Maybe (TargetSelection), status :: Maybe (JobStatus), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), completedAt :: Maybe (DateType) }
 ```
 
 <p>The job summary.</p>
@@ -6789,7 +6789,7 @@ Constructs JobSummary from required parameters
 #### `newJobSummary'`
 
 ``` purescript
-newJobSummary' :: ({ jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), thingGroupId :: NullOrUndefined (ThingGroupId), targetSelection :: NullOrUndefined (TargetSelection), status :: NullOrUndefined (JobStatus), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), completedAt :: NullOrUndefined (DateType) } -> { jobArn :: NullOrUndefined (JobArn), jobId :: NullOrUndefined (JobId), thingGroupId :: NullOrUndefined (ThingGroupId), targetSelection :: NullOrUndefined (TargetSelection), status :: NullOrUndefined (JobStatus), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), completedAt :: NullOrUndefined (DateType) }) -> JobSummary
+newJobSummary' :: ({ jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), thingGroupId :: Maybe (ThingGroupId), targetSelection :: Maybe (TargetSelection), status :: Maybe (JobStatus), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), completedAt :: Maybe (DateType) } -> { jobArn :: Maybe (JobArn), jobId :: Maybe (JobId), thingGroupId :: Maybe (ThingGroupId), targetSelection :: Maybe (TargetSelection), status :: Maybe (JobStatus), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), completedAt :: Maybe (DateType) }) -> JobSummary
 ```
 
 Constructs JobSummary's fields from required parameters
@@ -6878,7 +6878,7 @@ Encode KeyName
 
 ``` purescript
 newtype KeyPair
-  = KeyPair { "PublicKey" :: NullOrUndefined (PublicKey), "PrivateKey" :: NullOrUndefined (PrivateKey) }
+  = KeyPair { "PublicKey" :: Maybe (PublicKey), "PrivateKey" :: Maybe (PrivateKey) }
 ```
 
 <p>Describes a key pair.</p>
@@ -6903,7 +6903,7 @@ Constructs KeyPair from required parameters
 #### `newKeyPair'`
 
 ``` purescript
-newKeyPair' :: ({ "PublicKey" :: NullOrUndefined (PublicKey), "PrivateKey" :: NullOrUndefined (PrivateKey) } -> { "PublicKey" :: NullOrUndefined (PublicKey), "PrivateKey" :: NullOrUndefined (PrivateKey) }) -> KeyPair
+newKeyPair' :: ({ "PublicKey" :: Maybe (PublicKey), "PrivateKey" :: Maybe (PrivateKey) } -> { "PublicKey" :: Maybe (PublicKey), "PrivateKey" :: Maybe (PrivateKey) }) -> KeyPair
 ```
 
 Constructs KeyPair's fields from required parameters
@@ -6928,7 +6928,7 @@ Encode KeyValue
 
 ``` purescript
 newtype KinesisAction
-  = KinesisAction { roleArn :: AwsArn, streamName :: StreamName, partitionKey :: NullOrUndefined (PartitionKey) }
+  = KinesisAction { roleArn :: AwsArn, streamName :: StreamName, partitionKey :: Maybe (PartitionKey) }
 ```
 
 <p>Describes an action to write data to an Amazon Kinesis stream.</p>
@@ -6953,7 +6953,7 @@ Constructs KinesisAction from required parameters
 #### `newKinesisAction'`
 
 ``` purescript
-newKinesisAction' :: AwsArn -> StreamName -> ({ roleArn :: AwsArn, streamName :: StreamName, partitionKey :: NullOrUndefined (PartitionKey) } -> { roleArn :: AwsArn, streamName :: StreamName, partitionKey :: NullOrUndefined (PartitionKey) }) -> KinesisAction
+newKinesisAction' :: AwsArn -> StreamName -> ({ roleArn :: AwsArn, streamName :: StreamName, partitionKey :: Maybe (PartitionKey) } -> { roleArn :: AwsArn, streamName :: StreamName, partitionKey :: Maybe (PartitionKey) }) -> KinesisAction
 ```
 
 Constructs KinesisAction's fields from required parameters
@@ -7028,7 +7028,7 @@ Encode LastModifiedDate
 
 ``` purescript
 newtype LimitExceededException
-  = LimitExceededException { message :: NullOrUndefined (ErrorMessage') }
+  = LimitExceededException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The number of attached entities exceeds the limit.</p>
@@ -7053,7 +7053,7 @@ Constructs LimitExceededException from required parameters
 #### `newLimitExceededException'`
 
 ``` purescript
-newLimitExceededException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> LimitExceededException
+newLimitExceededException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> LimitExceededException
 ```
 
 Constructs LimitExceededException's fields from required parameters
@@ -7062,7 +7062,7 @@ Constructs LimitExceededException's fields from required parameters
 
 ``` purescript
 newtype ListAttachedPoliciesRequest
-  = ListAttachedPoliciesRequest { target :: PolicyTarget, recursive :: NullOrUndefined (Recursive), marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize) }
+  = ListAttachedPoliciesRequest { target :: PolicyTarget, recursive :: Maybe (Recursive), marker :: Maybe (Marker), pageSize :: Maybe (PageSize) }
 ```
 
 ##### Instances
@@ -7085,7 +7085,7 @@ Constructs ListAttachedPoliciesRequest from required parameters
 #### `newListAttachedPoliciesRequest'`
 
 ``` purescript
-newListAttachedPoliciesRequest' :: PolicyTarget -> ({ target :: PolicyTarget, recursive :: NullOrUndefined (Recursive), marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize) } -> { target :: PolicyTarget, recursive :: NullOrUndefined (Recursive), marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize) }) -> ListAttachedPoliciesRequest
+newListAttachedPoliciesRequest' :: PolicyTarget -> ({ target :: PolicyTarget, recursive :: Maybe (Recursive), marker :: Maybe (Marker), pageSize :: Maybe (PageSize) } -> { target :: PolicyTarget, recursive :: Maybe (Recursive), marker :: Maybe (Marker), pageSize :: Maybe (PageSize) }) -> ListAttachedPoliciesRequest
 ```
 
 Constructs ListAttachedPoliciesRequest's fields from required parameters
@@ -7094,7 +7094,7 @@ Constructs ListAttachedPoliciesRequest's fields from required parameters
 
 ``` purescript
 newtype ListAttachedPoliciesResponse
-  = ListAttachedPoliciesResponse { policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) }
+  = ListAttachedPoliciesResponse { policies :: Maybe (Policies), nextMarker :: Maybe (Marker) }
 ```
 
 ##### Instances
@@ -7117,7 +7117,7 @@ Constructs ListAttachedPoliciesResponse from required parameters
 #### `newListAttachedPoliciesResponse'`
 
 ``` purescript
-newListAttachedPoliciesResponse' :: ({ policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) } -> { policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) }) -> ListAttachedPoliciesResponse
+newListAttachedPoliciesResponse' :: ({ policies :: Maybe (Policies), nextMarker :: Maybe (Marker) } -> { policies :: Maybe (Policies), nextMarker :: Maybe (Marker) }) -> ListAttachedPoliciesResponse
 ```
 
 Constructs ListAttachedPoliciesResponse's fields from required parameters
@@ -7126,7 +7126,7 @@ Constructs ListAttachedPoliciesResponse's fields from required parameters
 
 ``` purescript
 newtype ListAuthorizersRequest
-  = ListAuthorizersRequest { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder), status :: NullOrUndefined (AuthorizerStatus) }
+  = ListAuthorizersRequest { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder), status :: Maybe (AuthorizerStatus) }
 ```
 
 ##### Instances
@@ -7149,7 +7149,7 @@ Constructs ListAuthorizersRequest from required parameters
 #### `newListAuthorizersRequest'`
 
 ``` purescript
-newListAuthorizersRequest' :: ({ pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder), status :: NullOrUndefined (AuthorizerStatus) } -> { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder), status :: NullOrUndefined (AuthorizerStatus) }) -> ListAuthorizersRequest
+newListAuthorizersRequest' :: ({ pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder), status :: Maybe (AuthorizerStatus) } -> { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder), status :: Maybe (AuthorizerStatus) }) -> ListAuthorizersRequest
 ```
 
 Constructs ListAuthorizersRequest's fields from required parameters
@@ -7158,7 +7158,7 @@ Constructs ListAuthorizersRequest's fields from required parameters
 
 ``` purescript
 newtype ListAuthorizersResponse
-  = ListAuthorizersResponse { authorizers :: NullOrUndefined (Authorizers), nextMarker :: NullOrUndefined (Marker) }
+  = ListAuthorizersResponse { authorizers :: Maybe (Authorizers), nextMarker :: Maybe (Marker) }
 ```
 
 ##### Instances
@@ -7181,7 +7181,7 @@ Constructs ListAuthorizersResponse from required parameters
 #### `newListAuthorizersResponse'`
 
 ``` purescript
-newListAuthorizersResponse' :: ({ authorizers :: NullOrUndefined (Authorizers), nextMarker :: NullOrUndefined (Marker) } -> { authorizers :: NullOrUndefined (Authorizers), nextMarker :: NullOrUndefined (Marker) }) -> ListAuthorizersResponse
+newListAuthorizersResponse' :: ({ authorizers :: Maybe (Authorizers), nextMarker :: Maybe (Marker) } -> { authorizers :: Maybe (Authorizers), nextMarker :: Maybe (Marker) }) -> ListAuthorizersResponse
 ```
 
 Constructs ListAuthorizersResponse's fields from required parameters
@@ -7190,7 +7190,7 @@ Constructs ListAuthorizersResponse's fields from required parameters
 
 ``` purescript
 newtype ListCACertificatesRequest
-  = ListCACertificatesRequest { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListCACertificatesRequest { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 <p>Input for the ListCACertificates operation.</p>
@@ -7215,7 +7215,7 @@ Constructs ListCACertificatesRequest from required parameters
 #### `newListCACertificatesRequest'`
 
 ``` purescript
-newListCACertificatesRequest' :: ({ pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListCACertificatesRequest
+newListCACertificatesRequest' :: ({ pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) } -> { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }) -> ListCACertificatesRequest
 ```
 
 Constructs ListCACertificatesRequest's fields from required parameters
@@ -7224,7 +7224,7 @@ Constructs ListCACertificatesRequest's fields from required parameters
 
 ``` purescript
 newtype ListCACertificatesResponse
-  = ListCACertificatesResponse { certificates :: NullOrUndefined (CACertificates), nextMarker :: NullOrUndefined (Marker) }
+  = ListCACertificatesResponse { certificates :: Maybe (CACertificates), nextMarker :: Maybe (Marker) }
 ```
 
 <p>The output from the ListCACertificates operation.</p>
@@ -7249,7 +7249,7 @@ Constructs ListCACertificatesResponse from required parameters
 #### `newListCACertificatesResponse'`
 
 ``` purescript
-newListCACertificatesResponse' :: ({ certificates :: NullOrUndefined (CACertificates), nextMarker :: NullOrUndefined (Marker) } -> { certificates :: NullOrUndefined (CACertificates), nextMarker :: NullOrUndefined (Marker) }) -> ListCACertificatesResponse
+newListCACertificatesResponse' :: ({ certificates :: Maybe (CACertificates), nextMarker :: Maybe (Marker) } -> { certificates :: Maybe (CACertificates), nextMarker :: Maybe (Marker) }) -> ListCACertificatesResponse
 ```
 
 Constructs ListCACertificatesResponse's fields from required parameters
@@ -7258,7 +7258,7 @@ Constructs ListCACertificatesResponse's fields from required parameters
 
 ``` purescript
 newtype ListCertificatesByCARequest
-  = ListCertificatesByCARequest { caCertificateId :: CertificateId, pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListCertificatesByCARequest { caCertificateId :: CertificateId, pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 <p>The input to the ListCertificatesByCA operation.</p>
@@ -7283,7 +7283,7 @@ Constructs ListCertificatesByCARequest from required parameters
 #### `newListCertificatesByCARequest'`
 
 ``` purescript
-newListCertificatesByCARequest' :: CertificateId -> ({ caCertificateId :: CertificateId, pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { caCertificateId :: CertificateId, pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListCertificatesByCARequest
+newListCertificatesByCARequest' :: CertificateId -> ({ caCertificateId :: CertificateId, pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) } -> { caCertificateId :: CertificateId, pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }) -> ListCertificatesByCARequest
 ```
 
 Constructs ListCertificatesByCARequest's fields from required parameters
@@ -7292,7 +7292,7 @@ Constructs ListCertificatesByCARequest's fields from required parameters
 
 ``` purescript
 newtype ListCertificatesByCAResponse
-  = ListCertificatesByCAResponse { certificates :: NullOrUndefined (Certificates), nextMarker :: NullOrUndefined (Marker) }
+  = ListCertificatesByCAResponse { certificates :: Maybe (Certificates), nextMarker :: Maybe (Marker) }
 ```
 
 <p>The output of the ListCertificatesByCA operation.</p>
@@ -7317,7 +7317,7 @@ Constructs ListCertificatesByCAResponse from required parameters
 #### `newListCertificatesByCAResponse'`
 
 ``` purescript
-newListCertificatesByCAResponse' :: ({ certificates :: NullOrUndefined (Certificates), nextMarker :: NullOrUndefined (Marker) } -> { certificates :: NullOrUndefined (Certificates), nextMarker :: NullOrUndefined (Marker) }) -> ListCertificatesByCAResponse
+newListCertificatesByCAResponse' :: ({ certificates :: Maybe (Certificates), nextMarker :: Maybe (Marker) } -> { certificates :: Maybe (Certificates), nextMarker :: Maybe (Marker) }) -> ListCertificatesByCAResponse
 ```
 
 Constructs ListCertificatesByCAResponse's fields from required parameters
@@ -7326,7 +7326,7 @@ Constructs ListCertificatesByCAResponse's fields from required parameters
 
 ``` purescript
 newtype ListCertificatesRequest
-  = ListCertificatesRequest { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListCertificatesRequest { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 <p>The input for the ListCertificates operation.</p>
@@ -7351,7 +7351,7 @@ Constructs ListCertificatesRequest from required parameters
 #### `newListCertificatesRequest'`
 
 ``` purescript
-newListCertificatesRequest' :: ({ pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListCertificatesRequest
+newListCertificatesRequest' :: ({ pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) } -> { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }) -> ListCertificatesRequest
 ```
 
 Constructs ListCertificatesRequest's fields from required parameters
@@ -7360,7 +7360,7 @@ Constructs ListCertificatesRequest's fields from required parameters
 
 ``` purescript
 newtype ListCertificatesResponse
-  = ListCertificatesResponse { certificates :: NullOrUndefined (Certificates), nextMarker :: NullOrUndefined (Marker) }
+  = ListCertificatesResponse { certificates :: Maybe (Certificates), nextMarker :: Maybe (Marker) }
 ```
 
 <p>The output of the ListCertificates operation.</p>
@@ -7385,7 +7385,7 @@ Constructs ListCertificatesResponse from required parameters
 #### `newListCertificatesResponse'`
 
 ``` purescript
-newListCertificatesResponse' :: ({ certificates :: NullOrUndefined (Certificates), nextMarker :: NullOrUndefined (Marker) } -> { certificates :: NullOrUndefined (Certificates), nextMarker :: NullOrUndefined (Marker) }) -> ListCertificatesResponse
+newListCertificatesResponse' :: ({ certificates :: Maybe (Certificates), nextMarker :: Maybe (Marker) } -> { certificates :: Maybe (Certificates), nextMarker :: Maybe (Marker) }) -> ListCertificatesResponse
 ```
 
 Constructs ListCertificatesResponse's fields from required parameters
@@ -7394,7 +7394,7 @@ Constructs ListCertificatesResponse's fields from required parameters
 
 ``` purescript
 newtype ListIndicesRequest
-  = ListIndicesRequest { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (QueryMaxResults) }
+  = ListIndicesRequest { nextToken :: Maybe (NextToken), maxResults :: Maybe (QueryMaxResults) }
 ```
 
 ##### Instances
@@ -7417,7 +7417,7 @@ Constructs ListIndicesRequest from required parameters
 #### `newListIndicesRequest'`
 
 ``` purescript
-newListIndicesRequest' :: ({ nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (QueryMaxResults) } -> { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (QueryMaxResults) }) -> ListIndicesRequest
+newListIndicesRequest' :: ({ nextToken :: Maybe (NextToken), maxResults :: Maybe (QueryMaxResults) } -> { nextToken :: Maybe (NextToken), maxResults :: Maybe (QueryMaxResults) }) -> ListIndicesRequest
 ```
 
 Constructs ListIndicesRequest's fields from required parameters
@@ -7426,7 +7426,7 @@ Constructs ListIndicesRequest's fields from required parameters
 
 ``` purescript
 newtype ListIndicesResponse
-  = ListIndicesResponse { indexNames :: NullOrUndefined (IndexNamesList), nextToken :: NullOrUndefined (NextToken) }
+  = ListIndicesResponse { indexNames :: Maybe (IndexNamesList), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -7449,7 +7449,7 @@ Constructs ListIndicesResponse from required parameters
 #### `newListIndicesResponse'`
 
 ``` purescript
-newListIndicesResponse' :: ({ indexNames :: NullOrUndefined (IndexNamesList), nextToken :: NullOrUndefined (NextToken) } -> { indexNames :: NullOrUndefined (IndexNamesList), nextToken :: NullOrUndefined (NextToken) }) -> ListIndicesResponse
+newListIndicesResponse' :: ({ indexNames :: Maybe (IndexNamesList), nextToken :: Maybe (NextToken) } -> { indexNames :: Maybe (IndexNamesList), nextToken :: Maybe (NextToken) }) -> ListIndicesResponse
 ```
 
 Constructs ListIndicesResponse's fields from required parameters
@@ -7458,7 +7458,7 @@ Constructs ListIndicesResponse's fields from required parameters
 
 ``` purescript
 newtype ListJobExecutionsForJobRequest
-  = ListJobExecutionsForJobRequest { jobId :: JobId, status :: NullOrUndefined (JobExecutionStatus), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken) }
+  = ListJobExecutionsForJobRequest { jobId :: JobId, status :: Maybe (JobExecutionStatus), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -7481,7 +7481,7 @@ Constructs ListJobExecutionsForJobRequest from required parameters
 #### `newListJobExecutionsForJobRequest'`
 
 ``` purescript
-newListJobExecutionsForJobRequest' :: JobId -> ({ jobId :: JobId, status :: NullOrUndefined (JobExecutionStatus), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken) } -> { jobId :: JobId, status :: NullOrUndefined (JobExecutionStatus), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken) }) -> ListJobExecutionsForJobRequest
+newListJobExecutionsForJobRequest' :: JobId -> ({ jobId :: JobId, status :: Maybe (JobExecutionStatus), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken) } -> { jobId :: JobId, status :: Maybe (JobExecutionStatus), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken) }) -> ListJobExecutionsForJobRequest
 ```
 
 Constructs ListJobExecutionsForJobRequest's fields from required parameters
@@ -7490,7 +7490,7 @@ Constructs ListJobExecutionsForJobRequest's fields from required parameters
 
 ``` purescript
 newtype ListJobExecutionsForJobResponse
-  = ListJobExecutionsForJobResponse { executionSummaries :: NullOrUndefined (JobExecutionSummaryForJobList), nextToken :: NullOrUndefined (NextToken) }
+  = ListJobExecutionsForJobResponse { executionSummaries :: Maybe (JobExecutionSummaryForJobList), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -7513,7 +7513,7 @@ Constructs ListJobExecutionsForJobResponse from required parameters
 #### `newListJobExecutionsForJobResponse'`
 
 ``` purescript
-newListJobExecutionsForJobResponse' :: ({ executionSummaries :: NullOrUndefined (JobExecutionSummaryForJobList), nextToken :: NullOrUndefined (NextToken) } -> { executionSummaries :: NullOrUndefined (JobExecutionSummaryForJobList), nextToken :: NullOrUndefined (NextToken) }) -> ListJobExecutionsForJobResponse
+newListJobExecutionsForJobResponse' :: ({ executionSummaries :: Maybe (JobExecutionSummaryForJobList), nextToken :: Maybe (NextToken) } -> { executionSummaries :: Maybe (JobExecutionSummaryForJobList), nextToken :: Maybe (NextToken) }) -> ListJobExecutionsForJobResponse
 ```
 
 Constructs ListJobExecutionsForJobResponse's fields from required parameters
@@ -7522,7 +7522,7 @@ Constructs ListJobExecutionsForJobResponse's fields from required parameters
 
 ``` purescript
 newtype ListJobExecutionsForThingRequest
-  = ListJobExecutionsForThingRequest { thingName :: ThingName, status :: NullOrUndefined (JobExecutionStatus), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken) }
+  = ListJobExecutionsForThingRequest { thingName :: ThingName, status :: Maybe (JobExecutionStatus), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -7545,7 +7545,7 @@ Constructs ListJobExecutionsForThingRequest from required parameters
 #### `newListJobExecutionsForThingRequest'`
 
 ``` purescript
-newListJobExecutionsForThingRequest' :: ThingName -> ({ thingName :: ThingName, status :: NullOrUndefined (JobExecutionStatus), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken) } -> { thingName :: ThingName, status :: NullOrUndefined (JobExecutionStatus), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken) }) -> ListJobExecutionsForThingRequest
+newListJobExecutionsForThingRequest' :: ThingName -> ({ thingName :: ThingName, status :: Maybe (JobExecutionStatus), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken) } -> { thingName :: ThingName, status :: Maybe (JobExecutionStatus), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken) }) -> ListJobExecutionsForThingRequest
 ```
 
 Constructs ListJobExecutionsForThingRequest's fields from required parameters
@@ -7554,7 +7554,7 @@ Constructs ListJobExecutionsForThingRequest's fields from required parameters
 
 ``` purescript
 newtype ListJobExecutionsForThingResponse
-  = ListJobExecutionsForThingResponse { executionSummaries :: NullOrUndefined (JobExecutionSummaryForThingList), nextToken :: NullOrUndefined (NextToken) }
+  = ListJobExecutionsForThingResponse { executionSummaries :: Maybe (JobExecutionSummaryForThingList), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -7577,7 +7577,7 @@ Constructs ListJobExecutionsForThingResponse from required parameters
 #### `newListJobExecutionsForThingResponse'`
 
 ``` purescript
-newListJobExecutionsForThingResponse' :: ({ executionSummaries :: NullOrUndefined (JobExecutionSummaryForThingList), nextToken :: NullOrUndefined (NextToken) } -> { executionSummaries :: NullOrUndefined (JobExecutionSummaryForThingList), nextToken :: NullOrUndefined (NextToken) }) -> ListJobExecutionsForThingResponse
+newListJobExecutionsForThingResponse' :: ({ executionSummaries :: Maybe (JobExecutionSummaryForThingList), nextToken :: Maybe (NextToken) } -> { executionSummaries :: Maybe (JobExecutionSummaryForThingList), nextToken :: Maybe (NextToken) }) -> ListJobExecutionsForThingResponse
 ```
 
 Constructs ListJobExecutionsForThingResponse's fields from required parameters
@@ -7586,7 +7586,7 @@ Constructs ListJobExecutionsForThingResponse's fields from required parameters
 
 ``` purescript
 newtype ListJobsRequest
-  = ListJobsRequest { status :: NullOrUndefined (JobStatus), targetSelection :: NullOrUndefined (TargetSelection), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken), thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupId :: NullOrUndefined (ThingGroupId) }
+  = ListJobsRequest { status :: Maybe (JobStatus), targetSelection :: Maybe (TargetSelection), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken), thingGroupName :: Maybe (ThingGroupName), thingGroupId :: Maybe (ThingGroupId) }
 ```
 
 ##### Instances
@@ -7609,7 +7609,7 @@ Constructs ListJobsRequest from required parameters
 #### `newListJobsRequest'`
 
 ``` purescript
-newListJobsRequest' :: ({ status :: NullOrUndefined (JobStatus), targetSelection :: NullOrUndefined (TargetSelection), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken), thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupId :: NullOrUndefined (ThingGroupId) } -> { status :: NullOrUndefined (JobStatus), targetSelection :: NullOrUndefined (TargetSelection), maxResults :: NullOrUndefined (LaserMaxResults), nextToken :: NullOrUndefined (NextToken), thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupId :: NullOrUndefined (ThingGroupId) }) -> ListJobsRequest
+newListJobsRequest' :: ({ status :: Maybe (JobStatus), targetSelection :: Maybe (TargetSelection), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken), thingGroupName :: Maybe (ThingGroupName), thingGroupId :: Maybe (ThingGroupId) } -> { status :: Maybe (JobStatus), targetSelection :: Maybe (TargetSelection), maxResults :: Maybe (LaserMaxResults), nextToken :: Maybe (NextToken), thingGroupName :: Maybe (ThingGroupName), thingGroupId :: Maybe (ThingGroupId) }) -> ListJobsRequest
 ```
 
 Constructs ListJobsRequest's fields from required parameters
@@ -7618,7 +7618,7 @@ Constructs ListJobsRequest's fields from required parameters
 
 ``` purescript
 newtype ListJobsResponse
-  = ListJobsResponse { jobs :: NullOrUndefined (JobSummaryList), nextToken :: NullOrUndefined (NextToken) }
+  = ListJobsResponse { jobs :: Maybe (JobSummaryList), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -7641,7 +7641,7 @@ Constructs ListJobsResponse from required parameters
 #### `newListJobsResponse'`
 
 ``` purescript
-newListJobsResponse' :: ({ jobs :: NullOrUndefined (JobSummaryList), nextToken :: NullOrUndefined (NextToken) } -> { jobs :: NullOrUndefined (JobSummaryList), nextToken :: NullOrUndefined (NextToken) }) -> ListJobsResponse
+newListJobsResponse' :: ({ jobs :: Maybe (JobSummaryList), nextToken :: Maybe (NextToken) } -> { jobs :: Maybe (JobSummaryList), nextToken :: Maybe (NextToken) }) -> ListJobsResponse
 ```
 
 Constructs ListJobsResponse's fields from required parameters
@@ -7650,7 +7650,7 @@ Constructs ListJobsResponse's fields from required parameters
 
 ``` purescript
 newtype ListOTAUpdatesRequest
-  = ListOTAUpdatesRequest { maxResults :: NullOrUndefined (MaxResults), nextToken :: NullOrUndefined (NextToken), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus) }
+  = ListOTAUpdatesRequest { maxResults :: Maybe (MaxResults), nextToken :: Maybe (NextToken), otaUpdateStatus :: Maybe (OTAUpdateStatus) }
 ```
 
 ##### Instances
@@ -7673,7 +7673,7 @@ Constructs ListOTAUpdatesRequest from required parameters
 #### `newListOTAUpdatesRequest'`
 
 ``` purescript
-newListOTAUpdatesRequest' :: ({ maxResults :: NullOrUndefined (MaxResults), nextToken :: NullOrUndefined (NextToken), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus) } -> { maxResults :: NullOrUndefined (MaxResults), nextToken :: NullOrUndefined (NextToken), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus) }) -> ListOTAUpdatesRequest
+newListOTAUpdatesRequest' :: ({ maxResults :: Maybe (MaxResults), nextToken :: Maybe (NextToken), otaUpdateStatus :: Maybe (OTAUpdateStatus) } -> { maxResults :: Maybe (MaxResults), nextToken :: Maybe (NextToken), otaUpdateStatus :: Maybe (OTAUpdateStatus) }) -> ListOTAUpdatesRequest
 ```
 
 Constructs ListOTAUpdatesRequest's fields from required parameters
@@ -7682,7 +7682,7 @@ Constructs ListOTAUpdatesRequest's fields from required parameters
 
 ``` purescript
 newtype ListOTAUpdatesResponse
-  = ListOTAUpdatesResponse { otaUpdates :: NullOrUndefined (OTAUpdatesSummary), nextToken :: NullOrUndefined (NextToken) }
+  = ListOTAUpdatesResponse { otaUpdates :: Maybe (OTAUpdatesSummary), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -7705,7 +7705,7 @@ Constructs ListOTAUpdatesResponse from required parameters
 #### `newListOTAUpdatesResponse'`
 
 ``` purescript
-newListOTAUpdatesResponse' :: ({ otaUpdates :: NullOrUndefined (OTAUpdatesSummary), nextToken :: NullOrUndefined (NextToken) } -> { otaUpdates :: NullOrUndefined (OTAUpdatesSummary), nextToken :: NullOrUndefined (NextToken) }) -> ListOTAUpdatesResponse
+newListOTAUpdatesResponse' :: ({ otaUpdates :: Maybe (OTAUpdatesSummary), nextToken :: Maybe (NextToken) } -> { otaUpdates :: Maybe (OTAUpdatesSummary), nextToken :: Maybe (NextToken) }) -> ListOTAUpdatesResponse
 ```
 
 Constructs ListOTAUpdatesResponse's fields from required parameters
@@ -7714,7 +7714,7 @@ Constructs ListOTAUpdatesResponse's fields from required parameters
 
 ``` purescript
 newtype ListOutgoingCertificatesRequest
-  = ListOutgoingCertificatesRequest { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListOutgoingCertificatesRequest { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 <p>The input to the ListOutgoingCertificates operation.</p>
@@ -7739,7 +7739,7 @@ Constructs ListOutgoingCertificatesRequest from required parameters
 #### `newListOutgoingCertificatesRequest'`
 
 ``` purescript
-newListOutgoingCertificatesRequest' :: ({ pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListOutgoingCertificatesRequest
+newListOutgoingCertificatesRequest' :: ({ pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) } -> { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }) -> ListOutgoingCertificatesRequest
 ```
 
 Constructs ListOutgoingCertificatesRequest's fields from required parameters
@@ -7748,7 +7748,7 @@ Constructs ListOutgoingCertificatesRequest's fields from required parameters
 
 ``` purescript
 newtype ListOutgoingCertificatesResponse
-  = ListOutgoingCertificatesResponse { outgoingCertificates :: NullOrUndefined (OutgoingCertificates), nextMarker :: NullOrUndefined (Marker) }
+  = ListOutgoingCertificatesResponse { outgoingCertificates :: Maybe (OutgoingCertificates), nextMarker :: Maybe (Marker) }
 ```
 
 <p>The output from the ListOutgoingCertificates operation.</p>
@@ -7773,7 +7773,7 @@ Constructs ListOutgoingCertificatesResponse from required parameters
 #### `newListOutgoingCertificatesResponse'`
 
 ``` purescript
-newListOutgoingCertificatesResponse' :: ({ outgoingCertificates :: NullOrUndefined (OutgoingCertificates), nextMarker :: NullOrUndefined (Marker) } -> { outgoingCertificates :: NullOrUndefined (OutgoingCertificates), nextMarker :: NullOrUndefined (Marker) }) -> ListOutgoingCertificatesResponse
+newListOutgoingCertificatesResponse' :: ({ outgoingCertificates :: Maybe (OutgoingCertificates), nextMarker :: Maybe (Marker) } -> { outgoingCertificates :: Maybe (OutgoingCertificates), nextMarker :: Maybe (Marker) }) -> ListOutgoingCertificatesResponse
 ```
 
 Constructs ListOutgoingCertificatesResponse's fields from required parameters
@@ -7782,7 +7782,7 @@ Constructs ListOutgoingCertificatesResponse's fields from required parameters
 
 ``` purescript
 newtype ListPoliciesRequest
-  = ListPoliciesRequest { marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListPoliciesRequest { marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 <p>The input for the ListPolicies operation.</p>
@@ -7807,7 +7807,7 @@ Constructs ListPoliciesRequest from required parameters
 #### `newListPoliciesRequest'`
 
 ``` purescript
-newListPoliciesRequest' :: ({ marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListPoliciesRequest
+newListPoliciesRequest' :: ({ marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) } -> { marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) }) -> ListPoliciesRequest
 ```
 
 Constructs ListPoliciesRequest's fields from required parameters
@@ -7816,7 +7816,7 @@ Constructs ListPoliciesRequest's fields from required parameters
 
 ``` purescript
 newtype ListPoliciesResponse
-  = ListPoliciesResponse { policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) }
+  = ListPoliciesResponse { policies :: Maybe (Policies), nextMarker :: Maybe (Marker) }
 ```
 
 <p>The output from the ListPolicies operation.</p>
@@ -7841,7 +7841,7 @@ Constructs ListPoliciesResponse from required parameters
 #### `newListPoliciesResponse'`
 
 ``` purescript
-newListPoliciesResponse' :: ({ policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) } -> { policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) }) -> ListPoliciesResponse
+newListPoliciesResponse' :: ({ policies :: Maybe (Policies), nextMarker :: Maybe (Marker) } -> { policies :: Maybe (Policies), nextMarker :: Maybe (Marker) }) -> ListPoliciesResponse
 ```
 
 Constructs ListPoliciesResponse's fields from required parameters
@@ -7850,7 +7850,7 @@ Constructs ListPoliciesResponse's fields from required parameters
 
 ``` purescript
 newtype ListPolicyPrincipalsRequest
-  = ListPolicyPrincipalsRequest { policyName :: PolicyName, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListPolicyPrincipalsRequest { policyName :: PolicyName, marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 <p>The input for the ListPolicyPrincipals operation.</p>
@@ -7875,7 +7875,7 @@ Constructs ListPolicyPrincipalsRequest from required parameters
 #### `newListPolicyPrincipalsRequest'`
 
 ``` purescript
-newListPolicyPrincipalsRequest' :: PolicyName -> ({ policyName :: PolicyName, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { policyName :: PolicyName, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListPolicyPrincipalsRequest
+newListPolicyPrincipalsRequest' :: PolicyName -> ({ policyName :: PolicyName, marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) } -> { policyName :: PolicyName, marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) }) -> ListPolicyPrincipalsRequest
 ```
 
 Constructs ListPolicyPrincipalsRequest's fields from required parameters
@@ -7884,7 +7884,7 @@ Constructs ListPolicyPrincipalsRequest's fields from required parameters
 
 ``` purescript
 newtype ListPolicyPrincipalsResponse
-  = ListPolicyPrincipalsResponse { principals :: NullOrUndefined (Principals), nextMarker :: NullOrUndefined (Marker) }
+  = ListPolicyPrincipalsResponse { principals :: Maybe (Principals), nextMarker :: Maybe (Marker) }
 ```
 
 <p>The output from the ListPolicyPrincipals operation.</p>
@@ -7909,7 +7909,7 @@ Constructs ListPolicyPrincipalsResponse from required parameters
 #### `newListPolicyPrincipalsResponse'`
 
 ``` purescript
-newListPolicyPrincipalsResponse' :: ({ principals :: NullOrUndefined (Principals), nextMarker :: NullOrUndefined (Marker) } -> { principals :: NullOrUndefined (Principals), nextMarker :: NullOrUndefined (Marker) }) -> ListPolicyPrincipalsResponse
+newListPolicyPrincipalsResponse' :: ({ principals :: Maybe (Principals), nextMarker :: Maybe (Marker) } -> { principals :: Maybe (Principals), nextMarker :: Maybe (Marker) }) -> ListPolicyPrincipalsResponse
 ```
 
 Constructs ListPolicyPrincipalsResponse's fields from required parameters
@@ -7952,7 +7952,7 @@ Constructs ListPolicyVersionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListPolicyVersionsResponse
-  = ListPolicyVersionsResponse { policyVersions :: NullOrUndefined (PolicyVersions) }
+  = ListPolicyVersionsResponse { policyVersions :: Maybe (PolicyVersions) }
 ```
 
 <p>The output from the ListPolicyVersions operation.</p>
@@ -7977,7 +7977,7 @@ Constructs ListPolicyVersionsResponse from required parameters
 #### `newListPolicyVersionsResponse'`
 
 ``` purescript
-newListPolicyVersionsResponse' :: ({ policyVersions :: NullOrUndefined (PolicyVersions) } -> { policyVersions :: NullOrUndefined (PolicyVersions) }) -> ListPolicyVersionsResponse
+newListPolicyVersionsResponse' :: ({ policyVersions :: Maybe (PolicyVersions) } -> { policyVersions :: Maybe (PolicyVersions) }) -> ListPolicyVersionsResponse
 ```
 
 Constructs ListPolicyVersionsResponse's fields from required parameters
@@ -7986,7 +7986,7 @@ Constructs ListPolicyVersionsResponse's fields from required parameters
 
 ``` purescript
 newtype ListPrincipalPoliciesRequest
-  = ListPrincipalPoliciesRequest { principal :: Principal, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListPrincipalPoliciesRequest { principal :: Principal, marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 <p>The input for the ListPrincipalPolicies operation.</p>
@@ -8011,7 +8011,7 @@ Constructs ListPrincipalPoliciesRequest from required parameters
 #### `newListPrincipalPoliciesRequest'`
 
 ``` purescript
-newListPrincipalPoliciesRequest' :: Principal -> ({ principal :: Principal, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { principal :: Principal, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListPrincipalPoliciesRequest
+newListPrincipalPoliciesRequest' :: Principal -> ({ principal :: Principal, marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) } -> { principal :: Principal, marker :: Maybe (Marker), pageSize :: Maybe (PageSize), ascendingOrder :: Maybe (AscendingOrder) }) -> ListPrincipalPoliciesRequest
 ```
 
 Constructs ListPrincipalPoliciesRequest's fields from required parameters
@@ -8020,7 +8020,7 @@ Constructs ListPrincipalPoliciesRequest's fields from required parameters
 
 ``` purescript
 newtype ListPrincipalPoliciesResponse
-  = ListPrincipalPoliciesResponse { policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) }
+  = ListPrincipalPoliciesResponse { policies :: Maybe (Policies), nextMarker :: Maybe (Marker) }
 ```
 
 <p>The output from the ListPrincipalPolicies operation.</p>
@@ -8045,7 +8045,7 @@ Constructs ListPrincipalPoliciesResponse from required parameters
 #### `newListPrincipalPoliciesResponse'`
 
 ``` purescript
-newListPrincipalPoliciesResponse' :: ({ policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) } -> { policies :: NullOrUndefined (Policies), nextMarker :: NullOrUndefined (Marker) }) -> ListPrincipalPoliciesResponse
+newListPrincipalPoliciesResponse' :: ({ policies :: Maybe (Policies), nextMarker :: Maybe (Marker) } -> { policies :: Maybe (Policies), nextMarker :: Maybe (Marker) }) -> ListPrincipalPoliciesResponse
 ```
 
 Constructs ListPrincipalPoliciesResponse's fields from required parameters
@@ -8054,7 +8054,7 @@ Constructs ListPrincipalPoliciesResponse's fields from required parameters
 
 ``` purescript
 newtype ListPrincipalThingsRequest
-  = ListPrincipalThingsRequest { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), principal :: Principal }
+  = ListPrincipalThingsRequest { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), principal :: Principal }
 ```
 
 <p>The input for the ListPrincipalThings operation.</p>
@@ -8079,7 +8079,7 @@ Constructs ListPrincipalThingsRequest from required parameters
 #### `newListPrincipalThingsRequest'`
 
 ``` purescript
-newListPrincipalThingsRequest' :: Principal -> ({ nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), principal :: Principal } -> { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), principal :: Principal }) -> ListPrincipalThingsRequest
+newListPrincipalThingsRequest' :: Principal -> ({ nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), principal :: Principal } -> { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), principal :: Principal }) -> ListPrincipalThingsRequest
 ```
 
 Constructs ListPrincipalThingsRequest's fields from required parameters
@@ -8088,7 +8088,7 @@ Constructs ListPrincipalThingsRequest's fields from required parameters
 
 ``` purescript
 newtype ListPrincipalThingsResponse
-  = ListPrincipalThingsResponse { things :: NullOrUndefined (ThingNameList), nextToken :: NullOrUndefined (NextToken) }
+  = ListPrincipalThingsResponse { things :: Maybe (ThingNameList), nextToken :: Maybe (NextToken) }
 ```
 
 <p>The output from the ListPrincipalThings operation.</p>
@@ -8113,7 +8113,7 @@ Constructs ListPrincipalThingsResponse from required parameters
 #### `newListPrincipalThingsResponse'`
 
 ``` purescript
-newListPrincipalThingsResponse' :: ({ things :: NullOrUndefined (ThingNameList), nextToken :: NullOrUndefined (NextToken) } -> { things :: NullOrUndefined (ThingNameList), nextToken :: NullOrUndefined (NextToken) }) -> ListPrincipalThingsResponse
+newListPrincipalThingsResponse' :: ({ things :: Maybe (ThingNameList), nextToken :: Maybe (NextToken) } -> { things :: Maybe (ThingNameList), nextToken :: Maybe (NextToken) }) -> ListPrincipalThingsResponse
 ```
 
 Constructs ListPrincipalThingsResponse's fields from required parameters
@@ -8122,7 +8122,7 @@ Constructs ListPrincipalThingsResponse's fields from required parameters
 
 ``` purescript
 newtype ListRoleAliasesRequest
-  = ListRoleAliasesRequest { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListRoleAliasesRequest { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 ##### Instances
@@ -8145,7 +8145,7 @@ Constructs ListRoleAliasesRequest from required parameters
 #### `newListRoleAliasesRequest'`
 
 ``` purescript
-newListRoleAliasesRequest' :: ({ pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { pageSize :: NullOrUndefined (PageSize), marker :: NullOrUndefined (Marker), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListRoleAliasesRequest
+newListRoleAliasesRequest' :: ({ pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) } -> { pageSize :: Maybe (PageSize), marker :: Maybe (Marker), ascendingOrder :: Maybe (AscendingOrder) }) -> ListRoleAliasesRequest
 ```
 
 Constructs ListRoleAliasesRequest's fields from required parameters
@@ -8154,7 +8154,7 @@ Constructs ListRoleAliasesRequest's fields from required parameters
 
 ``` purescript
 newtype ListRoleAliasesResponse
-  = ListRoleAliasesResponse { roleAliases :: NullOrUndefined (RoleAliases), nextMarker :: NullOrUndefined (Marker) }
+  = ListRoleAliasesResponse { roleAliases :: Maybe (RoleAliases), nextMarker :: Maybe (Marker) }
 ```
 
 ##### Instances
@@ -8177,7 +8177,7 @@ Constructs ListRoleAliasesResponse from required parameters
 #### `newListRoleAliasesResponse'`
 
 ``` purescript
-newListRoleAliasesResponse' :: ({ roleAliases :: NullOrUndefined (RoleAliases), nextMarker :: NullOrUndefined (Marker) } -> { roleAliases :: NullOrUndefined (RoleAliases), nextMarker :: NullOrUndefined (Marker) }) -> ListRoleAliasesResponse
+newListRoleAliasesResponse' :: ({ roleAliases :: Maybe (RoleAliases), nextMarker :: Maybe (Marker) } -> { roleAliases :: Maybe (RoleAliases), nextMarker :: Maybe (Marker) }) -> ListRoleAliasesResponse
 ```
 
 Constructs ListRoleAliasesResponse's fields from required parameters
@@ -8186,7 +8186,7 @@ Constructs ListRoleAliasesResponse's fields from required parameters
 
 ``` purescript
 newtype ListStreamsRequest
-  = ListStreamsRequest { maxResults :: NullOrUndefined (MaxResults), nextToken :: NullOrUndefined (NextToken), ascendingOrder :: NullOrUndefined (AscendingOrder) }
+  = ListStreamsRequest { maxResults :: Maybe (MaxResults), nextToken :: Maybe (NextToken), ascendingOrder :: Maybe (AscendingOrder) }
 ```
 
 ##### Instances
@@ -8209,7 +8209,7 @@ Constructs ListStreamsRequest from required parameters
 #### `newListStreamsRequest'`
 
 ``` purescript
-newListStreamsRequest' :: ({ maxResults :: NullOrUndefined (MaxResults), nextToken :: NullOrUndefined (NextToken), ascendingOrder :: NullOrUndefined (AscendingOrder) } -> { maxResults :: NullOrUndefined (MaxResults), nextToken :: NullOrUndefined (NextToken), ascendingOrder :: NullOrUndefined (AscendingOrder) }) -> ListStreamsRequest
+newListStreamsRequest' :: ({ maxResults :: Maybe (MaxResults), nextToken :: Maybe (NextToken), ascendingOrder :: Maybe (AscendingOrder) } -> { maxResults :: Maybe (MaxResults), nextToken :: Maybe (NextToken), ascendingOrder :: Maybe (AscendingOrder) }) -> ListStreamsRequest
 ```
 
 Constructs ListStreamsRequest's fields from required parameters
@@ -8218,7 +8218,7 @@ Constructs ListStreamsRequest's fields from required parameters
 
 ``` purescript
 newtype ListStreamsResponse
-  = ListStreamsResponse { streams :: NullOrUndefined (StreamsSummary), nextToken :: NullOrUndefined (NextToken) }
+  = ListStreamsResponse { streams :: Maybe (StreamsSummary), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -8241,7 +8241,7 @@ Constructs ListStreamsResponse from required parameters
 #### `newListStreamsResponse'`
 
 ``` purescript
-newListStreamsResponse' :: ({ streams :: NullOrUndefined (StreamsSummary), nextToken :: NullOrUndefined (NextToken) } -> { streams :: NullOrUndefined (StreamsSummary), nextToken :: NullOrUndefined (NextToken) }) -> ListStreamsResponse
+newListStreamsResponse' :: ({ streams :: Maybe (StreamsSummary), nextToken :: Maybe (NextToken) } -> { streams :: Maybe (StreamsSummary), nextToken :: Maybe (NextToken) }) -> ListStreamsResponse
 ```
 
 Constructs ListStreamsResponse's fields from required parameters
@@ -8250,7 +8250,7 @@ Constructs ListStreamsResponse's fields from required parameters
 
 ``` purescript
 newtype ListTargetsForPolicyRequest
-  = ListTargetsForPolicyRequest { policyName :: PolicyName, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize) }
+  = ListTargetsForPolicyRequest { policyName :: PolicyName, marker :: Maybe (Marker), pageSize :: Maybe (PageSize) }
 ```
 
 ##### Instances
@@ -8273,7 +8273,7 @@ Constructs ListTargetsForPolicyRequest from required parameters
 #### `newListTargetsForPolicyRequest'`
 
 ``` purescript
-newListTargetsForPolicyRequest' :: PolicyName -> ({ policyName :: PolicyName, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize) } -> { policyName :: PolicyName, marker :: NullOrUndefined (Marker), pageSize :: NullOrUndefined (PageSize) }) -> ListTargetsForPolicyRequest
+newListTargetsForPolicyRequest' :: PolicyName -> ({ policyName :: PolicyName, marker :: Maybe (Marker), pageSize :: Maybe (PageSize) } -> { policyName :: PolicyName, marker :: Maybe (Marker), pageSize :: Maybe (PageSize) }) -> ListTargetsForPolicyRequest
 ```
 
 Constructs ListTargetsForPolicyRequest's fields from required parameters
@@ -8282,7 +8282,7 @@ Constructs ListTargetsForPolicyRequest's fields from required parameters
 
 ``` purescript
 newtype ListTargetsForPolicyResponse
-  = ListTargetsForPolicyResponse { targets :: NullOrUndefined (PolicyTargets), nextMarker :: NullOrUndefined (Marker) }
+  = ListTargetsForPolicyResponse { targets :: Maybe (PolicyTargets), nextMarker :: Maybe (Marker) }
 ```
 
 ##### Instances
@@ -8305,7 +8305,7 @@ Constructs ListTargetsForPolicyResponse from required parameters
 #### `newListTargetsForPolicyResponse'`
 
 ``` purescript
-newListTargetsForPolicyResponse' :: ({ targets :: NullOrUndefined (PolicyTargets), nextMarker :: NullOrUndefined (Marker) } -> { targets :: NullOrUndefined (PolicyTargets), nextMarker :: NullOrUndefined (Marker) }) -> ListTargetsForPolicyResponse
+newListTargetsForPolicyResponse' :: ({ targets :: Maybe (PolicyTargets), nextMarker :: Maybe (Marker) } -> { targets :: Maybe (PolicyTargets), nextMarker :: Maybe (Marker) }) -> ListTargetsForPolicyResponse
 ```
 
 Constructs ListTargetsForPolicyResponse's fields from required parameters
@@ -8314,7 +8314,7 @@ Constructs ListTargetsForPolicyResponse's fields from required parameters
 
 ``` purescript
 newtype ListThingGroupsForThingRequest
-  = ListThingGroupsForThingRequest { thingName :: ThingName, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) }
+  = ListThingGroupsForThingRequest { thingName :: ThingName, nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) }
 ```
 
 ##### Instances
@@ -8337,7 +8337,7 @@ Constructs ListThingGroupsForThingRequest from required parameters
 #### `newListThingGroupsForThingRequest'`
 
 ``` purescript
-newListThingGroupsForThingRequest' :: ThingName -> ({ thingName :: ThingName, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) } -> { thingName :: ThingName, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) }) -> ListThingGroupsForThingRequest
+newListThingGroupsForThingRequest' :: ThingName -> ({ thingName :: ThingName, nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) } -> { thingName :: ThingName, nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) }) -> ListThingGroupsForThingRequest
 ```
 
 Constructs ListThingGroupsForThingRequest's fields from required parameters
@@ -8346,7 +8346,7 @@ Constructs ListThingGroupsForThingRequest's fields from required parameters
 
 ``` purescript
 newtype ListThingGroupsForThingResponse
-  = ListThingGroupsForThingResponse { thingGroups :: NullOrUndefined (ThingGroupNameAndArnList), nextToken :: NullOrUndefined (NextToken) }
+  = ListThingGroupsForThingResponse { thingGroups :: Maybe (ThingGroupNameAndArnList), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -8369,7 +8369,7 @@ Constructs ListThingGroupsForThingResponse from required parameters
 #### `newListThingGroupsForThingResponse'`
 
 ``` purescript
-newListThingGroupsForThingResponse' :: ({ thingGroups :: NullOrUndefined (ThingGroupNameAndArnList), nextToken :: NullOrUndefined (NextToken) } -> { thingGroups :: NullOrUndefined (ThingGroupNameAndArnList), nextToken :: NullOrUndefined (NextToken) }) -> ListThingGroupsForThingResponse
+newListThingGroupsForThingResponse' :: ({ thingGroups :: Maybe (ThingGroupNameAndArnList), nextToken :: Maybe (NextToken) } -> { thingGroups :: Maybe (ThingGroupNameAndArnList), nextToken :: Maybe (NextToken) }) -> ListThingGroupsForThingResponse
 ```
 
 Constructs ListThingGroupsForThingResponse's fields from required parameters
@@ -8378,7 +8378,7 @@ Constructs ListThingGroupsForThingResponse's fields from required parameters
 
 ``` purescript
 newtype ListThingGroupsRequest
-  = ListThingGroupsRequest { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), parentGroup :: NullOrUndefined (ThingGroupName), namePrefixFilter :: NullOrUndefined (ThingGroupName), recursive :: NullOrUndefined (RecursiveWithoutDefault) }
+  = ListThingGroupsRequest { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), parentGroup :: Maybe (ThingGroupName), namePrefixFilter :: Maybe (ThingGroupName), recursive :: Maybe (RecursiveWithoutDefault) }
 ```
 
 ##### Instances
@@ -8401,7 +8401,7 @@ Constructs ListThingGroupsRequest from required parameters
 #### `newListThingGroupsRequest'`
 
 ``` purescript
-newListThingGroupsRequest' :: ({ nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), parentGroup :: NullOrUndefined (ThingGroupName), namePrefixFilter :: NullOrUndefined (ThingGroupName), recursive :: NullOrUndefined (RecursiveWithoutDefault) } -> { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), parentGroup :: NullOrUndefined (ThingGroupName), namePrefixFilter :: NullOrUndefined (ThingGroupName), recursive :: NullOrUndefined (RecursiveWithoutDefault) }) -> ListThingGroupsRequest
+newListThingGroupsRequest' :: ({ nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), parentGroup :: Maybe (ThingGroupName), namePrefixFilter :: Maybe (ThingGroupName), recursive :: Maybe (RecursiveWithoutDefault) } -> { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), parentGroup :: Maybe (ThingGroupName), namePrefixFilter :: Maybe (ThingGroupName), recursive :: Maybe (RecursiveWithoutDefault) }) -> ListThingGroupsRequest
 ```
 
 Constructs ListThingGroupsRequest's fields from required parameters
@@ -8410,7 +8410,7 @@ Constructs ListThingGroupsRequest's fields from required parameters
 
 ``` purescript
 newtype ListThingGroupsResponse
-  = ListThingGroupsResponse { thingGroups :: NullOrUndefined (ThingGroupNameAndArnList), nextToken :: NullOrUndefined (NextToken) }
+  = ListThingGroupsResponse { thingGroups :: Maybe (ThingGroupNameAndArnList), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -8433,7 +8433,7 @@ Constructs ListThingGroupsResponse from required parameters
 #### `newListThingGroupsResponse'`
 
 ``` purescript
-newListThingGroupsResponse' :: ({ thingGroups :: NullOrUndefined (ThingGroupNameAndArnList), nextToken :: NullOrUndefined (NextToken) } -> { thingGroups :: NullOrUndefined (ThingGroupNameAndArnList), nextToken :: NullOrUndefined (NextToken) }) -> ListThingGroupsResponse
+newListThingGroupsResponse' :: ({ thingGroups :: Maybe (ThingGroupNameAndArnList), nextToken :: Maybe (NextToken) } -> { thingGroups :: Maybe (ThingGroupNameAndArnList), nextToken :: Maybe (NextToken) }) -> ListThingGroupsResponse
 ```
 
 Constructs ListThingGroupsResponse's fields from required parameters
@@ -8476,7 +8476,7 @@ Constructs ListThingPrincipalsRequest's fields from required parameters
 
 ``` purescript
 newtype ListThingPrincipalsResponse
-  = ListThingPrincipalsResponse { principals :: NullOrUndefined (Principals) }
+  = ListThingPrincipalsResponse { principals :: Maybe (Principals) }
 ```
 
 <p>The output from the ListThingPrincipals operation.</p>
@@ -8501,7 +8501,7 @@ Constructs ListThingPrincipalsResponse from required parameters
 #### `newListThingPrincipalsResponse'`
 
 ``` purescript
-newListThingPrincipalsResponse' :: ({ principals :: NullOrUndefined (Principals) } -> { principals :: NullOrUndefined (Principals) }) -> ListThingPrincipalsResponse
+newListThingPrincipalsResponse' :: ({ principals :: Maybe (Principals) } -> { principals :: Maybe (Principals) }) -> ListThingPrincipalsResponse
 ```
 
 Constructs ListThingPrincipalsResponse's fields from required parameters
@@ -8510,7 +8510,7 @@ Constructs ListThingPrincipalsResponse's fields from required parameters
 
 ``` purescript
 newtype ListThingRegistrationTaskReportsRequest
-  = ListThingRegistrationTaskReportsRequest { taskId :: TaskId, reportType :: ReportType, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) }
+  = ListThingRegistrationTaskReportsRequest { taskId :: TaskId, reportType :: ReportType, nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) }
 ```
 
 ##### Instances
@@ -8533,7 +8533,7 @@ Constructs ListThingRegistrationTaskReportsRequest from required parameters
 #### `newListThingRegistrationTaskReportsRequest'`
 
 ``` purescript
-newListThingRegistrationTaskReportsRequest' :: ReportType -> TaskId -> ({ taskId :: TaskId, reportType :: ReportType, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) } -> { taskId :: TaskId, reportType :: ReportType, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) }) -> ListThingRegistrationTaskReportsRequest
+newListThingRegistrationTaskReportsRequest' :: ReportType -> TaskId -> ({ taskId :: TaskId, reportType :: ReportType, nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) } -> { taskId :: TaskId, reportType :: ReportType, nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) }) -> ListThingRegistrationTaskReportsRequest
 ```
 
 Constructs ListThingRegistrationTaskReportsRequest's fields from required parameters
@@ -8542,7 +8542,7 @@ Constructs ListThingRegistrationTaskReportsRequest's fields from required parame
 
 ``` purescript
 newtype ListThingRegistrationTaskReportsResponse
-  = ListThingRegistrationTaskReportsResponse { resourceLinks :: NullOrUndefined (S3FileUrlList), reportType :: NullOrUndefined (ReportType), nextToken :: NullOrUndefined (NextToken) }
+  = ListThingRegistrationTaskReportsResponse { resourceLinks :: Maybe (S3FileUrlList), reportType :: Maybe (ReportType), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -8565,7 +8565,7 @@ Constructs ListThingRegistrationTaskReportsResponse from required parameters
 #### `newListThingRegistrationTaskReportsResponse'`
 
 ``` purescript
-newListThingRegistrationTaskReportsResponse' :: ({ resourceLinks :: NullOrUndefined (S3FileUrlList), reportType :: NullOrUndefined (ReportType), nextToken :: NullOrUndefined (NextToken) } -> { resourceLinks :: NullOrUndefined (S3FileUrlList), reportType :: NullOrUndefined (ReportType), nextToken :: NullOrUndefined (NextToken) }) -> ListThingRegistrationTaskReportsResponse
+newListThingRegistrationTaskReportsResponse' :: ({ resourceLinks :: Maybe (S3FileUrlList), reportType :: Maybe (ReportType), nextToken :: Maybe (NextToken) } -> { resourceLinks :: Maybe (S3FileUrlList), reportType :: Maybe (ReportType), nextToken :: Maybe (NextToken) }) -> ListThingRegistrationTaskReportsResponse
 ```
 
 Constructs ListThingRegistrationTaskReportsResponse's fields from required parameters
@@ -8574,7 +8574,7 @@ Constructs ListThingRegistrationTaskReportsResponse's fields from required param
 
 ``` purescript
 newtype ListThingRegistrationTasksRequest
-  = ListThingRegistrationTasksRequest { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), status :: NullOrUndefined (Status) }
+  = ListThingRegistrationTasksRequest { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), status :: Maybe (Status) }
 ```
 
 ##### Instances
@@ -8597,7 +8597,7 @@ Constructs ListThingRegistrationTasksRequest from required parameters
 #### `newListThingRegistrationTasksRequest'`
 
 ``` purescript
-newListThingRegistrationTasksRequest' :: ({ nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), status :: NullOrUndefined (Status) } -> { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), status :: NullOrUndefined (Status) }) -> ListThingRegistrationTasksRequest
+newListThingRegistrationTasksRequest' :: ({ nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), status :: Maybe (Status) } -> { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), status :: Maybe (Status) }) -> ListThingRegistrationTasksRequest
 ```
 
 Constructs ListThingRegistrationTasksRequest's fields from required parameters
@@ -8606,7 +8606,7 @@ Constructs ListThingRegistrationTasksRequest's fields from required parameters
 
 ``` purescript
 newtype ListThingRegistrationTasksResponse
-  = ListThingRegistrationTasksResponse { taskIds :: NullOrUndefined (TaskIdList), nextToken :: NullOrUndefined (NextToken) }
+  = ListThingRegistrationTasksResponse { taskIds :: Maybe (TaskIdList), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -8629,7 +8629,7 @@ Constructs ListThingRegistrationTasksResponse from required parameters
 #### `newListThingRegistrationTasksResponse'`
 
 ``` purescript
-newListThingRegistrationTasksResponse' :: ({ taskIds :: NullOrUndefined (TaskIdList), nextToken :: NullOrUndefined (NextToken) } -> { taskIds :: NullOrUndefined (TaskIdList), nextToken :: NullOrUndefined (NextToken) }) -> ListThingRegistrationTasksResponse
+newListThingRegistrationTasksResponse' :: ({ taskIds :: Maybe (TaskIdList), nextToken :: Maybe (NextToken) } -> { taskIds :: Maybe (TaskIdList), nextToken :: Maybe (NextToken) }) -> ListThingRegistrationTasksResponse
 ```
 
 Constructs ListThingRegistrationTasksResponse's fields from required parameters
@@ -8638,7 +8638,7 @@ Constructs ListThingRegistrationTasksResponse's fields from required parameters
 
 ``` purescript
 newtype ListThingTypesRequest
-  = ListThingTypesRequest { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), thingTypeName :: NullOrUndefined (ThingTypeName) }
+  = ListThingTypesRequest { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), thingTypeName :: Maybe (ThingTypeName) }
 ```
 
 <p>The input for the ListThingTypes operation.</p>
@@ -8663,7 +8663,7 @@ Constructs ListThingTypesRequest from required parameters
 #### `newListThingTypesRequest'`
 
 ``` purescript
-newListThingTypesRequest' :: ({ nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), thingTypeName :: NullOrUndefined (ThingTypeName) } -> { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), thingTypeName :: NullOrUndefined (ThingTypeName) }) -> ListThingTypesRequest
+newListThingTypesRequest' :: ({ nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), thingTypeName :: Maybe (ThingTypeName) } -> { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), thingTypeName :: Maybe (ThingTypeName) }) -> ListThingTypesRequest
 ```
 
 Constructs ListThingTypesRequest's fields from required parameters
@@ -8672,7 +8672,7 @@ Constructs ListThingTypesRequest's fields from required parameters
 
 ``` purescript
 newtype ListThingTypesResponse
-  = ListThingTypesResponse { thingTypes :: NullOrUndefined (ThingTypeList), nextToken :: NullOrUndefined (NextToken) }
+  = ListThingTypesResponse { thingTypes :: Maybe (ThingTypeList), nextToken :: Maybe (NextToken) }
 ```
 
 <p>The output for the ListThingTypes operation.</p>
@@ -8697,7 +8697,7 @@ Constructs ListThingTypesResponse from required parameters
 #### `newListThingTypesResponse'`
 
 ``` purescript
-newListThingTypesResponse' :: ({ thingTypes :: NullOrUndefined (ThingTypeList), nextToken :: NullOrUndefined (NextToken) } -> { thingTypes :: NullOrUndefined (ThingTypeList), nextToken :: NullOrUndefined (NextToken) }) -> ListThingTypesResponse
+newListThingTypesResponse' :: ({ thingTypes :: Maybe (ThingTypeList), nextToken :: Maybe (NextToken) } -> { thingTypes :: Maybe (ThingTypeList), nextToken :: Maybe (NextToken) }) -> ListThingTypesResponse
 ```
 
 Constructs ListThingTypesResponse's fields from required parameters
@@ -8706,7 +8706,7 @@ Constructs ListThingTypesResponse's fields from required parameters
 
 ``` purescript
 newtype ListThingsInThingGroupRequest
-  = ListThingsInThingGroupRequest { thingGroupName :: ThingGroupName, recursive :: NullOrUndefined (Recursive), nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) }
+  = ListThingsInThingGroupRequest { thingGroupName :: ThingGroupName, recursive :: Maybe (Recursive), nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) }
 ```
 
 ##### Instances
@@ -8729,7 +8729,7 @@ Constructs ListThingsInThingGroupRequest from required parameters
 #### `newListThingsInThingGroupRequest'`
 
 ``` purescript
-newListThingsInThingGroupRequest' :: ThingGroupName -> ({ thingGroupName :: ThingGroupName, recursive :: NullOrUndefined (Recursive), nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) } -> { thingGroupName :: ThingGroupName, recursive :: NullOrUndefined (Recursive), nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults) }) -> ListThingsInThingGroupRequest
+newListThingsInThingGroupRequest' :: ThingGroupName -> ({ thingGroupName :: ThingGroupName, recursive :: Maybe (Recursive), nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) } -> { thingGroupName :: ThingGroupName, recursive :: Maybe (Recursive), nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults) }) -> ListThingsInThingGroupRequest
 ```
 
 Constructs ListThingsInThingGroupRequest's fields from required parameters
@@ -8738,7 +8738,7 @@ Constructs ListThingsInThingGroupRequest's fields from required parameters
 
 ``` purescript
 newtype ListThingsInThingGroupResponse
-  = ListThingsInThingGroupResponse { things :: NullOrUndefined (ThingNameList), nextToken :: NullOrUndefined (NextToken) }
+  = ListThingsInThingGroupResponse { things :: Maybe (ThingNameList), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -8761,7 +8761,7 @@ Constructs ListThingsInThingGroupResponse from required parameters
 #### `newListThingsInThingGroupResponse'`
 
 ``` purescript
-newListThingsInThingGroupResponse' :: ({ things :: NullOrUndefined (ThingNameList), nextToken :: NullOrUndefined (NextToken) } -> { things :: NullOrUndefined (ThingNameList), nextToken :: NullOrUndefined (NextToken) }) -> ListThingsInThingGroupResponse
+newListThingsInThingGroupResponse' :: ({ things :: Maybe (ThingNameList), nextToken :: Maybe (NextToken) } -> { things :: Maybe (ThingNameList), nextToken :: Maybe (NextToken) }) -> ListThingsInThingGroupResponse
 ```
 
 Constructs ListThingsInThingGroupResponse's fields from required parameters
@@ -8770,7 +8770,7 @@ Constructs ListThingsInThingGroupResponse's fields from required parameters
 
 ``` purescript
 newtype ListThingsRequest
-  = ListThingsRequest { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), attributeName :: NullOrUndefined (AttributeName), attributeValue :: NullOrUndefined (AttributeValue), thingTypeName :: NullOrUndefined (ThingTypeName) }
+  = ListThingsRequest { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), attributeName :: Maybe (AttributeName), attributeValue :: Maybe (AttributeValue), thingTypeName :: Maybe (ThingTypeName) }
 ```
 
 <p>The input for the ListThings operation.</p>
@@ -8795,7 +8795,7 @@ Constructs ListThingsRequest from required parameters
 #### `newListThingsRequest'`
 
 ``` purescript
-newListThingsRequest' :: ({ nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), attributeName :: NullOrUndefined (AttributeName), attributeValue :: NullOrUndefined (AttributeValue), thingTypeName :: NullOrUndefined (ThingTypeName) } -> { nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (RegistryMaxResults), attributeName :: NullOrUndefined (AttributeName), attributeValue :: NullOrUndefined (AttributeValue), thingTypeName :: NullOrUndefined (ThingTypeName) }) -> ListThingsRequest
+newListThingsRequest' :: ({ nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), attributeName :: Maybe (AttributeName), attributeValue :: Maybe (AttributeValue), thingTypeName :: Maybe (ThingTypeName) } -> { nextToken :: Maybe (NextToken), maxResults :: Maybe (RegistryMaxResults), attributeName :: Maybe (AttributeName), attributeValue :: Maybe (AttributeValue), thingTypeName :: Maybe (ThingTypeName) }) -> ListThingsRequest
 ```
 
 Constructs ListThingsRequest's fields from required parameters
@@ -8804,7 +8804,7 @@ Constructs ListThingsRequest's fields from required parameters
 
 ``` purescript
 newtype ListThingsResponse
-  = ListThingsResponse { things :: NullOrUndefined (ThingAttributeList), nextToken :: NullOrUndefined (NextToken) }
+  = ListThingsResponse { things :: Maybe (ThingAttributeList), nextToken :: Maybe (NextToken) }
 ```
 
 <p>The output from the ListThings operation.</p>
@@ -8829,7 +8829,7 @@ Constructs ListThingsResponse from required parameters
 #### `newListThingsResponse'`
 
 ``` purescript
-newListThingsResponse' :: ({ things :: NullOrUndefined (ThingAttributeList), nextToken :: NullOrUndefined (NextToken) } -> { things :: NullOrUndefined (ThingAttributeList), nextToken :: NullOrUndefined (NextToken) }) -> ListThingsResponse
+newListThingsResponse' :: ({ things :: Maybe (ThingAttributeList), nextToken :: Maybe (NextToken) } -> { things :: Maybe (ThingAttributeList), nextToken :: Maybe (NextToken) }) -> ListThingsResponse
 ```
 
 Constructs ListThingsResponse's fields from required parameters
@@ -8838,7 +8838,7 @@ Constructs ListThingsResponse's fields from required parameters
 
 ``` purescript
 newtype ListTopicRulesRequest
-  = ListTopicRulesRequest { topic :: NullOrUndefined (Topic), maxResults :: NullOrUndefined (GEMaxResults), nextToken :: NullOrUndefined (NextToken), ruleDisabled :: NullOrUndefined (IsDisabled) }
+  = ListTopicRulesRequest { topic :: Maybe (Topic), maxResults :: Maybe (GEMaxResults), nextToken :: Maybe (NextToken), ruleDisabled :: Maybe (IsDisabled) }
 ```
 
 <p>The input for the ListTopicRules operation.</p>
@@ -8863,7 +8863,7 @@ Constructs ListTopicRulesRequest from required parameters
 #### `newListTopicRulesRequest'`
 
 ``` purescript
-newListTopicRulesRequest' :: ({ topic :: NullOrUndefined (Topic), maxResults :: NullOrUndefined (GEMaxResults), nextToken :: NullOrUndefined (NextToken), ruleDisabled :: NullOrUndefined (IsDisabled) } -> { topic :: NullOrUndefined (Topic), maxResults :: NullOrUndefined (GEMaxResults), nextToken :: NullOrUndefined (NextToken), ruleDisabled :: NullOrUndefined (IsDisabled) }) -> ListTopicRulesRequest
+newListTopicRulesRequest' :: ({ topic :: Maybe (Topic), maxResults :: Maybe (GEMaxResults), nextToken :: Maybe (NextToken), ruleDisabled :: Maybe (IsDisabled) } -> { topic :: Maybe (Topic), maxResults :: Maybe (GEMaxResults), nextToken :: Maybe (NextToken), ruleDisabled :: Maybe (IsDisabled) }) -> ListTopicRulesRequest
 ```
 
 Constructs ListTopicRulesRequest's fields from required parameters
@@ -8872,7 +8872,7 @@ Constructs ListTopicRulesRequest's fields from required parameters
 
 ``` purescript
 newtype ListTopicRulesResponse
-  = ListTopicRulesResponse { rules :: NullOrUndefined (TopicRuleList), nextToken :: NullOrUndefined (NextToken) }
+  = ListTopicRulesResponse { rules :: Maybe (TopicRuleList), nextToken :: Maybe (NextToken) }
 ```
 
 <p>The output from the ListTopicRules operation.</p>
@@ -8897,7 +8897,7 @@ Constructs ListTopicRulesResponse from required parameters
 #### `newListTopicRulesResponse'`
 
 ``` purescript
-newListTopicRulesResponse' :: ({ rules :: NullOrUndefined (TopicRuleList), nextToken :: NullOrUndefined (NextToken) } -> { rules :: NullOrUndefined (TopicRuleList), nextToken :: NullOrUndefined (NextToken) }) -> ListTopicRulesResponse
+newListTopicRulesResponse' :: ({ rules :: Maybe (TopicRuleList), nextToken :: Maybe (NextToken) } -> { rules :: Maybe (TopicRuleList), nextToken :: Maybe (NextToken) }) -> ListTopicRulesResponse
 ```
 
 Constructs ListTopicRulesResponse's fields from required parameters
@@ -8906,7 +8906,7 @@ Constructs ListTopicRulesResponse's fields from required parameters
 
 ``` purescript
 newtype ListV2LoggingLevelsRequest
-  = ListV2LoggingLevelsRequest { targetType :: NullOrUndefined (LogTargetType), nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (SkyfallMaxResults) }
+  = ListV2LoggingLevelsRequest { targetType :: Maybe (LogTargetType), nextToken :: Maybe (NextToken), maxResults :: Maybe (SkyfallMaxResults) }
 ```
 
 ##### Instances
@@ -8929,7 +8929,7 @@ Constructs ListV2LoggingLevelsRequest from required parameters
 #### `newListV2LoggingLevelsRequest'`
 
 ``` purescript
-newListV2LoggingLevelsRequest' :: ({ targetType :: NullOrUndefined (LogTargetType), nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (SkyfallMaxResults) } -> { targetType :: NullOrUndefined (LogTargetType), nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (SkyfallMaxResults) }) -> ListV2LoggingLevelsRequest
+newListV2LoggingLevelsRequest' :: ({ targetType :: Maybe (LogTargetType), nextToken :: Maybe (NextToken), maxResults :: Maybe (SkyfallMaxResults) } -> { targetType :: Maybe (LogTargetType), nextToken :: Maybe (NextToken), maxResults :: Maybe (SkyfallMaxResults) }) -> ListV2LoggingLevelsRequest
 ```
 
 Constructs ListV2LoggingLevelsRequest's fields from required parameters
@@ -8938,7 +8938,7 @@ Constructs ListV2LoggingLevelsRequest's fields from required parameters
 
 ``` purescript
 newtype ListV2LoggingLevelsResponse
-  = ListV2LoggingLevelsResponse { logTargetConfigurations :: NullOrUndefined (LogTargetConfigurations), nextToken :: NullOrUndefined (NextToken) }
+  = ListV2LoggingLevelsResponse { logTargetConfigurations :: Maybe (LogTargetConfigurations), nextToken :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -8961,7 +8961,7 @@ Constructs ListV2LoggingLevelsResponse from required parameters
 #### `newListV2LoggingLevelsResponse'`
 
 ``` purescript
-newListV2LoggingLevelsResponse' :: ({ logTargetConfigurations :: NullOrUndefined (LogTargetConfigurations), nextToken :: NullOrUndefined (NextToken) } -> { logTargetConfigurations :: NullOrUndefined (LogTargetConfigurations), nextToken :: NullOrUndefined (NextToken) }) -> ListV2LoggingLevelsResponse
+newListV2LoggingLevelsResponse' :: ({ logTargetConfigurations :: Maybe (LogTargetConfigurations), nextToken :: Maybe (NextToken) } -> { logTargetConfigurations :: Maybe (LogTargetConfigurations), nextToken :: Maybe (NextToken) }) -> ListV2LoggingLevelsResponse
 ```
 
 Constructs ListV2LoggingLevelsResponse's fields from required parameters
@@ -8986,7 +8986,7 @@ Encode LogLevel
 
 ``` purescript
 newtype LogTarget
-  = LogTarget { targetType :: LogTargetType, targetName :: NullOrUndefined (LogTargetName) }
+  = LogTarget { targetType :: LogTargetType, targetName :: Maybe (LogTargetName) }
 ```
 
 <p>A log target.</p>
@@ -9011,7 +9011,7 @@ Constructs LogTarget from required parameters
 #### `newLogTarget'`
 
 ``` purescript
-newLogTarget' :: LogTargetType -> ({ targetType :: LogTargetType, targetName :: NullOrUndefined (LogTargetName) } -> { targetType :: LogTargetType, targetName :: NullOrUndefined (LogTargetName) }) -> LogTarget
+newLogTarget' :: LogTargetType -> ({ targetType :: LogTargetType, targetName :: Maybe (LogTargetName) } -> { targetType :: LogTargetType, targetName :: Maybe (LogTargetName) }) -> LogTarget
 ```
 
 Constructs LogTarget's fields from required parameters
@@ -9020,7 +9020,7 @@ Constructs LogTarget's fields from required parameters
 
 ``` purescript
 newtype LogTargetConfiguration
-  = LogTargetConfiguration { logTarget :: NullOrUndefined (LogTarget), logLevel :: NullOrUndefined (LogLevel) }
+  = LogTargetConfiguration { logTarget :: Maybe (LogTarget), logLevel :: Maybe (LogLevel) }
 ```
 
 <p>The target configuration.</p>
@@ -9045,7 +9045,7 @@ Constructs LogTargetConfiguration from required parameters
 #### `newLogTargetConfiguration'`
 
 ``` purescript
-newLogTargetConfiguration' :: ({ logTarget :: NullOrUndefined (LogTarget), logLevel :: NullOrUndefined (LogLevel) } -> { logTarget :: NullOrUndefined (LogTarget), logLevel :: NullOrUndefined (LogLevel) }) -> LogTargetConfiguration
+newLogTargetConfiguration' :: ({ logTarget :: Maybe (LogTarget), logLevel :: Maybe (LogLevel) } -> { logTarget :: Maybe (LogTarget), logLevel :: Maybe (LogLevel) }) -> LogTargetConfiguration
 ```
 
 Constructs LogTargetConfiguration's fields from required parameters
@@ -9102,7 +9102,7 @@ Encode LogTargetType
 
 ``` purescript
 newtype LoggingOptionsPayload
-  = LoggingOptionsPayload { roleArn :: AwsArn, logLevel :: NullOrUndefined (LogLevel) }
+  = LoggingOptionsPayload { roleArn :: AwsArn, logLevel :: Maybe (LogLevel) }
 ```
 
 <p>Describes the logging options payload.</p>
@@ -9127,7 +9127,7 @@ Constructs LoggingOptionsPayload from required parameters
 #### `newLoggingOptionsPayload'`
 
 ``` purescript
-newLoggingOptionsPayload' :: AwsArn -> ({ roleArn :: AwsArn, logLevel :: NullOrUndefined (LogLevel) } -> { roleArn :: AwsArn, logLevel :: NullOrUndefined (LogLevel) }) -> LoggingOptionsPayload
+newLoggingOptionsPayload' :: AwsArn -> ({ roleArn :: AwsArn, logLevel :: Maybe (LogLevel) } -> { roleArn :: AwsArn, logLevel :: Maybe (LogLevel) }) -> LoggingOptionsPayload
 ```
 
 Constructs LoggingOptionsPayload's fields from required parameters
@@ -9136,7 +9136,7 @@ Constructs LoggingOptionsPayload's fields from required parameters
 
 ``` purescript
 newtype MalformedPolicyException
-  = MalformedPolicyException { message :: NullOrUndefined (ErrorMessage') }
+  = MalformedPolicyException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The policy documentation is not valid.</p>
@@ -9161,7 +9161,7 @@ Constructs MalformedPolicyException from required parameters
 #### `newMalformedPolicyException'`
 
 ``` purescript
-newMalformedPolicyException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> MalformedPolicyException
+newMalformedPolicyException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> MalformedPolicyException
 ```
 
 Constructs MalformedPolicyException's fields from required parameters
@@ -9378,7 +9378,7 @@ Encode NextToken
 
 ``` purescript
 newtype NotConfiguredException
-  = NotConfiguredException { message :: NullOrUndefined (ErrorMessage') }
+  = NotConfiguredException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The resource is not configured.</p>
@@ -9403,7 +9403,7 @@ Constructs NotConfiguredException from required parameters
 #### `newNotConfiguredException'`
 
 ``` purescript
-newNotConfiguredException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> NotConfiguredException
+newNotConfiguredException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> NotConfiguredException
 ```
 
 Constructs NotConfiguredException's fields from required parameters
@@ -9460,7 +9460,7 @@ Encode OTAUpdateErrorMessage
 
 ``` purescript
 newtype OTAUpdateFile
-  = OTAUpdateFile { fileName :: NullOrUndefined (FileName), fileVersion :: NullOrUndefined (OTAUpdateFileVersion), fileSource :: NullOrUndefined (Stream), codeSigning :: NullOrUndefined (CodeSigning), attributes :: NullOrUndefined (AttributesMap) }
+  = OTAUpdateFile { fileName :: Maybe (FileName), fileVersion :: Maybe (OTAUpdateFileVersion), fileSource :: Maybe (Stream), codeSigning :: Maybe (CodeSigning), attributes :: Maybe (AttributesMap) }
 ```
 
 <p>Describes a file to be associated with an OTA update.</p>
@@ -9485,7 +9485,7 @@ Constructs OTAUpdateFile from required parameters
 #### `newOTAUpdateFile'`
 
 ``` purescript
-newOTAUpdateFile' :: ({ fileName :: NullOrUndefined (FileName), fileVersion :: NullOrUndefined (OTAUpdateFileVersion), fileSource :: NullOrUndefined (Stream), codeSigning :: NullOrUndefined (CodeSigning), attributes :: NullOrUndefined (AttributesMap) } -> { fileName :: NullOrUndefined (FileName), fileVersion :: NullOrUndefined (OTAUpdateFileVersion), fileSource :: NullOrUndefined (Stream), codeSigning :: NullOrUndefined (CodeSigning), attributes :: NullOrUndefined (AttributesMap) }) -> OTAUpdateFile
+newOTAUpdateFile' :: ({ fileName :: Maybe (FileName), fileVersion :: Maybe (OTAUpdateFileVersion), fileSource :: Maybe (Stream), codeSigning :: Maybe (CodeSigning), attributes :: Maybe (AttributesMap) } -> { fileName :: Maybe (FileName), fileVersion :: Maybe (OTAUpdateFileVersion), fileSource :: Maybe (Stream), codeSigning :: Maybe (CodeSigning), attributes :: Maybe (AttributesMap) }) -> OTAUpdateFile
 ```
 
 Constructs OTAUpdateFile's fields from required parameters
@@ -9542,7 +9542,7 @@ Encode OTAUpdateId
 
 ``` purescript
 newtype OTAUpdateInfo
-  = OTAUpdateInfo { otaUpdateId :: NullOrUndefined (OTAUpdateId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType), description :: NullOrUndefined (OTAUpdateDescription), targets :: NullOrUndefined (Targets), targetSelection :: NullOrUndefined (TargetSelection), otaUpdateFiles :: NullOrUndefined (OTAUpdateFiles), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus), awsIotJobId :: NullOrUndefined (AwsIotJobId), awsIotJobArn :: NullOrUndefined (AwsIotJobArn), errorInfo :: NullOrUndefined (ErrorInfo), additionalParameters :: NullOrUndefined (AdditionalParameterMap) }
+  = OTAUpdateInfo { otaUpdateId :: Maybe (OTAUpdateId), otaUpdateArn :: Maybe (OTAUpdateArn), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType), description :: Maybe (OTAUpdateDescription), targets :: Maybe (Targets), targetSelection :: Maybe (TargetSelection), otaUpdateFiles :: Maybe (OTAUpdateFiles), otaUpdateStatus :: Maybe (OTAUpdateStatus), awsIotJobId :: Maybe (AwsIotJobId), awsIotJobArn :: Maybe (AwsIotJobArn), errorInfo :: Maybe (ErrorInfo), additionalParameters :: Maybe (AdditionalParameterMap) }
 ```
 
 <p>Information about an OTA update.</p>
@@ -9567,7 +9567,7 @@ Constructs OTAUpdateInfo from required parameters
 #### `newOTAUpdateInfo'`
 
 ``` purescript
-newOTAUpdateInfo' :: ({ otaUpdateId :: NullOrUndefined (OTAUpdateId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType), description :: NullOrUndefined (OTAUpdateDescription), targets :: NullOrUndefined (Targets), targetSelection :: NullOrUndefined (TargetSelection), otaUpdateFiles :: NullOrUndefined (OTAUpdateFiles), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus), awsIotJobId :: NullOrUndefined (AwsIotJobId), awsIotJobArn :: NullOrUndefined (AwsIotJobArn), errorInfo :: NullOrUndefined (ErrorInfo), additionalParameters :: NullOrUndefined (AdditionalParameterMap) } -> { otaUpdateId :: NullOrUndefined (OTAUpdateId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType), description :: NullOrUndefined (OTAUpdateDescription), targets :: NullOrUndefined (Targets), targetSelection :: NullOrUndefined (TargetSelection), otaUpdateFiles :: NullOrUndefined (OTAUpdateFiles), otaUpdateStatus :: NullOrUndefined (OTAUpdateStatus), awsIotJobId :: NullOrUndefined (AwsIotJobId), awsIotJobArn :: NullOrUndefined (AwsIotJobArn), errorInfo :: NullOrUndefined (ErrorInfo), additionalParameters :: NullOrUndefined (AdditionalParameterMap) }) -> OTAUpdateInfo
+newOTAUpdateInfo' :: ({ otaUpdateId :: Maybe (OTAUpdateId), otaUpdateArn :: Maybe (OTAUpdateArn), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType), description :: Maybe (OTAUpdateDescription), targets :: Maybe (Targets), targetSelection :: Maybe (TargetSelection), otaUpdateFiles :: Maybe (OTAUpdateFiles), otaUpdateStatus :: Maybe (OTAUpdateStatus), awsIotJobId :: Maybe (AwsIotJobId), awsIotJobArn :: Maybe (AwsIotJobArn), errorInfo :: Maybe (ErrorInfo), additionalParameters :: Maybe (AdditionalParameterMap) } -> { otaUpdateId :: Maybe (OTAUpdateId), otaUpdateArn :: Maybe (OTAUpdateArn), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType), description :: Maybe (OTAUpdateDescription), targets :: Maybe (Targets), targetSelection :: Maybe (TargetSelection), otaUpdateFiles :: Maybe (OTAUpdateFiles), otaUpdateStatus :: Maybe (OTAUpdateStatus), awsIotJobId :: Maybe (AwsIotJobId), awsIotJobArn :: Maybe (AwsIotJobArn), errorInfo :: Maybe (ErrorInfo), additionalParameters :: Maybe (AdditionalParameterMap) }) -> OTAUpdateInfo
 ```
 
 Constructs OTAUpdateInfo's fields from required parameters
@@ -9592,7 +9592,7 @@ Encode OTAUpdateStatus
 
 ``` purescript
 newtype OTAUpdateSummary
-  = OTAUpdateSummary { otaUpdateId :: NullOrUndefined (OTAUpdateId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), creationDate :: NullOrUndefined (DateType) }
+  = OTAUpdateSummary { otaUpdateId :: Maybe (OTAUpdateId), otaUpdateArn :: Maybe (OTAUpdateArn), creationDate :: Maybe (DateType) }
 ```
 
 <p>An OTA update summary.</p>
@@ -9617,7 +9617,7 @@ Constructs OTAUpdateSummary from required parameters
 #### `newOTAUpdateSummary'`
 
 ``` purescript
-newOTAUpdateSummary' :: ({ otaUpdateId :: NullOrUndefined (OTAUpdateId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), creationDate :: NullOrUndefined (DateType) } -> { otaUpdateId :: NullOrUndefined (OTAUpdateId), otaUpdateArn :: NullOrUndefined (OTAUpdateArn), creationDate :: NullOrUndefined (DateType) }) -> OTAUpdateSummary
+newOTAUpdateSummary' :: ({ otaUpdateId :: Maybe (OTAUpdateId), otaUpdateArn :: Maybe (OTAUpdateArn), creationDate :: Maybe (DateType) } -> { otaUpdateId :: Maybe (OTAUpdateId), otaUpdateArn :: Maybe (OTAUpdateArn), creationDate :: Maybe (DateType) }) -> OTAUpdateSummary
 ```
 
 Constructs OTAUpdateSummary's fields from required parameters
@@ -9658,7 +9658,7 @@ Encode OptionalVersion
 
 ``` purescript
 newtype OutgoingCertificate
-  = OutgoingCertificate { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), transferredTo :: NullOrUndefined (AwsAccountId), transferDate :: NullOrUndefined (DateType), transferMessage :: NullOrUndefined (Message), creationDate :: NullOrUndefined (DateType) }
+  = OutgoingCertificate { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), transferredTo :: Maybe (AwsAccountId), transferDate :: Maybe (DateType), transferMessage :: Maybe (Message), creationDate :: Maybe (DateType) }
 ```
 
 <p>A certificate that has been transferred but not yet accepted.</p>
@@ -9683,7 +9683,7 @@ Constructs OutgoingCertificate from required parameters
 #### `newOutgoingCertificate'`
 
 ``` purescript
-newOutgoingCertificate' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), transferredTo :: NullOrUndefined (AwsAccountId), transferDate :: NullOrUndefined (DateType), transferMessage :: NullOrUndefined (Message), creationDate :: NullOrUndefined (DateType) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId), transferredTo :: NullOrUndefined (AwsAccountId), transferDate :: NullOrUndefined (DateType), transferMessage :: NullOrUndefined (Message), creationDate :: NullOrUndefined (DateType) }) -> OutgoingCertificate
+newOutgoingCertificate' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), transferredTo :: Maybe (AwsAccountId), transferDate :: Maybe (DateType), transferMessage :: Maybe (Message), creationDate :: Maybe (DateType) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId), transferredTo :: Maybe (AwsAccountId), transferDate :: Maybe (DateType), transferMessage :: Maybe (Message), creationDate :: Maybe (DateType) }) -> OutgoingCertificate
 ```
 
 Constructs OutgoingCertificate's fields from required parameters
@@ -9852,7 +9852,7 @@ Encode Policies
 
 ``` purescript
 newtype Policy
-  = Policy { policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn) }
+  = Policy { policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn) }
 ```
 
 <p>Describes an AWS IoT policy.</p>
@@ -9877,7 +9877,7 @@ Constructs Policy from required parameters
 #### `newPolicy'`
 
 ``` purescript
-newPolicy' :: ({ policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn) } -> { policyName :: NullOrUndefined (PolicyName), policyArn :: NullOrUndefined (PolicyArn) }) -> Policy
+newPolicy' :: ({ policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn) } -> { policyName :: Maybe (PolicyName), policyArn :: Maybe (PolicyArn) }) -> Policy
 ```
 
 Constructs Policy's fields from required parameters
@@ -9998,7 +9998,7 @@ Encode PolicyTargets
 
 ``` purescript
 newtype PolicyVersion
-  = PolicyVersion { versionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion), createDate :: NullOrUndefined (DateType) }
+  = PolicyVersion { versionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion), createDate :: Maybe (DateType) }
 ```
 
 <p>Describes a policy version.</p>
@@ -10023,7 +10023,7 @@ Constructs PolicyVersion from required parameters
 #### `newPolicyVersion'`
 
 ``` purescript
-newPolicyVersion' :: ({ versionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion), createDate :: NullOrUndefined (DateType) } -> { versionId :: NullOrUndefined (PolicyVersionId), isDefaultVersion :: NullOrUndefined (IsDefaultVersion), createDate :: NullOrUndefined (DateType) }) -> PolicyVersion
+newPolicyVersion' :: ({ versionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion), createDate :: Maybe (DateType) } -> { versionId :: Maybe (PolicyVersionId), isDefaultVersion :: Maybe (IsDefaultVersion), createDate :: Maybe (DateType) }) -> PolicyVersion
 ```
 
 Constructs PolicyVersion's fields from required parameters
@@ -10064,7 +10064,7 @@ Encode PolicyVersions
 
 ``` purescript
 newtype PresignedUrlConfig
-  = PresignedUrlConfig { roleArn :: NullOrUndefined (RoleArn), expiresInSec :: NullOrUndefined (ExpiresInSec) }
+  = PresignedUrlConfig { roleArn :: Maybe (RoleArn), expiresInSec :: Maybe (ExpiresInSec) }
 ```
 
 <p>Configuration for pre-signed S3 URLs.</p>
@@ -10089,7 +10089,7 @@ Constructs PresignedUrlConfig from required parameters
 #### `newPresignedUrlConfig'`
 
 ``` purescript
-newPresignedUrlConfig' :: ({ roleArn :: NullOrUndefined (RoleArn), expiresInSec :: NullOrUndefined (ExpiresInSec) } -> { roleArn :: NullOrUndefined (RoleArn), expiresInSec :: NullOrUndefined (ExpiresInSec) }) -> PresignedUrlConfig
+newPresignedUrlConfig' :: ({ roleArn :: Maybe (RoleArn), expiresInSec :: Maybe (ExpiresInSec) } -> { roleArn :: Maybe (RoleArn), expiresInSec :: Maybe (ExpiresInSec) }) -> PresignedUrlConfig
 ```
 
 Constructs PresignedUrlConfig's fields from required parameters
@@ -10420,7 +10420,7 @@ Encode RecursiveWithoutDefault
 
 ``` purescript
 newtype RegisterCACertificateRequest
-  = RegisterCACertificateRequest { caCertificate :: CertificatePem, verificationCertificate :: CertificatePem, setAsActive :: NullOrUndefined (SetAsActive), allowAutoRegistration :: NullOrUndefined (AllowAutoRegistration), registrationConfig :: NullOrUndefined (RegistrationConfig) }
+  = RegisterCACertificateRequest { caCertificate :: CertificatePem, verificationCertificate :: CertificatePem, setAsActive :: Maybe (SetAsActive), allowAutoRegistration :: Maybe (AllowAutoRegistration), registrationConfig :: Maybe (RegistrationConfig) }
 ```
 
 <p>The input to the RegisterCACertificate operation.</p>
@@ -10445,7 +10445,7 @@ Constructs RegisterCACertificateRequest from required parameters
 #### `newRegisterCACertificateRequest'`
 
 ``` purescript
-newRegisterCACertificateRequest' :: CertificatePem -> CertificatePem -> ({ caCertificate :: CertificatePem, verificationCertificate :: CertificatePem, setAsActive :: NullOrUndefined (SetAsActive), allowAutoRegistration :: NullOrUndefined (AllowAutoRegistration), registrationConfig :: NullOrUndefined (RegistrationConfig) } -> { caCertificate :: CertificatePem, verificationCertificate :: CertificatePem, setAsActive :: NullOrUndefined (SetAsActive), allowAutoRegistration :: NullOrUndefined (AllowAutoRegistration), registrationConfig :: NullOrUndefined (RegistrationConfig) }) -> RegisterCACertificateRequest
+newRegisterCACertificateRequest' :: CertificatePem -> CertificatePem -> ({ caCertificate :: CertificatePem, verificationCertificate :: CertificatePem, setAsActive :: Maybe (SetAsActive), allowAutoRegistration :: Maybe (AllowAutoRegistration), registrationConfig :: Maybe (RegistrationConfig) } -> { caCertificate :: CertificatePem, verificationCertificate :: CertificatePem, setAsActive :: Maybe (SetAsActive), allowAutoRegistration :: Maybe (AllowAutoRegistration), registrationConfig :: Maybe (RegistrationConfig) }) -> RegisterCACertificateRequest
 ```
 
 Constructs RegisterCACertificateRequest's fields from required parameters
@@ -10454,7 +10454,7 @@ Constructs RegisterCACertificateRequest's fields from required parameters
 
 ``` purescript
 newtype RegisterCACertificateResponse
-  = RegisterCACertificateResponse { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId) }
+  = RegisterCACertificateResponse { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId) }
 ```
 
 <p>The output from the RegisterCACertificateResponse operation.</p>
@@ -10479,7 +10479,7 @@ Constructs RegisterCACertificateResponse from required parameters
 #### `newRegisterCACertificateResponse'`
 
 ``` purescript
-newRegisterCACertificateResponse' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId) }) -> RegisterCACertificateResponse
+newRegisterCACertificateResponse' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId) }) -> RegisterCACertificateResponse
 ```
 
 Constructs RegisterCACertificateResponse's fields from required parameters
@@ -10488,7 +10488,7 @@ Constructs RegisterCACertificateResponse's fields from required parameters
 
 ``` purescript
 newtype RegisterCertificateRequest
-  = RegisterCertificateRequest { certificatePem :: CertificatePem, caCertificatePem :: NullOrUndefined (CertificatePem), setAsActive :: NullOrUndefined (SetAsActiveFlag), status :: NullOrUndefined (CertificateStatus) }
+  = RegisterCertificateRequest { certificatePem :: CertificatePem, caCertificatePem :: Maybe (CertificatePem), setAsActive :: Maybe (SetAsActiveFlag), status :: Maybe (CertificateStatus) }
 ```
 
 <p>The input to the RegisterCertificate operation.</p>
@@ -10513,7 +10513,7 @@ Constructs RegisterCertificateRequest from required parameters
 #### `newRegisterCertificateRequest'`
 
 ``` purescript
-newRegisterCertificateRequest' :: CertificatePem -> ({ certificatePem :: CertificatePem, caCertificatePem :: NullOrUndefined (CertificatePem), setAsActive :: NullOrUndefined (SetAsActiveFlag), status :: NullOrUndefined (CertificateStatus) } -> { certificatePem :: CertificatePem, caCertificatePem :: NullOrUndefined (CertificatePem), setAsActive :: NullOrUndefined (SetAsActiveFlag), status :: NullOrUndefined (CertificateStatus) }) -> RegisterCertificateRequest
+newRegisterCertificateRequest' :: CertificatePem -> ({ certificatePem :: CertificatePem, caCertificatePem :: Maybe (CertificatePem), setAsActive :: Maybe (SetAsActiveFlag), status :: Maybe (CertificateStatus) } -> { certificatePem :: CertificatePem, caCertificatePem :: Maybe (CertificatePem), setAsActive :: Maybe (SetAsActiveFlag), status :: Maybe (CertificateStatus) }) -> RegisterCertificateRequest
 ```
 
 Constructs RegisterCertificateRequest's fields from required parameters
@@ -10522,7 +10522,7 @@ Constructs RegisterCertificateRequest's fields from required parameters
 
 ``` purescript
 newtype RegisterCertificateResponse
-  = RegisterCertificateResponse { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId) }
+  = RegisterCertificateResponse { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId) }
 ```
 
 <p>The output from the RegisterCertificate operation.</p>
@@ -10547,7 +10547,7 @@ Constructs RegisterCertificateResponse from required parameters
 #### `newRegisterCertificateResponse'`
 
 ``` purescript
-newRegisterCertificateResponse' :: ({ certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId) } -> { certificateArn :: NullOrUndefined (CertificateArn), certificateId :: NullOrUndefined (CertificateId) }) -> RegisterCertificateResponse
+newRegisterCertificateResponse' :: ({ certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId) } -> { certificateArn :: Maybe (CertificateArn), certificateId :: Maybe (CertificateId) }) -> RegisterCertificateResponse
 ```
 
 Constructs RegisterCertificateResponse's fields from required parameters
@@ -10556,7 +10556,7 @@ Constructs RegisterCertificateResponse's fields from required parameters
 
 ``` purescript
 newtype RegisterThingRequest
-  = RegisterThingRequest { templateBody :: TemplateBody, parameters :: NullOrUndefined (Parameters) }
+  = RegisterThingRequest { templateBody :: TemplateBody, parameters :: Maybe (Parameters) }
 ```
 
 ##### Instances
@@ -10579,7 +10579,7 @@ Constructs RegisterThingRequest from required parameters
 #### `newRegisterThingRequest'`
 
 ``` purescript
-newRegisterThingRequest' :: TemplateBody -> ({ templateBody :: TemplateBody, parameters :: NullOrUndefined (Parameters) } -> { templateBody :: TemplateBody, parameters :: NullOrUndefined (Parameters) }) -> RegisterThingRequest
+newRegisterThingRequest' :: TemplateBody -> ({ templateBody :: TemplateBody, parameters :: Maybe (Parameters) } -> { templateBody :: TemplateBody, parameters :: Maybe (Parameters) }) -> RegisterThingRequest
 ```
 
 Constructs RegisterThingRequest's fields from required parameters
@@ -10588,7 +10588,7 @@ Constructs RegisterThingRequest's fields from required parameters
 
 ``` purescript
 newtype RegisterThingResponse
-  = RegisterThingResponse { certificatePem :: NullOrUndefined (CertificatePem), resourceArns :: NullOrUndefined (ResourceArns) }
+  = RegisterThingResponse { certificatePem :: Maybe (CertificatePem), resourceArns :: Maybe (ResourceArns) }
 ```
 
 ##### Instances
@@ -10611,7 +10611,7 @@ Constructs RegisterThingResponse from required parameters
 #### `newRegisterThingResponse'`
 
 ``` purescript
-newRegisterThingResponse' :: ({ certificatePem :: NullOrUndefined (CertificatePem), resourceArns :: NullOrUndefined (ResourceArns) } -> { certificatePem :: NullOrUndefined (CertificatePem), resourceArns :: NullOrUndefined (ResourceArns) }) -> RegisterThingResponse
+newRegisterThingResponse' :: ({ certificatePem :: Maybe (CertificatePem), resourceArns :: Maybe (ResourceArns) } -> { certificatePem :: Maybe (CertificatePem), resourceArns :: Maybe (ResourceArns) }) -> RegisterThingResponse
 ```
 
 Constructs RegisterThingResponse's fields from required parameters
@@ -10636,7 +10636,7 @@ Encode RegistrationCode
 
 ``` purescript
 newtype RegistrationCodeValidationException
-  = RegistrationCodeValidationException { message :: NullOrUndefined (ErrorMessage') }
+  = RegistrationCodeValidationException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The registration code is invalid.</p>
@@ -10661,7 +10661,7 @@ Constructs RegistrationCodeValidationException from required parameters
 #### `newRegistrationCodeValidationException'`
 
 ``` purescript
-newRegistrationCodeValidationException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> RegistrationCodeValidationException
+newRegistrationCodeValidationException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> RegistrationCodeValidationException
 ```
 
 Constructs RegistrationCodeValidationException's fields from required parameters
@@ -10670,7 +10670,7 @@ Constructs RegistrationCodeValidationException's fields from required parameters
 
 ``` purescript
 newtype RegistrationConfig
-  = RegistrationConfig { templateBody :: NullOrUndefined (TemplateBody), roleArn :: NullOrUndefined (RoleArn) }
+  = RegistrationConfig { templateBody :: Maybe (TemplateBody), roleArn :: Maybe (RoleArn) }
 ```
 
 <p>The registration configuration.</p>
@@ -10695,7 +10695,7 @@ Constructs RegistrationConfig from required parameters
 #### `newRegistrationConfig'`
 
 ``` purescript
-newRegistrationConfig' :: ({ templateBody :: NullOrUndefined (TemplateBody), roleArn :: NullOrUndefined (RoleArn) } -> { templateBody :: NullOrUndefined (TemplateBody), roleArn :: NullOrUndefined (RoleArn) }) -> RegistrationConfig
+newRegistrationConfig' :: ({ templateBody :: Maybe (TemplateBody), roleArn :: Maybe (RoleArn) } -> { templateBody :: Maybe (TemplateBody), roleArn :: Maybe (RoleArn) }) -> RegistrationConfig
 ```
 
 Constructs RegistrationConfig's fields from required parameters
@@ -10752,7 +10752,7 @@ Encode RegistryS3KeyName
 
 ``` purescript
 newtype RejectCertificateTransferRequest
-  = RejectCertificateTransferRequest { certificateId :: CertificateId, rejectReason :: NullOrUndefined (Message) }
+  = RejectCertificateTransferRequest { certificateId :: CertificateId, rejectReason :: Maybe (Message) }
 ```
 
 <p>The input for the RejectCertificateTransfer operation.</p>
@@ -10777,7 +10777,7 @@ Constructs RejectCertificateTransferRequest from required parameters
 #### `newRejectCertificateTransferRequest'`
 
 ``` purescript
-newRejectCertificateTransferRequest' :: CertificateId -> ({ certificateId :: CertificateId, rejectReason :: NullOrUndefined (Message) } -> { certificateId :: CertificateId, rejectReason :: NullOrUndefined (Message) }) -> RejectCertificateTransferRequest
+newRejectCertificateTransferRequest' :: CertificateId -> ({ certificateId :: CertificateId, rejectReason :: Maybe (Message) } -> { certificateId :: CertificateId, rejectReason :: Maybe (Message) }) -> RejectCertificateTransferRequest
 ```
 
 Constructs RejectCertificateTransferRequest's fields from required parameters
@@ -10818,7 +10818,7 @@ Encode RemoveAutoRegistration
 
 ``` purescript
 newtype RemoveThingFromThingGroupRequest
-  = RemoveThingFromThingGroupRequest { thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn) }
+  = RemoveThingFromThingGroupRequest { thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn) }
 ```
 
 ##### Instances
@@ -10841,7 +10841,7 @@ Constructs RemoveThingFromThingGroupRequest from required parameters
 #### `newRemoveThingFromThingGroupRequest'`
 
 ``` purescript
-newRemoveThingFromThingGroupRequest' :: ({ thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn) } -> { thingGroupName :: NullOrUndefined (ThingGroupName), thingGroupArn :: NullOrUndefined (ThingGroupArn), thingName :: NullOrUndefined (ThingName), thingArn :: NullOrUndefined (ThingArn) }) -> RemoveThingFromThingGroupRequest
+newRemoveThingFromThingGroupRequest' :: ({ thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn) } -> { thingGroupName :: Maybe (ThingGroupName), thingGroupArn :: Maybe (ThingGroupArn), thingName :: Maybe (ThingName), thingArn :: Maybe (ThingArn) }) -> RemoveThingFromThingGroupRequest
 ```
 
 Constructs RemoveThingFromThingGroupRequest's fields from required parameters
@@ -10998,7 +10998,7 @@ Encode Resource
 
 ``` purescript
 newtype ResourceAlreadyExistsException
-  = ResourceAlreadyExistsException { message :: NullOrUndefined (ErrorMessage'), resourceId :: NullOrUndefined (ResourceId'), resourceArn :: NullOrUndefined (ResourceArn') }
+  = ResourceAlreadyExistsException { message :: Maybe (ErrorMessage'), resourceId :: Maybe (ResourceId'), resourceArn :: Maybe (ResourceArn') }
 ```
 
 <p>The resource already exists.</p>
@@ -11023,7 +11023,7 @@ Constructs ResourceAlreadyExistsException from required parameters
 #### `newResourceAlreadyExistsException'`
 
 ``` purescript
-newResourceAlreadyExistsException' :: ({ message :: NullOrUndefined (ErrorMessage'), resourceId :: NullOrUndefined (ResourceId'), resourceArn :: NullOrUndefined (ResourceArn') } -> { message :: NullOrUndefined (ErrorMessage'), resourceId :: NullOrUndefined (ResourceId'), resourceArn :: NullOrUndefined (ResourceArn') }) -> ResourceAlreadyExistsException
+newResourceAlreadyExistsException' :: ({ message :: Maybe (ErrorMessage'), resourceId :: Maybe (ResourceId'), resourceArn :: Maybe (ResourceArn') } -> { message :: Maybe (ErrorMessage'), resourceId :: Maybe (ResourceId'), resourceArn :: Maybe (ResourceArn') }) -> ResourceAlreadyExistsException
 ```
 
 Constructs ResourceAlreadyExistsException's fields from required parameters
@@ -11080,7 +11080,7 @@ Encode ResourceLogicalId
 
 ``` purescript
 newtype ResourceNotFoundException
-  = ResourceNotFoundException { message :: NullOrUndefined (ErrorMessage') }
+  = ResourceNotFoundException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The specified resource does not exist.</p>
@@ -11105,7 +11105,7 @@ Constructs ResourceNotFoundException from required parameters
 #### `newResourceNotFoundException'`
 
 ``` purescript
-newResourceNotFoundException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> ResourceNotFoundException
+newResourceNotFoundException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> ResourceNotFoundException
 ```
 
 Constructs ResourceNotFoundException's fields from required parameters
@@ -11114,7 +11114,7 @@ Constructs ResourceNotFoundException's fields from required parameters
 
 ``` purescript
 newtype ResourceRegistrationFailureException
-  = ResourceRegistrationFailureException { message :: NullOrUndefined (ErrorMessage') }
+  = ResourceRegistrationFailureException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The resource registration failed.</p>
@@ -11139,7 +11139,7 @@ Constructs ResourceRegistrationFailureException from required parameters
 #### `newResourceRegistrationFailureException'`
 
 ``` purescript
-newResourceRegistrationFailureException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> ResourceRegistrationFailureException
+newResourceRegistrationFailureException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> ResourceRegistrationFailureException
 ```
 
 Constructs ResourceRegistrationFailureException's fields from required parameters
@@ -11196,7 +11196,7 @@ Encode RoleAliasArn
 
 ``` purescript
 newtype RoleAliasDescription
-  = RoleAliasDescription { roleAlias :: NullOrUndefined (RoleAlias), roleArn :: NullOrUndefined (RoleArn), owner :: NullOrUndefined (AwsAccountId), credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType) }
+  = RoleAliasDescription { roleAlias :: Maybe (RoleAlias), roleArn :: Maybe (RoleArn), owner :: Maybe (AwsAccountId), credentialDurationSeconds :: Maybe (CredentialDurationSeconds), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType) }
 ```
 
 <p>Role alias description.</p>
@@ -11221,7 +11221,7 @@ Constructs RoleAliasDescription from required parameters
 #### `newRoleAliasDescription'`
 
 ``` purescript
-newRoleAliasDescription' :: ({ roleAlias :: NullOrUndefined (RoleAlias), roleArn :: NullOrUndefined (RoleArn), owner :: NullOrUndefined (AwsAccountId), credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType) } -> { roleAlias :: NullOrUndefined (RoleAlias), roleArn :: NullOrUndefined (RoleArn), owner :: NullOrUndefined (AwsAccountId), credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds), creationDate :: NullOrUndefined (DateType), lastModifiedDate :: NullOrUndefined (DateType) }) -> RoleAliasDescription
+newRoleAliasDescription' :: ({ roleAlias :: Maybe (RoleAlias), roleArn :: Maybe (RoleArn), owner :: Maybe (AwsAccountId), credentialDurationSeconds :: Maybe (CredentialDurationSeconds), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType) } -> { roleAlias :: Maybe (RoleAlias), roleArn :: Maybe (RoleArn), owner :: Maybe (AwsAccountId), credentialDurationSeconds :: Maybe (CredentialDurationSeconds), creationDate :: Maybe (DateType), lastModifiedDate :: Maybe (DateType) }) -> RoleAliasDescription
 ```
 
 Constructs RoleAliasDescription's fields from required parameters
@@ -11294,7 +11294,7 @@ Encode RuleName
 
 ``` purescript
 newtype S3Action
-  = S3Action { roleArn :: AwsArn, bucketName :: BucketName, key :: Key, cannedAcl :: NullOrUndefined (CannedAccessControlList) }
+  = S3Action { roleArn :: AwsArn, bucketName :: BucketName, key :: Key, cannedAcl :: Maybe (CannedAccessControlList) }
 ```
 
 <p>Describes an action to write data to an Amazon S3 bucket.</p>
@@ -11319,7 +11319,7 @@ Constructs S3Action from required parameters
 #### `newS3Action'`
 
 ``` purescript
-newS3Action' :: BucketName -> Key -> AwsArn -> ({ roleArn :: AwsArn, bucketName :: BucketName, key :: Key, cannedAcl :: NullOrUndefined (CannedAccessControlList) } -> { roleArn :: AwsArn, bucketName :: BucketName, key :: Key, cannedAcl :: NullOrUndefined (CannedAccessControlList) }) -> S3Action
+newS3Action' :: BucketName -> Key -> AwsArn -> ({ roleArn :: AwsArn, bucketName :: BucketName, key :: Key, cannedAcl :: Maybe (CannedAccessControlList) } -> { roleArn :: AwsArn, bucketName :: BucketName, key :: Key, cannedAcl :: Maybe (CannedAccessControlList) }) -> S3Action
 ```
 
 Constructs S3Action's fields from required parameters
@@ -11392,7 +11392,7 @@ Encode S3Key
 
 ``` purescript
 newtype S3Location
-  = S3Location { bucket :: S3Bucket, key :: S3Key, version :: NullOrUndefined (S3Version) }
+  = S3Location { bucket :: S3Bucket, key :: S3Key, version :: Maybe (S3Version) }
 ```
 
 <p>The location in S3 the contains the files to stream.</p>
@@ -11417,7 +11417,7 @@ Constructs S3Location from required parameters
 #### `newS3Location'`
 
 ``` purescript
-newS3Location' :: S3Bucket -> S3Key -> ({ bucket :: S3Bucket, key :: S3Key, version :: NullOrUndefined (S3Version) } -> { bucket :: S3Bucket, key :: S3Key, version :: NullOrUndefined (S3Version) }) -> S3Location
+newS3Location' :: S3Bucket -> S3Key -> ({ bucket :: S3Bucket, key :: S3Key, version :: Maybe (S3Version) } -> { bucket :: S3Bucket, key :: S3Key, version :: Maybe (S3Version) }) -> S3Location
 ```
 
 Constructs S3Location's fields from required parameters
@@ -11524,7 +11524,7 @@ Encode SalesforceToken
 
 ``` purescript
 newtype SearchIndexRequest
-  = SearchIndexRequest { indexName :: NullOrUndefined (IndexName), queryString :: QueryString, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (QueryMaxResults), queryVersion :: NullOrUndefined (QueryVersion) }
+  = SearchIndexRequest { indexName :: Maybe (IndexName), queryString :: QueryString, nextToken :: Maybe (NextToken), maxResults :: Maybe (QueryMaxResults), queryVersion :: Maybe (QueryVersion) }
 ```
 
 ##### Instances
@@ -11547,7 +11547,7 @@ Constructs SearchIndexRequest from required parameters
 #### `newSearchIndexRequest'`
 
 ``` purescript
-newSearchIndexRequest' :: QueryString -> ({ indexName :: NullOrUndefined (IndexName), queryString :: QueryString, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (QueryMaxResults), queryVersion :: NullOrUndefined (QueryVersion) } -> { indexName :: NullOrUndefined (IndexName), queryString :: QueryString, nextToken :: NullOrUndefined (NextToken), maxResults :: NullOrUndefined (QueryMaxResults), queryVersion :: NullOrUndefined (QueryVersion) }) -> SearchIndexRequest
+newSearchIndexRequest' :: QueryString -> ({ indexName :: Maybe (IndexName), queryString :: QueryString, nextToken :: Maybe (NextToken), maxResults :: Maybe (QueryMaxResults), queryVersion :: Maybe (QueryVersion) } -> { indexName :: Maybe (IndexName), queryString :: QueryString, nextToken :: Maybe (NextToken), maxResults :: Maybe (QueryMaxResults), queryVersion :: Maybe (QueryVersion) }) -> SearchIndexRequest
 ```
 
 Constructs SearchIndexRequest's fields from required parameters
@@ -11556,7 +11556,7 @@ Constructs SearchIndexRequest's fields from required parameters
 
 ``` purescript
 newtype SearchIndexResponse
-  = SearchIndexResponse { nextToken :: NullOrUndefined (NextToken), things :: NullOrUndefined (ThingDocumentList) }
+  = SearchIndexResponse { nextToken :: Maybe (NextToken), things :: Maybe (ThingDocumentList) }
 ```
 
 ##### Instances
@@ -11579,7 +11579,7 @@ Constructs SearchIndexResponse from required parameters
 #### `newSearchIndexResponse'`
 
 ``` purescript
-newSearchIndexResponse' :: ({ nextToken :: NullOrUndefined (NextToken), things :: NullOrUndefined (ThingDocumentList) } -> { nextToken :: NullOrUndefined (NextToken), things :: NullOrUndefined (ThingDocumentList) }) -> SearchIndexResponse
+newSearchIndexResponse' :: ({ nextToken :: Maybe (NextToken), things :: Maybe (ThingDocumentList) } -> { nextToken :: Maybe (NextToken), things :: Maybe (ThingDocumentList) }) -> SearchIndexResponse
 ```
 
 Constructs SearchIndexResponse's fields from required parameters
@@ -11620,7 +11620,7 @@ Encode Seconds
 
 ``` purescript
 newtype ServiceUnavailableException
-  = ServiceUnavailableException { message :: NullOrUndefined (ErrorMessage') }
+  = ServiceUnavailableException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The service is temporarily unavailable.</p>
@@ -11645,7 +11645,7 @@ Constructs ServiceUnavailableException from required parameters
 #### `newServiceUnavailableException'`
 
 ``` purescript
-newServiceUnavailableException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> ServiceUnavailableException
+newServiceUnavailableException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> ServiceUnavailableException
 ```
 
 Constructs ServiceUnavailableException's fields from required parameters
@@ -11734,7 +11734,7 @@ Constructs SetDefaultAuthorizerRequest's fields from required parameters
 
 ``` purescript
 newtype SetDefaultAuthorizerResponse
-  = SetDefaultAuthorizerResponse { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) }
+  = SetDefaultAuthorizerResponse { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) }
 ```
 
 ##### Instances
@@ -11757,7 +11757,7 @@ Constructs SetDefaultAuthorizerResponse from required parameters
 #### `newSetDefaultAuthorizerResponse'`
 
 ``` purescript
-newSetDefaultAuthorizerResponse' :: ({ authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) } -> { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) }) -> SetDefaultAuthorizerResponse
+newSetDefaultAuthorizerResponse' :: ({ authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) } -> { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) }) -> SetDefaultAuthorizerResponse
 ```
 
 Constructs SetDefaultAuthorizerResponse's fields from required parameters
@@ -11866,7 +11866,7 @@ Constructs SetV2LoggingLevelRequest's fields from required parameters
 
 ``` purescript
 newtype SetV2LoggingOptionsRequest
-  = SetV2LoggingOptionsRequest { roleArn :: NullOrUndefined (AwsArn), defaultLogLevel :: NullOrUndefined (LogLevel), disableAllLogs :: NullOrUndefined (DisableAllLogs) }
+  = SetV2LoggingOptionsRequest { roleArn :: Maybe (AwsArn), defaultLogLevel :: Maybe (LogLevel), disableAllLogs :: Maybe (DisableAllLogs) }
 ```
 
 ##### Instances
@@ -11889,7 +11889,7 @@ Constructs SetV2LoggingOptionsRequest from required parameters
 #### `newSetV2LoggingOptionsRequest'`
 
 ``` purescript
-newSetV2LoggingOptionsRequest' :: ({ roleArn :: NullOrUndefined (AwsArn), defaultLogLevel :: NullOrUndefined (LogLevel), disableAllLogs :: NullOrUndefined (DisableAllLogs) } -> { roleArn :: NullOrUndefined (AwsArn), defaultLogLevel :: NullOrUndefined (LogLevel), disableAllLogs :: NullOrUndefined (DisableAllLogs) }) -> SetV2LoggingOptionsRequest
+newSetV2LoggingOptionsRequest' :: ({ roleArn :: Maybe (AwsArn), defaultLogLevel :: Maybe (LogLevel), disableAllLogs :: Maybe (DisableAllLogs) } -> { roleArn :: Maybe (AwsArn), defaultLogLevel :: Maybe (LogLevel), disableAllLogs :: Maybe (DisableAllLogs) }) -> SetV2LoggingOptionsRequest
 ```
 
 Constructs SetV2LoggingOptionsRequest's fields from required parameters
@@ -11962,7 +11962,7 @@ Encode SkyfallMaxResults
 
 ``` purescript
 newtype SnsAction
-  = SnsAction { targetArn :: AwsArn, roleArn :: AwsArn, messageFormat :: NullOrUndefined (MessageFormat) }
+  = SnsAction { targetArn :: AwsArn, roleArn :: AwsArn, messageFormat :: Maybe (MessageFormat) }
 ```
 
 <p>Describes an action to publish to an Amazon SNS topic.</p>
@@ -11987,7 +11987,7 @@ Constructs SnsAction from required parameters
 #### `newSnsAction'`
 
 ``` purescript
-newSnsAction' :: AwsArn -> AwsArn -> ({ targetArn :: AwsArn, roleArn :: AwsArn, messageFormat :: NullOrUndefined (MessageFormat) } -> { targetArn :: AwsArn, roleArn :: AwsArn, messageFormat :: NullOrUndefined (MessageFormat) }) -> SnsAction
+newSnsAction' :: AwsArn -> AwsArn -> ({ targetArn :: AwsArn, roleArn :: AwsArn, messageFormat :: Maybe (MessageFormat) } -> { targetArn :: AwsArn, roleArn :: AwsArn, messageFormat :: Maybe (MessageFormat) }) -> SnsAction
 ```
 
 Constructs SnsAction's fields from required parameters
@@ -11996,7 +11996,7 @@ Constructs SnsAction's fields from required parameters
 
 ``` purescript
 newtype SqlParseException
-  = SqlParseException { message :: NullOrUndefined (ErrorMessage') }
+  = SqlParseException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The Rule-SQL expression can't be parsed correctly.</p>
@@ -12021,7 +12021,7 @@ Constructs SqlParseException from required parameters
 #### `newSqlParseException'`
 
 ``` purescript
-newSqlParseException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> SqlParseException
+newSqlParseException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> SqlParseException
 ```
 
 Constructs SqlParseException's fields from required parameters
@@ -12030,7 +12030,7 @@ Constructs SqlParseException's fields from required parameters
 
 ``` purescript
 newtype SqsAction
-  = SqsAction { roleArn :: AwsArn, queueUrl :: QueueUrl, useBase64 :: NullOrUndefined (UseBase64) }
+  = SqsAction { roleArn :: AwsArn, queueUrl :: QueueUrl, useBase64 :: Maybe (UseBase64) }
 ```
 
 <p>Describes an action to publish data to an Amazon SQS queue.</p>
@@ -12055,7 +12055,7 @@ Constructs SqsAction from required parameters
 #### `newSqsAction'`
 
 ``` purescript
-newSqsAction' :: QueueUrl -> AwsArn -> ({ roleArn :: AwsArn, queueUrl :: QueueUrl, useBase64 :: NullOrUndefined (UseBase64) } -> { roleArn :: AwsArn, queueUrl :: QueueUrl, useBase64 :: NullOrUndefined (UseBase64) }) -> SqsAction
+newSqsAction' :: QueueUrl -> AwsArn -> ({ roleArn :: AwsArn, queueUrl :: QueueUrl, useBase64 :: Maybe (UseBase64) } -> { roleArn :: AwsArn, queueUrl :: QueueUrl, useBase64 :: Maybe (UseBase64) }) -> SqsAction
 ```
 
 Constructs SqsAction's fields from required parameters
@@ -12096,7 +12096,7 @@ Constructs StartThingRegistrationTaskRequest's fields from required parameters
 
 ``` purescript
 newtype StartThingRegistrationTaskResponse
-  = StartThingRegistrationTaskResponse { taskId :: NullOrUndefined (TaskId) }
+  = StartThingRegistrationTaskResponse { taskId :: Maybe (TaskId) }
 ```
 
 ##### Instances
@@ -12119,7 +12119,7 @@ Constructs StartThingRegistrationTaskResponse from required parameters
 #### `newStartThingRegistrationTaskResponse'`
 
 ``` purescript
-newStartThingRegistrationTaskResponse' :: ({ taskId :: NullOrUndefined (TaskId) } -> { taskId :: NullOrUndefined (TaskId) }) -> StartThingRegistrationTaskResponse
+newStartThingRegistrationTaskResponse' :: ({ taskId :: Maybe (TaskId) } -> { taskId :: Maybe (TaskId) }) -> StartThingRegistrationTaskResponse
 ```
 
 Constructs StartThingRegistrationTaskResponse's fields from required parameters
@@ -12224,7 +12224,7 @@ Encode StopThingRegistrationTaskResponse
 
 ``` purescript
 newtype Stream
-  = Stream { streamId :: NullOrUndefined (StreamId), fileId :: NullOrUndefined (FileId) }
+  = Stream { streamId :: Maybe (StreamId), fileId :: Maybe (FileId) }
 ```
 
 <p>Describes a group of files that can be streamed.</p>
@@ -12249,7 +12249,7 @@ Constructs Stream from required parameters
 #### `newStream'`
 
 ``` purescript
-newStream' :: ({ streamId :: NullOrUndefined (StreamId), fileId :: NullOrUndefined (FileId) } -> { streamId :: NullOrUndefined (StreamId), fileId :: NullOrUndefined (FileId) }) -> Stream
+newStream' :: ({ streamId :: Maybe (StreamId), fileId :: Maybe (FileId) } -> { streamId :: Maybe (StreamId), fileId :: Maybe (FileId) }) -> Stream
 ```
 
 Constructs Stream's fields from required parameters
@@ -12290,7 +12290,7 @@ Encode StreamDescription
 
 ``` purescript
 newtype StreamFile
-  = StreamFile { fileId :: NullOrUndefined (FileId), s3Location :: NullOrUndefined (S3Location) }
+  = StreamFile { fileId :: Maybe (FileId), s3Location :: Maybe (S3Location) }
 ```
 
 <p>Represents a file to stream.</p>
@@ -12315,7 +12315,7 @@ Constructs StreamFile from required parameters
 #### `newStreamFile'`
 
 ``` purescript
-newStreamFile' :: ({ fileId :: NullOrUndefined (FileId), s3Location :: NullOrUndefined (S3Location) } -> { fileId :: NullOrUndefined (FileId), s3Location :: NullOrUndefined (S3Location) }) -> StreamFile
+newStreamFile' :: ({ fileId :: Maybe (FileId), s3Location :: Maybe (S3Location) } -> { fileId :: Maybe (FileId), s3Location :: Maybe (S3Location) }) -> StreamFile
 ```
 
 Constructs StreamFile's fields from required parameters
@@ -12356,7 +12356,7 @@ Encode StreamId
 
 ``` purescript
 newtype StreamInfo
-  = StreamInfo { streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), streamVersion :: NullOrUndefined (StreamVersion), description :: NullOrUndefined (StreamDescription), files :: NullOrUndefined (StreamFiles), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), roleArn :: NullOrUndefined (RoleArn) }
+  = StreamInfo { streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), streamVersion :: Maybe (StreamVersion), description :: Maybe (StreamDescription), files :: Maybe (StreamFiles), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), roleArn :: Maybe (RoleArn) }
 ```
 
 <p>Information about a stream.</p>
@@ -12381,7 +12381,7 @@ Constructs StreamInfo from required parameters
 #### `newStreamInfo'`
 
 ``` purescript
-newStreamInfo' :: ({ streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), streamVersion :: NullOrUndefined (StreamVersion), description :: NullOrUndefined (StreamDescription), files :: NullOrUndefined (StreamFiles), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), roleArn :: NullOrUndefined (RoleArn) } -> { streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), streamVersion :: NullOrUndefined (StreamVersion), description :: NullOrUndefined (StreamDescription), files :: NullOrUndefined (StreamFiles), createdAt :: NullOrUndefined (DateType), lastUpdatedAt :: NullOrUndefined (DateType), roleArn :: NullOrUndefined (RoleArn) }) -> StreamInfo
+newStreamInfo' :: ({ streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), streamVersion :: Maybe (StreamVersion), description :: Maybe (StreamDescription), files :: Maybe (StreamFiles), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), roleArn :: Maybe (RoleArn) } -> { streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), streamVersion :: Maybe (StreamVersion), description :: Maybe (StreamDescription), files :: Maybe (StreamFiles), createdAt :: Maybe (DateType), lastUpdatedAt :: Maybe (DateType), roleArn :: Maybe (RoleArn) }) -> StreamInfo
 ```
 
 Constructs StreamInfo's fields from required parameters
@@ -12406,7 +12406,7 @@ Encode StreamName
 
 ``` purescript
 newtype StreamSummary
-  = StreamSummary { streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), streamVersion :: NullOrUndefined (StreamVersion), description :: NullOrUndefined (StreamDescription) }
+  = StreamSummary { streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), streamVersion :: Maybe (StreamVersion), description :: Maybe (StreamDescription) }
 ```
 
 <p>A summary of a stream.</p>
@@ -12431,7 +12431,7 @@ Constructs StreamSummary from required parameters
 #### `newStreamSummary'`
 
 ``` purescript
-newStreamSummary' :: ({ streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), streamVersion :: NullOrUndefined (StreamVersion), description :: NullOrUndefined (StreamDescription) } -> { streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), streamVersion :: NullOrUndefined (StreamVersion), description :: NullOrUndefined (StreamDescription) }) -> StreamSummary
+newStreamSummary' :: ({ streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), streamVersion :: Maybe (StreamVersion), description :: Maybe (StreamDescription) } -> { streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), streamVersion :: Maybe (StreamVersion), description :: Maybe (StreamDescription) }) -> StreamSummary
 ```
 
 Constructs StreamSummary's fields from required parameters
@@ -12616,7 +12616,7 @@ Encode TemplateBody
 
 ``` purescript
 newtype TestAuthorizationRequest
-  = TestAuthorizationRequest { principal :: NullOrUndefined (Principal), cognitoIdentityPoolId :: NullOrUndefined (CognitoIdentityPoolId), authInfos :: AuthInfos, clientId :: NullOrUndefined (ClientId), policyNamesToAdd :: NullOrUndefined (PolicyNames), policyNamesToSkip :: NullOrUndefined (PolicyNames) }
+  = TestAuthorizationRequest { principal :: Maybe (Principal), cognitoIdentityPoolId :: Maybe (CognitoIdentityPoolId), authInfos :: AuthInfos, clientId :: Maybe (ClientId), policyNamesToAdd :: Maybe (PolicyNames), policyNamesToSkip :: Maybe (PolicyNames) }
 ```
 
 ##### Instances
@@ -12639,7 +12639,7 @@ Constructs TestAuthorizationRequest from required parameters
 #### `newTestAuthorizationRequest'`
 
 ``` purescript
-newTestAuthorizationRequest' :: AuthInfos -> ({ principal :: NullOrUndefined (Principal), cognitoIdentityPoolId :: NullOrUndefined (CognitoIdentityPoolId), authInfos :: AuthInfos, clientId :: NullOrUndefined (ClientId), policyNamesToAdd :: NullOrUndefined (PolicyNames), policyNamesToSkip :: NullOrUndefined (PolicyNames) } -> { principal :: NullOrUndefined (Principal), cognitoIdentityPoolId :: NullOrUndefined (CognitoIdentityPoolId), authInfos :: AuthInfos, clientId :: NullOrUndefined (ClientId), policyNamesToAdd :: NullOrUndefined (PolicyNames), policyNamesToSkip :: NullOrUndefined (PolicyNames) }) -> TestAuthorizationRequest
+newTestAuthorizationRequest' :: AuthInfos -> ({ principal :: Maybe (Principal), cognitoIdentityPoolId :: Maybe (CognitoIdentityPoolId), authInfos :: AuthInfos, clientId :: Maybe (ClientId), policyNamesToAdd :: Maybe (PolicyNames), policyNamesToSkip :: Maybe (PolicyNames) } -> { principal :: Maybe (Principal), cognitoIdentityPoolId :: Maybe (CognitoIdentityPoolId), authInfos :: AuthInfos, clientId :: Maybe (ClientId), policyNamesToAdd :: Maybe (PolicyNames), policyNamesToSkip :: Maybe (PolicyNames) }) -> TestAuthorizationRequest
 ```
 
 Constructs TestAuthorizationRequest's fields from required parameters
@@ -12648,7 +12648,7 @@ Constructs TestAuthorizationRequest's fields from required parameters
 
 ``` purescript
 newtype TestAuthorizationResponse
-  = TestAuthorizationResponse { authResults :: NullOrUndefined (AuthResults) }
+  = TestAuthorizationResponse { authResults :: Maybe (AuthResults) }
 ```
 
 ##### Instances
@@ -12671,7 +12671,7 @@ Constructs TestAuthorizationResponse from required parameters
 #### `newTestAuthorizationResponse'`
 
 ``` purescript
-newTestAuthorizationResponse' :: ({ authResults :: NullOrUndefined (AuthResults) } -> { authResults :: NullOrUndefined (AuthResults) }) -> TestAuthorizationResponse
+newTestAuthorizationResponse' :: ({ authResults :: Maybe (AuthResults) } -> { authResults :: Maybe (AuthResults) }) -> TestAuthorizationResponse
 ```
 
 Constructs TestAuthorizationResponse's fields from required parameters
@@ -12712,7 +12712,7 @@ Constructs TestInvokeAuthorizerRequest's fields from required parameters
 
 ``` purescript
 newtype TestInvokeAuthorizerResponse
-  = TestInvokeAuthorizerResponse { isAuthenticated :: NullOrUndefined (IsAuthenticated), principalId :: NullOrUndefined (PrincipalId), policyDocuments :: NullOrUndefined (PolicyDocuments), refreshAfterInSeconds :: NullOrUndefined (Seconds), disconnectAfterInSeconds :: NullOrUndefined (Seconds) }
+  = TestInvokeAuthorizerResponse { isAuthenticated :: Maybe (IsAuthenticated), principalId :: Maybe (PrincipalId), policyDocuments :: Maybe (PolicyDocuments), refreshAfterInSeconds :: Maybe (Seconds), disconnectAfterInSeconds :: Maybe (Seconds) }
 ```
 
 ##### Instances
@@ -12735,7 +12735,7 @@ Constructs TestInvokeAuthorizerResponse from required parameters
 #### `newTestInvokeAuthorizerResponse'`
 
 ``` purescript
-newTestInvokeAuthorizerResponse' :: ({ isAuthenticated :: NullOrUndefined (IsAuthenticated), principalId :: NullOrUndefined (PrincipalId), policyDocuments :: NullOrUndefined (PolicyDocuments), refreshAfterInSeconds :: NullOrUndefined (Seconds), disconnectAfterInSeconds :: NullOrUndefined (Seconds) } -> { isAuthenticated :: NullOrUndefined (IsAuthenticated), principalId :: NullOrUndefined (PrincipalId), policyDocuments :: NullOrUndefined (PolicyDocuments), refreshAfterInSeconds :: NullOrUndefined (Seconds), disconnectAfterInSeconds :: NullOrUndefined (Seconds) }) -> TestInvokeAuthorizerResponse
+newTestInvokeAuthorizerResponse' :: ({ isAuthenticated :: Maybe (IsAuthenticated), principalId :: Maybe (PrincipalId), policyDocuments :: Maybe (PolicyDocuments), refreshAfterInSeconds :: Maybe (Seconds), disconnectAfterInSeconds :: Maybe (Seconds) } -> { isAuthenticated :: Maybe (IsAuthenticated), principalId :: Maybe (PrincipalId), policyDocuments :: Maybe (PolicyDocuments), refreshAfterInSeconds :: Maybe (Seconds), disconnectAfterInSeconds :: Maybe (Seconds) }) -> TestInvokeAuthorizerResponse
 ```
 
 Constructs TestInvokeAuthorizerResponse's fields from required parameters
@@ -12760,7 +12760,7 @@ Encode ThingArn
 
 ``` purescript
 newtype ThingAttribute
-  = ThingAttribute { thingName :: NullOrUndefined (ThingName), thingTypeName :: NullOrUndefined (ThingTypeName), thingArn :: NullOrUndefined (ThingArn), attributes :: NullOrUndefined (Attributes), version :: NullOrUndefined (Version) }
+  = ThingAttribute { thingName :: Maybe (ThingName), thingTypeName :: Maybe (ThingTypeName), thingArn :: Maybe (ThingArn), attributes :: Maybe (Attributes), version :: Maybe (Version) }
 ```
 
 <p>The properties of the thing, including thing name, thing type name, and a list of thing attributes.</p>
@@ -12785,7 +12785,7 @@ Constructs ThingAttribute from required parameters
 #### `newThingAttribute'`
 
 ``` purescript
-newThingAttribute' :: ({ thingName :: NullOrUndefined (ThingName), thingTypeName :: NullOrUndefined (ThingTypeName), thingArn :: NullOrUndefined (ThingArn), attributes :: NullOrUndefined (Attributes), version :: NullOrUndefined (Version) } -> { thingName :: NullOrUndefined (ThingName), thingTypeName :: NullOrUndefined (ThingTypeName), thingArn :: NullOrUndefined (ThingArn), attributes :: NullOrUndefined (Attributes), version :: NullOrUndefined (Version) }) -> ThingAttribute
+newThingAttribute' :: ({ thingName :: Maybe (ThingName), thingTypeName :: Maybe (ThingTypeName), thingArn :: Maybe (ThingArn), attributes :: Maybe (Attributes), version :: Maybe (Version) } -> { thingName :: Maybe (ThingName), thingTypeName :: Maybe (ThingTypeName), thingArn :: Maybe (ThingArn), attributes :: Maybe (Attributes), version :: Maybe (Version) }) -> ThingAttribute
 ```
 
 Constructs ThingAttribute's fields from required parameters
@@ -12810,7 +12810,7 @@ Encode ThingAttributeList
 
 ``` purescript
 newtype ThingDocument
-  = ThingDocument { thingName :: NullOrUndefined (ThingName), thingId :: NullOrUndefined (ThingId), thingTypeName :: NullOrUndefined (ThingTypeName), thingGroupNames :: NullOrUndefined (ThingGroupNameList), attributes :: NullOrUndefined (Attributes), shadow :: NullOrUndefined (JsonDocument) }
+  = ThingDocument { thingName :: Maybe (ThingName), thingId :: Maybe (ThingId), thingTypeName :: Maybe (ThingTypeName), thingGroupNames :: Maybe (ThingGroupNameList), attributes :: Maybe (Attributes), shadow :: Maybe (JsonDocument) }
 ```
 
 <p>The thing search index document.</p>
@@ -12835,7 +12835,7 @@ Constructs ThingDocument from required parameters
 #### `newThingDocument'`
 
 ``` purescript
-newThingDocument' :: ({ thingName :: NullOrUndefined (ThingName), thingId :: NullOrUndefined (ThingId), thingTypeName :: NullOrUndefined (ThingTypeName), thingGroupNames :: NullOrUndefined (ThingGroupNameList), attributes :: NullOrUndefined (Attributes), shadow :: NullOrUndefined (JsonDocument) } -> { thingName :: NullOrUndefined (ThingName), thingId :: NullOrUndefined (ThingId), thingTypeName :: NullOrUndefined (ThingTypeName), thingGroupNames :: NullOrUndefined (ThingGroupNameList), attributes :: NullOrUndefined (Attributes), shadow :: NullOrUndefined (JsonDocument) }) -> ThingDocument
+newThingDocument' :: ({ thingName :: Maybe (ThingName), thingId :: Maybe (ThingId), thingTypeName :: Maybe (ThingTypeName), thingGroupNames :: Maybe (ThingGroupNameList), attributes :: Maybe (Attributes), shadow :: Maybe (JsonDocument) } -> { thingName :: Maybe (ThingName), thingId :: Maybe (ThingId), thingTypeName :: Maybe (ThingTypeName), thingGroupNames :: Maybe (ThingGroupNameList), attributes :: Maybe (Attributes), shadow :: Maybe (JsonDocument) }) -> ThingDocument
 ```
 
 Constructs ThingDocument's fields from required parameters
@@ -12924,7 +12924,7 @@ Encode ThingGroupList
 
 ``` purescript
 newtype ThingGroupMetadata
-  = ThingGroupMetadata { parentGroupName :: NullOrUndefined (ThingGroupName), rootToParentThingGroups :: NullOrUndefined (ThingGroupNameAndArnList), creationDate :: NullOrUndefined (CreationDate) }
+  = ThingGroupMetadata { parentGroupName :: Maybe (ThingGroupName), rootToParentThingGroups :: Maybe (ThingGroupNameAndArnList), creationDate :: Maybe (CreationDate) }
 ```
 
 <p>Thing group metadata.</p>
@@ -12949,7 +12949,7 @@ Constructs ThingGroupMetadata from required parameters
 #### `newThingGroupMetadata'`
 
 ``` purescript
-newThingGroupMetadata' :: ({ parentGroupName :: NullOrUndefined (ThingGroupName), rootToParentThingGroups :: NullOrUndefined (ThingGroupNameAndArnList), creationDate :: NullOrUndefined (CreationDate) } -> { parentGroupName :: NullOrUndefined (ThingGroupName), rootToParentThingGroups :: NullOrUndefined (ThingGroupNameAndArnList), creationDate :: NullOrUndefined (CreationDate) }) -> ThingGroupMetadata
+newThingGroupMetadata' :: ({ parentGroupName :: Maybe (ThingGroupName), rootToParentThingGroups :: Maybe (ThingGroupNameAndArnList), creationDate :: Maybe (CreationDate) } -> { parentGroupName :: Maybe (ThingGroupName), rootToParentThingGroups :: Maybe (ThingGroupNameAndArnList), creationDate :: Maybe (CreationDate) }) -> ThingGroupMetadata
 ```
 
 Constructs ThingGroupMetadata's fields from required parameters
@@ -13006,7 +13006,7 @@ Encode ThingGroupNameList
 
 ``` purescript
 newtype ThingGroupProperties
-  = ThingGroupProperties { thingGroupDescription :: NullOrUndefined (ThingGroupDescription), attributePayload :: NullOrUndefined (AttributePayload) }
+  = ThingGroupProperties { thingGroupDescription :: Maybe (ThingGroupDescription), attributePayload :: Maybe (AttributePayload) }
 ```
 
 <p>Thing group properties.</p>
@@ -13031,7 +13031,7 @@ Constructs ThingGroupProperties from required parameters
 #### `newThingGroupProperties'`
 
 ``` purescript
-newThingGroupProperties' :: ({ thingGroupDescription :: NullOrUndefined (ThingGroupDescription), attributePayload :: NullOrUndefined (AttributePayload) } -> { thingGroupDescription :: NullOrUndefined (ThingGroupDescription), attributePayload :: NullOrUndefined (AttributePayload) }) -> ThingGroupProperties
+newThingGroupProperties' :: ({ thingGroupDescription :: Maybe (ThingGroupDescription), attributePayload :: Maybe (AttributePayload) } -> { thingGroupDescription :: Maybe (ThingGroupDescription), attributePayload :: Maybe (AttributePayload) }) -> ThingGroupProperties
 ```
 
 Constructs ThingGroupProperties's fields from required parameters
@@ -13056,7 +13056,7 @@ Encode ThingId
 
 ``` purescript
 newtype ThingIndexingConfiguration
-  = ThingIndexingConfiguration { thingIndexingMode :: NullOrUndefined (ThingIndexingMode) }
+  = ThingIndexingConfiguration { thingIndexingMode :: Maybe (ThingIndexingMode) }
 ```
 
 <p>Thing indexing configuration.</p>
@@ -13081,7 +13081,7 @@ Constructs ThingIndexingConfiguration from required parameters
 #### `newThingIndexingConfiguration'`
 
 ``` purescript
-newThingIndexingConfiguration' :: ({ thingIndexingMode :: NullOrUndefined (ThingIndexingMode) } -> { thingIndexingMode :: NullOrUndefined (ThingIndexingMode) }) -> ThingIndexingConfiguration
+newThingIndexingConfiguration' :: ({ thingIndexingMode :: Maybe (ThingIndexingMode) } -> { thingIndexingMode :: Maybe (ThingIndexingMode) }) -> ThingIndexingConfiguration
 ```
 
 Constructs ThingIndexingConfiguration's fields from required parameters
@@ -13154,7 +13154,7 @@ Encode ThingTypeArn
 
 ``` purescript
 newtype ThingTypeDefinition
-  = ThingTypeDefinition { thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeProperties :: NullOrUndefined (ThingTypeProperties), thingTypeMetadata :: NullOrUndefined (ThingTypeMetadata) }
+  = ThingTypeDefinition { thingTypeName :: Maybe (ThingTypeName), thingTypeArn :: Maybe (ThingTypeArn), thingTypeProperties :: Maybe (ThingTypeProperties), thingTypeMetadata :: Maybe (ThingTypeMetadata) }
 ```
 
 <p>The definition of the thing type, including thing type name and description.</p>
@@ -13179,7 +13179,7 @@ Constructs ThingTypeDefinition from required parameters
 #### `newThingTypeDefinition'`
 
 ``` purescript
-newThingTypeDefinition' :: ({ thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeProperties :: NullOrUndefined (ThingTypeProperties), thingTypeMetadata :: NullOrUndefined (ThingTypeMetadata) } -> { thingTypeName :: NullOrUndefined (ThingTypeName), thingTypeArn :: NullOrUndefined (ThingTypeArn), thingTypeProperties :: NullOrUndefined (ThingTypeProperties), thingTypeMetadata :: NullOrUndefined (ThingTypeMetadata) }) -> ThingTypeDefinition
+newThingTypeDefinition' :: ({ thingTypeName :: Maybe (ThingTypeName), thingTypeArn :: Maybe (ThingTypeArn), thingTypeProperties :: Maybe (ThingTypeProperties), thingTypeMetadata :: Maybe (ThingTypeMetadata) } -> { thingTypeName :: Maybe (ThingTypeName), thingTypeArn :: Maybe (ThingTypeArn), thingTypeProperties :: Maybe (ThingTypeProperties), thingTypeMetadata :: Maybe (ThingTypeMetadata) }) -> ThingTypeDefinition
 ```
 
 Constructs ThingTypeDefinition's fields from required parameters
@@ -13236,7 +13236,7 @@ Encode ThingTypeList
 
 ``` purescript
 newtype ThingTypeMetadata
-  = ThingTypeMetadata { deprecated :: NullOrUndefined (Boolean), deprecationDate :: NullOrUndefined (DeprecationDate), creationDate :: NullOrUndefined (CreationDate) }
+  = ThingTypeMetadata { deprecated :: Maybe (Boolean), deprecationDate :: Maybe (DeprecationDate), creationDate :: Maybe (CreationDate) }
 ```
 
 <p>The ThingTypeMetadata contains additional information about the thing type including: creation date and time, a value indicating whether the thing type is deprecated, and a date and time when time was deprecated.</p>
@@ -13261,7 +13261,7 @@ Constructs ThingTypeMetadata from required parameters
 #### `newThingTypeMetadata'`
 
 ``` purescript
-newThingTypeMetadata' :: ({ deprecated :: NullOrUndefined (Boolean), deprecationDate :: NullOrUndefined (DeprecationDate), creationDate :: NullOrUndefined (CreationDate) } -> { deprecated :: NullOrUndefined (Boolean), deprecationDate :: NullOrUndefined (DeprecationDate), creationDate :: NullOrUndefined (CreationDate) }) -> ThingTypeMetadata
+newThingTypeMetadata' :: ({ deprecated :: Maybe (Boolean), deprecationDate :: Maybe (DeprecationDate), creationDate :: Maybe (CreationDate) } -> { deprecated :: Maybe (Boolean), deprecationDate :: Maybe (DeprecationDate), creationDate :: Maybe (CreationDate) }) -> ThingTypeMetadata
 ```
 
 Constructs ThingTypeMetadata's fields from required parameters
@@ -13286,7 +13286,7 @@ Encode ThingTypeName
 
 ``` purescript
 newtype ThingTypeProperties
-  = ThingTypeProperties { thingTypeDescription :: NullOrUndefined (ThingTypeDescription), searchableAttributes :: NullOrUndefined (SearchableAttributes) }
+  = ThingTypeProperties { thingTypeDescription :: Maybe (ThingTypeDescription), searchableAttributes :: Maybe (SearchableAttributes) }
 ```
 
 <p>The ThingTypeProperties contains information about the thing type including: a thing type description, and a list of searchable thing attribute names.</p>
@@ -13311,7 +13311,7 @@ Constructs ThingTypeProperties from required parameters
 #### `newThingTypeProperties'`
 
 ``` purescript
-newThingTypeProperties' :: ({ thingTypeDescription :: NullOrUndefined (ThingTypeDescription), searchableAttributes :: NullOrUndefined (SearchableAttributes) } -> { thingTypeDescription :: NullOrUndefined (ThingTypeDescription), searchableAttributes :: NullOrUndefined (SearchableAttributes) }) -> ThingTypeProperties
+newThingTypeProperties' :: ({ thingTypeDescription :: Maybe (ThingTypeDescription), searchableAttributes :: Maybe (SearchableAttributes) } -> { thingTypeDescription :: Maybe (ThingTypeDescription), searchableAttributes :: Maybe (SearchableAttributes) }) -> ThingTypeProperties
 ```
 
 Constructs ThingTypeProperties's fields from required parameters
@@ -13320,7 +13320,7 @@ Constructs ThingTypeProperties's fields from required parameters
 
 ``` purescript
 newtype ThrottlingException
-  = ThrottlingException { message :: NullOrUndefined (ErrorMessage') }
+  = ThrottlingException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The rate exceeds the limit.</p>
@@ -13345,7 +13345,7 @@ Constructs ThrottlingException from required parameters
 #### `newThrottlingException'`
 
 ``` purescript
-newThrottlingException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> ThrottlingException
+newThrottlingException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> ThrottlingException
 ```
 
 Constructs ThrottlingException's fields from required parameters
@@ -13434,7 +13434,7 @@ Encode TopicPattern
 
 ``` purescript
 newtype TopicRule
-  = TopicRule { ruleName :: NullOrUndefined (RuleName), sql :: NullOrUndefined (SQL), description :: NullOrUndefined (Description), createdAt :: NullOrUndefined (CreatedAtDate), actions :: NullOrUndefined (ActionList), ruleDisabled :: NullOrUndefined (IsDisabled), awsIotSqlVersion :: NullOrUndefined (AwsIotSqlVersion), errorAction :: NullOrUndefined (Action) }
+  = TopicRule { ruleName :: Maybe (RuleName), sql :: Maybe (SQL), description :: Maybe (Description), createdAt :: Maybe (CreatedAtDate), actions :: Maybe (ActionList), ruleDisabled :: Maybe (IsDisabled), awsIotSqlVersion :: Maybe (AwsIotSqlVersion), errorAction :: Maybe (Action) }
 ```
 
 <p>Describes a rule.</p>
@@ -13459,7 +13459,7 @@ Constructs TopicRule from required parameters
 #### `newTopicRule'`
 
 ``` purescript
-newTopicRule' :: ({ ruleName :: NullOrUndefined (RuleName), sql :: NullOrUndefined (SQL), description :: NullOrUndefined (Description), createdAt :: NullOrUndefined (CreatedAtDate), actions :: NullOrUndefined (ActionList), ruleDisabled :: NullOrUndefined (IsDisabled), awsIotSqlVersion :: NullOrUndefined (AwsIotSqlVersion), errorAction :: NullOrUndefined (Action) } -> { ruleName :: NullOrUndefined (RuleName), sql :: NullOrUndefined (SQL), description :: NullOrUndefined (Description), createdAt :: NullOrUndefined (CreatedAtDate), actions :: NullOrUndefined (ActionList), ruleDisabled :: NullOrUndefined (IsDisabled), awsIotSqlVersion :: NullOrUndefined (AwsIotSqlVersion), errorAction :: NullOrUndefined (Action) }) -> TopicRule
+newTopicRule' :: ({ ruleName :: Maybe (RuleName), sql :: Maybe (SQL), description :: Maybe (Description), createdAt :: Maybe (CreatedAtDate), actions :: Maybe (ActionList), ruleDisabled :: Maybe (IsDisabled), awsIotSqlVersion :: Maybe (AwsIotSqlVersion), errorAction :: Maybe (Action) } -> { ruleName :: Maybe (RuleName), sql :: Maybe (SQL), description :: Maybe (Description), createdAt :: Maybe (CreatedAtDate), actions :: Maybe (ActionList), ruleDisabled :: Maybe (IsDisabled), awsIotSqlVersion :: Maybe (AwsIotSqlVersion), errorAction :: Maybe (Action) }) -> TopicRule
 ```
 
 Constructs TopicRule's fields from required parameters
@@ -13484,7 +13484,7 @@ Encode TopicRuleList
 
 ``` purescript
 newtype TopicRuleListItem
-  = TopicRuleListItem { ruleArn :: NullOrUndefined (RuleArn), ruleName :: NullOrUndefined (RuleName), topicPattern :: NullOrUndefined (TopicPattern), createdAt :: NullOrUndefined (CreatedAtDate), ruleDisabled :: NullOrUndefined (IsDisabled) }
+  = TopicRuleListItem { ruleArn :: Maybe (RuleArn), ruleName :: Maybe (RuleName), topicPattern :: Maybe (TopicPattern), createdAt :: Maybe (CreatedAtDate), ruleDisabled :: Maybe (IsDisabled) }
 ```
 
 <p>Describes a rule.</p>
@@ -13509,7 +13509,7 @@ Constructs TopicRuleListItem from required parameters
 #### `newTopicRuleListItem'`
 
 ``` purescript
-newTopicRuleListItem' :: ({ ruleArn :: NullOrUndefined (RuleArn), ruleName :: NullOrUndefined (RuleName), topicPattern :: NullOrUndefined (TopicPattern), createdAt :: NullOrUndefined (CreatedAtDate), ruleDisabled :: NullOrUndefined (IsDisabled) } -> { ruleArn :: NullOrUndefined (RuleArn), ruleName :: NullOrUndefined (RuleName), topicPattern :: NullOrUndefined (TopicPattern), createdAt :: NullOrUndefined (CreatedAtDate), ruleDisabled :: NullOrUndefined (IsDisabled) }) -> TopicRuleListItem
+newTopicRuleListItem' :: ({ ruleArn :: Maybe (RuleArn), ruleName :: Maybe (RuleName), topicPattern :: Maybe (TopicPattern), createdAt :: Maybe (CreatedAtDate), ruleDisabled :: Maybe (IsDisabled) } -> { ruleArn :: Maybe (RuleArn), ruleName :: Maybe (RuleName), topicPattern :: Maybe (TopicPattern), createdAt :: Maybe (CreatedAtDate), ruleDisabled :: Maybe (IsDisabled) }) -> TopicRuleListItem
 ```
 
 Constructs TopicRuleListItem's fields from required parameters
@@ -13518,7 +13518,7 @@ Constructs TopicRuleListItem's fields from required parameters
 
 ``` purescript
 newtype TopicRulePayload
-  = TopicRulePayload { sql :: SQL, description :: NullOrUndefined (Description), actions :: ActionList, ruleDisabled :: NullOrUndefined (IsDisabled), awsIotSqlVersion :: NullOrUndefined (AwsIotSqlVersion), errorAction :: NullOrUndefined (Action) }
+  = TopicRulePayload { sql :: SQL, description :: Maybe (Description), actions :: ActionList, ruleDisabled :: Maybe (IsDisabled), awsIotSqlVersion :: Maybe (AwsIotSqlVersion), errorAction :: Maybe (Action) }
 ```
 
 <p>Describes a rule.</p>
@@ -13543,7 +13543,7 @@ Constructs TopicRulePayload from required parameters
 #### `newTopicRulePayload'`
 
 ``` purescript
-newTopicRulePayload' :: ActionList -> SQL -> ({ sql :: SQL, description :: NullOrUndefined (Description), actions :: ActionList, ruleDisabled :: NullOrUndefined (IsDisabled), awsIotSqlVersion :: NullOrUndefined (AwsIotSqlVersion), errorAction :: NullOrUndefined (Action) } -> { sql :: SQL, description :: NullOrUndefined (Description), actions :: ActionList, ruleDisabled :: NullOrUndefined (IsDisabled), awsIotSqlVersion :: NullOrUndefined (AwsIotSqlVersion), errorAction :: NullOrUndefined (Action) }) -> TopicRulePayload
+newTopicRulePayload' :: ActionList -> SQL -> ({ sql :: SQL, description :: Maybe (Description), actions :: ActionList, ruleDisabled :: Maybe (IsDisabled), awsIotSqlVersion :: Maybe (AwsIotSqlVersion), errorAction :: Maybe (Action) } -> { sql :: SQL, description :: Maybe (Description), actions :: ActionList, ruleDisabled :: Maybe (IsDisabled), awsIotSqlVersion :: Maybe (AwsIotSqlVersion), errorAction :: Maybe (Action) }) -> TopicRulePayload
 ```
 
 Constructs TopicRulePayload's fields from required parameters
@@ -13552,7 +13552,7 @@ Constructs TopicRulePayload's fields from required parameters
 
 ``` purescript
 newtype TransferAlreadyCompletedException
-  = TransferAlreadyCompletedException { message :: NullOrUndefined (ErrorMessage') }
+  = TransferAlreadyCompletedException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>You can't revert the certificate transfer because the transfer is already complete.</p>
@@ -13577,7 +13577,7 @@ Constructs TransferAlreadyCompletedException from required parameters
 #### `newTransferAlreadyCompletedException'`
 
 ``` purescript
-newTransferAlreadyCompletedException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> TransferAlreadyCompletedException
+newTransferAlreadyCompletedException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> TransferAlreadyCompletedException
 ```
 
 Constructs TransferAlreadyCompletedException's fields from required parameters
@@ -13586,7 +13586,7 @@ Constructs TransferAlreadyCompletedException's fields from required parameters
 
 ``` purescript
 newtype TransferCertificateRequest
-  = TransferCertificateRequest { certificateId :: CertificateId, targetAwsAccount :: AwsAccountId, transferMessage :: NullOrUndefined (Message) }
+  = TransferCertificateRequest { certificateId :: CertificateId, targetAwsAccount :: AwsAccountId, transferMessage :: Maybe (Message) }
 ```
 
 <p>The input for the TransferCertificate operation.</p>
@@ -13611,7 +13611,7 @@ Constructs TransferCertificateRequest from required parameters
 #### `newTransferCertificateRequest'`
 
 ``` purescript
-newTransferCertificateRequest' :: CertificateId -> AwsAccountId -> ({ certificateId :: CertificateId, targetAwsAccount :: AwsAccountId, transferMessage :: NullOrUndefined (Message) } -> { certificateId :: CertificateId, targetAwsAccount :: AwsAccountId, transferMessage :: NullOrUndefined (Message) }) -> TransferCertificateRequest
+newTransferCertificateRequest' :: CertificateId -> AwsAccountId -> ({ certificateId :: CertificateId, targetAwsAccount :: AwsAccountId, transferMessage :: Maybe (Message) } -> { certificateId :: CertificateId, targetAwsAccount :: AwsAccountId, transferMessage :: Maybe (Message) }) -> TransferCertificateRequest
 ```
 
 Constructs TransferCertificateRequest's fields from required parameters
@@ -13620,7 +13620,7 @@ Constructs TransferCertificateRequest's fields from required parameters
 
 ``` purescript
 newtype TransferCertificateResponse
-  = TransferCertificateResponse { transferredCertificateArn :: NullOrUndefined (CertificateArn) }
+  = TransferCertificateResponse { transferredCertificateArn :: Maybe (CertificateArn) }
 ```
 
 <p>The output from the TransferCertificate operation.</p>
@@ -13645,7 +13645,7 @@ Constructs TransferCertificateResponse from required parameters
 #### `newTransferCertificateResponse'`
 
 ``` purescript
-newTransferCertificateResponse' :: ({ transferredCertificateArn :: NullOrUndefined (CertificateArn) } -> { transferredCertificateArn :: NullOrUndefined (CertificateArn) }) -> TransferCertificateResponse
+newTransferCertificateResponse' :: ({ transferredCertificateArn :: Maybe (CertificateArn) } -> { transferredCertificateArn :: Maybe (CertificateArn) }) -> TransferCertificateResponse
 ```
 
 Constructs TransferCertificateResponse's fields from required parameters
@@ -13654,7 +13654,7 @@ Constructs TransferCertificateResponse's fields from required parameters
 
 ``` purescript
 newtype TransferConflictException
-  = TransferConflictException { message :: NullOrUndefined (ErrorMessage') }
+  = TransferConflictException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>You can't transfer the certificate because authorization policies are still attached.</p>
@@ -13679,7 +13679,7 @@ Constructs TransferConflictException from required parameters
 #### `newTransferConflictException'`
 
 ``` purescript
-newTransferConflictException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> TransferConflictException
+newTransferConflictException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> TransferConflictException
 ```
 
 Constructs TransferConflictException's fields from required parameters
@@ -13688,7 +13688,7 @@ Constructs TransferConflictException's fields from required parameters
 
 ``` purescript
 newtype TransferData
-  = TransferData { transferMessage :: NullOrUndefined (Message), rejectReason :: NullOrUndefined (Message), transferDate :: NullOrUndefined (DateType), acceptDate :: NullOrUndefined (DateType), rejectDate :: NullOrUndefined (DateType) }
+  = TransferData { transferMessage :: Maybe (Message), rejectReason :: Maybe (Message), transferDate :: Maybe (DateType), acceptDate :: Maybe (DateType), rejectDate :: Maybe (DateType) }
 ```
 
 <p>Data used to transfer a certificate to an AWS account.</p>
@@ -13713,7 +13713,7 @@ Constructs TransferData from required parameters
 #### `newTransferData'`
 
 ``` purescript
-newTransferData' :: ({ transferMessage :: NullOrUndefined (Message), rejectReason :: NullOrUndefined (Message), transferDate :: NullOrUndefined (DateType), acceptDate :: NullOrUndefined (DateType), rejectDate :: NullOrUndefined (DateType) } -> { transferMessage :: NullOrUndefined (Message), rejectReason :: NullOrUndefined (Message), transferDate :: NullOrUndefined (DateType), acceptDate :: NullOrUndefined (DateType), rejectDate :: NullOrUndefined (DateType) }) -> TransferData
+newTransferData' :: ({ transferMessage :: Maybe (Message), rejectReason :: Maybe (Message), transferDate :: Maybe (DateType), acceptDate :: Maybe (DateType), rejectDate :: Maybe (DateType) } -> { transferMessage :: Maybe (Message), rejectReason :: Maybe (Message), transferDate :: Maybe (DateType), acceptDate :: Maybe (DateType), rejectDate :: Maybe (DateType) }) -> TransferData
 ```
 
 Constructs TransferData's fields from required parameters
@@ -13722,7 +13722,7 @@ Constructs TransferData's fields from required parameters
 
 ``` purescript
 newtype UnauthorizedException
-  = UnauthorizedException { message :: NullOrUndefined (ErrorMessage') }
+  = UnauthorizedException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>You are not authorized to perform this operation.</p>
@@ -13747,7 +13747,7 @@ Constructs UnauthorizedException from required parameters
 #### `newUnauthorizedException'`
 
 ``` purescript
-newUnauthorizedException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> UnauthorizedException
+newUnauthorizedException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> UnauthorizedException
 ```
 
 Constructs UnauthorizedException's fields from required parameters
@@ -13772,7 +13772,7 @@ Encode UndoDeprecate
 
 ``` purescript
 newtype UpdateAuthorizerRequest
-  = UpdateAuthorizerRequest { authorizerName :: AuthorizerName, authorizerFunctionArn :: NullOrUndefined (AuthorizerFunctionArn), tokenKeyName :: NullOrUndefined (TokenKeyName), tokenSigningPublicKeys :: NullOrUndefined (PublicKeyMap), status :: NullOrUndefined (AuthorizerStatus) }
+  = UpdateAuthorizerRequest { authorizerName :: AuthorizerName, authorizerFunctionArn :: Maybe (AuthorizerFunctionArn), tokenKeyName :: Maybe (TokenKeyName), tokenSigningPublicKeys :: Maybe (PublicKeyMap), status :: Maybe (AuthorizerStatus) }
 ```
 
 ##### Instances
@@ -13795,7 +13795,7 @@ Constructs UpdateAuthorizerRequest from required parameters
 #### `newUpdateAuthorizerRequest'`
 
 ``` purescript
-newUpdateAuthorizerRequest' :: AuthorizerName -> ({ authorizerName :: AuthorizerName, authorizerFunctionArn :: NullOrUndefined (AuthorizerFunctionArn), tokenKeyName :: NullOrUndefined (TokenKeyName), tokenSigningPublicKeys :: NullOrUndefined (PublicKeyMap), status :: NullOrUndefined (AuthorizerStatus) } -> { authorizerName :: AuthorizerName, authorizerFunctionArn :: NullOrUndefined (AuthorizerFunctionArn), tokenKeyName :: NullOrUndefined (TokenKeyName), tokenSigningPublicKeys :: NullOrUndefined (PublicKeyMap), status :: NullOrUndefined (AuthorizerStatus) }) -> UpdateAuthorizerRequest
+newUpdateAuthorizerRequest' :: AuthorizerName -> ({ authorizerName :: AuthorizerName, authorizerFunctionArn :: Maybe (AuthorizerFunctionArn), tokenKeyName :: Maybe (TokenKeyName), tokenSigningPublicKeys :: Maybe (PublicKeyMap), status :: Maybe (AuthorizerStatus) } -> { authorizerName :: AuthorizerName, authorizerFunctionArn :: Maybe (AuthorizerFunctionArn), tokenKeyName :: Maybe (TokenKeyName), tokenSigningPublicKeys :: Maybe (PublicKeyMap), status :: Maybe (AuthorizerStatus) }) -> UpdateAuthorizerRequest
 ```
 
 Constructs UpdateAuthorizerRequest's fields from required parameters
@@ -13804,7 +13804,7 @@ Constructs UpdateAuthorizerRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateAuthorizerResponse
-  = UpdateAuthorizerResponse { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) }
+  = UpdateAuthorizerResponse { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) }
 ```
 
 ##### Instances
@@ -13827,7 +13827,7 @@ Constructs UpdateAuthorizerResponse from required parameters
 #### `newUpdateAuthorizerResponse'`
 
 ``` purescript
-newUpdateAuthorizerResponse' :: ({ authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) } -> { authorizerName :: NullOrUndefined (AuthorizerName), authorizerArn :: NullOrUndefined (AuthorizerArn) }) -> UpdateAuthorizerResponse
+newUpdateAuthorizerResponse' :: ({ authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) } -> { authorizerName :: Maybe (AuthorizerName), authorizerArn :: Maybe (AuthorizerArn) }) -> UpdateAuthorizerResponse
 ```
 
 Constructs UpdateAuthorizerResponse's fields from required parameters
@@ -13836,7 +13836,7 @@ Constructs UpdateAuthorizerResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateCACertificateRequest
-  = UpdateCACertificateRequest { certificateId :: CertificateId, newStatus :: NullOrUndefined (CACertificateStatus), newAutoRegistrationStatus :: NullOrUndefined (AutoRegistrationStatus), registrationConfig :: NullOrUndefined (RegistrationConfig), removeAutoRegistration :: NullOrUndefined (RemoveAutoRegistration) }
+  = UpdateCACertificateRequest { certificateId :: CertificateId, newStatus :: Maybe (CACertificateStatus), newAutoRegistrationStatus :: Maybe (AutoRegistrationStatus), registrationConfig :: Maybe (RegistrationConfig), removeAutoRegistration :: Maybe (RemoveAutoRegistration) }
 ```
 
 <p>The input to the UpdateCACertificate operation.</p>
@@ -13861,7 +13861,7 @@ Constructs UpdateCACertificateRequest from required parameters
 #### `newUpdateCACertificateRequest'`
 
 ``` purescript
-newUpdateCACertificateRequest' :: CertificateId -> ({ certificateId :: CertificateId, newStatus :: NullOrUndefined (CACertificateStatus), newAutoRegistrationStatus :: NullOrUndefined (AutoRegistrationStatus), registrationConfig :: NullOrUndefined (RegistrationConfig), removeAutoRegistration :: NullOrUndefined (RemoveAutoRegistration) } -> { certificateId :: CertificateId, newStatus :: NullOrUndefined (CACertificateStatus), newAutoRegistrationStatus :: NullOrUndefined (AutoRegistrationStatus), registrationConfig :: NullOrUndefined (RegistrationConfig), removeAutoRegistration :: NullOrUndefined (RemoveAutoRegistration) }) -> UpdateCACertificateRequest
+newUpdateCACertificateRequest' :: CertificateId -> ({ certificateId :: CertificateId, newStatus :: Maybe (CACertificateStatus), newAutoRegistrationStatus :: Maybe (AutoRegistrationStatus), registrationConfig :: Maybe (RegistrationConfig), removeAutoRegistration :: Maybe (RemoveAutoRegistration) } -> { certificateId :: CertificateId, newStatus :: Maybe (CACertificateStatus), newAutoRegistrationStatus :: Maybe (AutoRegistrationStatus), registrationConfig :: Maybe (RegistrationConfig), removeAutoRegistration :: Maybe (RemoveAutoRegistration) }) -> UpdateCACertificateRequest
 ```
 
 Constructs UpdateCACertificateRequest's fields from required parameters
@@ -13904,7 +13904,7 @@ Constructs UpdateCertificateRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateEventConfigurationsRequest
-  = UpdateEventConfigurationsRequest { eventConfigurations :: NullOrUndefined (EventConfigurations) }
+  = UpdateEventConfigurationsRequest { eventConfigurations :: Maybe (EventConfigurations) }
 ```
 
 ##### Instances
@@ -13927,7 +13927,7 @@ Constructs UpdateEventConfigurationsRequest from required parameters
 #### `newUpdateEventConfigurationsRequest'`
 
 ``` purescript
-newUpdateEventConfigurationsRequest' :: ({ eventConfigurations :: NullOrUndefined (EventConfigurations) } -> { eventConfigurations :: NullOrUndefined (EventConfigurations) }) -> UpdateEventConfigurationsRequest
+newUpdateEventConfigurationsRequest' :: ({ eventConfigurations :: Maybe (EventConfigurations) } -> { eventConfigurations :: Maybe (EventConfigurations) }) -> UpdateEventConfigurationsRequest
 ```
 
 Constructs UpdateEventConfigurationsRequest's fields from required parameters
@@ -13952,7 +13952,7 @@ Encode UpdateEventConfigurationsResponse
 
 ``` purescript
 newtype UpdateIndexingConfigurationRequest
-  = UpdateIndexingConfigurationRequest { thingIndexingConfiguration :: NullOrUndefined (ThingIndexingConfiguration) }
+  = UpdateIndexingConfigurationRequest { thingIndexingConfiguration :: Maybe (ThingIndexingConfiguration) }
 ```
 
 ##### Instances
@@ -13975,7 +13975,7 @@ Constructs UpdateIndexingConfigurationRequest from required parameters
 #### `newUpdateIndexingConfigurationRequest'`
 
 ``` purescript
-newUpdateIndexingConfigurationRequest' :: ({ thingIndexingConfiguration :: NullOrUndefined (ThingIndexingConfiguration) } -> { thingIndexingConfiguration :: NullOrUndefined (ThingIndexingConfiguration) }) -> UpdateIndexingConfigurationRequest
+newUpdateIndexingConfigurationRequest' :: ({ thingIndexingConfiguration :: Maybe (ThingIndexingConfiguration) } -> { thingIndexingConfiguration :: Maybe (ThingIndexingConfiguration) }) -> UpdateIndexingConfigurationRequest
 ```
 
 Constructs UpdateIndexingConfigurationRequest's fields from required parameters
@@ -14000,7 +14000,7 @@ Encode UpdateIndexingConfigurationResponse
 
 ``` purescript
 newtype UpdateRoleAliasRequest
-  = UpdateRoleAliasRequest { roleAlias :: RoleAlias, roleArn :: NullOrUndefined (RoleArn), credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds) }
+  = UpdateRoleAliasRequest { roleAlias :: RoleAlias, roleArn :: Maybe (RoleArn), credentialDurationSeconds :: Maybe (CredentialDurationSeconds) }
 ```
 
 ##### Instances
@@ -14023,7 +14023,7 @@ Constructs UpdateRoleAliasRequest from required parameters
 #### `newUpdateRoleAliasRequest'`
 
 ``` purescript
-newUpdateRoleAliasRequest' :: RoleAlias -> ({ roleAlias :: RoleAlias, roleArn :: NullOrUndefined (RoleArn), credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds) } -> { roleAlias :: RoleAlias, roleArn :: NullOrUndefined (RoleArn), credentialDurationSeconds :: NullOrUndefined (CredentialDurationSeconds) }) -> UpdateRoleAliasRequest
+newUpdateRoleAliasRequest' :: RoleAlias -> ({ roleAlias :: RoleAlias, roleArn :: Maybe (RoleArn), credentialDurationSeconds :: Maybe (CredentialDurationSeconds) } -> { roleAlias :: RoleAlias, roleArn :: Maybe (RoleArn), credentialDurationSeconds :: Maybe (CredentialDurationSeconds) }) -> UpdateRoleAliasRequest
 ```
 
 Constructs UpdateRoleAliasRequest's fields from required parameters
@@ -14032,7 +14032,7 @@ Constructs UpdateRoleAliasRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateRoleAliasResponse
-  = UpdateRoleAliasResponse { roleAlias :: NullOrUndefined (RoleAlias), roleAliasArn :: NullOrUndefined (RoleAliasArn) }
+  = UpdateRoleAliasResponse { roleAlias :: Maybe (RoleAlias), roleAliasArn :: Maybe (RoleAliasArn) }
 ```
 
 ##### Instances
@@ -14055,7 +14055,7 @@ Constructs UpdateRoleAliasResponse from required parameters
 #### `newUpdateRoleAliasResponse'`
 
 ``` purescript
-newUpdateRoleAliasResponse' :: ({ roleAlias :: NullOrUndefined (RoleAlias), roleAliasArn :: NullOrUndefined (RoleAliasArn) } -> { roleAlias :: NullOrUndefined (RoleAlias), roleAliasArn :: NullOrUndefined (RoleAliasArn) }) -> UpdateRoleAliasResponse
+newUpdateRoleAliasResponse' :: ({ roleAlias :: Maybe (RoleAlias), roleAliasArn :: Maybe (RoleAliasArn) } -> { roleAlias :: Maybe (RoleAlias), roleAliasArn :: Maybe (RoleAliasArn) }) -> UpdateRoleAliasResponse
 ```
 
 Constructs UpdateRoleAliasResponse's fields from required parameters
@@ -14064,7 +14064,7 @@ Constructs UpdateRoleAliasResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateStreamRequest
-  = UpdateStreamRequest { streamId :: StreamId, description :: NullOrUndefined (StreamDescription), files :: NullOrUndefined (StreamFiles), roleArn :: NullOrUndefined (RoleArn) }
+  = UpdateStreamRequest { streamId :: StreamId, description :: Maybe (StreamDescription), files :: Maybe (StreamFiles), roleArn :: Maybe (RoleArn) }
 ```
 
 ##### Instances
@@ -14087,7 +14087,7 @@ Constructs UpdateStreamRequest from required parameters
 #### `newUpdateStreamRequest'`
 
 ``` purescript
-newUpdateStreamRequest' :: StreamId -> ({ streamId :: StreamId, description :: NullOrUndefined (StreamDescription), files :: NullOrUndefined (StreamFiles), roleArn :: NullOrUndefined (RoleArn) } -> { streamId :: StreamId, description :: NullOrUndefined (StreamDescription), files :: NullOrUndefined (StreamFiles), roleArn :: NullOrUndefined (RoleArn) }) -> UpdateStreamRequest
+newUpdateStreamRequest' :: StreamId -> ({ streamId :: StreamId, description :: Maybe (StreamDescription), files :: Maybe (StreamFiles), roleArn :: Maybe (RoleArn) } -> { streamId :: StreamId, description :: Maybe (StreamDescription), files :: Maybe (StreamFiles), roleArn :: Maybe (RoleArn) }) -> UpdateStreamRequest
 ```
 
 Constructs UpdateStreamRequest's fields from required parameters
@@ -14096,7 +14096,7 @@ Constructs UpdateStreamRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateStreamResponse
-  = UpdateStreamResponse { streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), description :: NullOrUndefined (StreamDescription), streamVersion :: NullOrUndefined (StreamVersion) }
+  = UpdateStreamResponse { streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), description :: Maybe (StreamDescription), streamVersion :: Maybe (StreamVersion) }
 ```
 
 ##### Instances
@@ -14119,7 +14119,7 @@ Constructs UpdateStreamResponse from required parameters
 #### `newUpdateStreamResponse'`
 
 ``` purescript
-newUpdateStreamResponse' :: ({ streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), description :: NullOrUndefined (StreamDescription), streamVersion :: NullOrUndefined (StreamVersion) } -> { streamId :: NullOrUndefined (StreamId), streamArn :: NullOrUndefined (StreamArn), description :: NullOrUndefined (StreamDescription), streamVersion :: NullOrUndefined (StreamVersion) }) -> UpdateStreamResponse
+newUpdateStreamResponse' :: ({ streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), description :: Maybe (StreamDescription), streamVersion :: Maybe (StreamVersion) } -> { streamId :: Maybe (StreamId), streamArn :: Maybe (StreamArn), description :: Maybe (StreamDescription), streamVersion :: Maybe (StreamVersion) }) -> UpdateStreamResponse
 ```
 
 Constructs UpdateStreamResponse's fields from required parameters
@@ -14128,7 +14128,7 @@ Constructs UpdateStreamResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateThingGroupRequest
-  = UpdateThingGroupRequest { thingGroupName :: ThingGroupName, thingGroupProperties :: ThingGroupProperties, expectedVersion :: NullOrUndefined (OptionalVersion) }
+  = UpdateThingGroupRequest { thingGroupName :: ThingGroupName, thingGroupProperties :: ThingGroupProperties, expectedVersion :: Maybe (OptionalVersion) }
 ```
 
 ##### Instances
@@ -14151,7 +14151,7 @@ Constructs UpdateThingGroupRequest from required parameters
 #### `newUpdateThingGroupRequest'`
 
 ``` purescript
-newUpdateThingGroupRequest' :: ThingGroupName -> ThingGroupProperties -> ({ thingGroupName :: ThingGroupName, thingGroupProperties :: ThingGroupProperties, expectedVersion :: NullOrUndefined (OptionalVersion) } -> { thingGroupName :: ThingGroupName, thingGroupProperties :: ThingGroupProperties, expectedVersion :: NullOrUndefined (OptionalVersion) }) -> UpdateThingGroupRequest
+newUpdateThingGroupRequest' :: ThingGroupName -> ThingGroupProperties -> ({ thingGroupName :: ThingGroupName, thingGroupProperties :: ThingGroupProperties, expectedVersion :: Maybe (OptionalVersion) } -> { thingGroupName :: ThingGroupName, thingGroupProperties :: ThingGroupProperties, expectedVersion :: Maybe (OptionalVersion) }) -> UpdateThingGroupRequest
 ```
 
 Constructs UpdateThingGroupRequest's fields from required parameters
@@ -14160,7 +14160,7 @@ Constructs UpdateThingGroupRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateThingGroupResponse
-  = UpdateThingGroupResponse { version :: NullOrUndefined (Version) }
+  = UpdateThingGroupResponse { version :: Maybe (Version) }
 ```
 
 ##### Instances
@@ -14183,7 +14183,7 @@ Constructs UpdateThingGroupResponse from required parameters
 #### `newUpdateThingGroupResponse'`
 
 ``` purescript
-newUpdateThingGroupResponse' :: ({ version :: NullOrUndefined (Version) } -> { version :: NullOrUndefined (Version) }) -> UpdateThingGroupResponse
+newUpdateThingGroupResponse' :: ({ version :: Maybe (Version) } -> { version :: Maybe (Version) }) -> UpdateThingGroupResponse
 ```
 
 Constructs UpdateThingGroupResponse's fields from required parameters
@@ -14192,7 +14192,7 @@ Constructs UpdateThingGroupResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateThingGroupsForThingRequest
-  = UpdateThingGroupsForThingRequest { thingName :: NullOrUndefined (ThingName), thingGroupsToAdd :: NullOrUndefined (ThingGroupList), thingGroupsToRemove :: NullOrUndefined (ThingGroupList) }
+  = UpdateThingGroupsForThingRequest { thingName :: Maybe (ThingName), thingGroupsToAdd :: Maybe (ThingGroupList), thingGroupsToRemove :: Maybe (ThingGroupList) }
 ```
 
 ##### Instances
@@ -14215,7 +14215,7 @@ Constructs UpdateThingGroupsForThingRequest from required parameters
 #### `newUpdateThingGroupsForThingRequest'`
 
 ``` purescript
-newUpdateThingGroupsForThingRequest' :: ({ thingName :: NullOrUndefined (ThingName), thingGroupsToAdd :: NullOrUndefined (ThingGroupList), thingGroupsToRemove :: NullOrUndefined (ThingGroupList) } -> { thingName :: NullOrUndefined (ThingName), thingGroupsToAdd :: NullOrUndefined (ThingGroupList), thingGroupsToRemove :: NullOrUndefined (ThingGroupList) }) -> UpdateThingGroupsForThingRequest
+newUpdateThingGroupsForThingRequest' :: ({ thingName :: Maybe (ThingName), thingGroupsToAdd :: Maybe (ThingGroupList), thingGroupsToRemove :: Maybe (ThingGroupList) } -> { thingName :: Maybe (ThingName), thingGroupsToAdd :: Maybe (ThingGroupList), thingGroupsToRemove :: Maybe (ThingGroupList) }) -> UpdateThingGroupsForThingRequest
 ```
 
 Constructs UpdateThingGroupsForThingRequest's fields from required parameters
@@ -14240,7 +14240,7 @@ Encode UpdateThingGroupsForThingResponse
 
 ``` purescript
 newtype UpdateThingRequest
-  = UpdateThingRequest { thingName :: ThingName, thingTypeName :: NullOrUndefined (ThingTypeName), attributePayload :: NullOrUndefined (AttributePayload), expectedVersion :: NullOrUndefined (OptionalVersion), removeThingType :: NullOrUndefined (RemoveThingType) }
+  = UpdateThingRequest { thingName :: ThingName, thingTypeName :: Maybe (ThingTypeName), attributePayload :: Maybe (AttributePayload), expectedVersion :: Maybe (OptionalVersion), removeThingType :: Maybe (RemoveThingType) }
 ```
 
 <p>The input for the UpdateThing operation.</p>
@@ -14265,7 +14265,7 @@ Constructs UpdateThingRequest from required parameters
 #### `newUpdateThingRequest'`
 
 ``` purescript
-newUpdateThingRequest' :: ThingName -> ({ thingName :: ThingName, thingTypeName :: NullOrUndefined (ThingTypeName), attributePayload :: NullOrUndefined (AttributePayload), expectedVersion :: NullOrUndefined (OptionalVersion), removeThingType :: NullOrUndefined (RemoveThingType) } -> { thingName :: ThingName, thingTypeName :: NullOrUndefined (ThingTypeName), attributePayload :: NullOrUndefined (AttributePayload), expectedVersion :: NullOrUndefined (OptionalVersion), removeThingType :: NullOrUndefined (RemoveThingType) }) -> UpdateThingRequest
+newUpdateThingRequest' :: ThingName -> ({ thingName :: ThingName, thingTypeName :: Maybe (ThingTypeName), attributePayload :: Maybe (AttributePayload), expectedVersion :: Maybe (OptionalVersion), removeThingType :: Maybe (RemoveThingType) } -> { thingName :: ThingName, thingTypeName :: Maybe (ThingTypeName), attributePayload :: Maybe (AttributePayload), expectedVersion :: Maybe (OptionalVersion), removeThingType :: Maybe (RemoveThingType) }) -> UpdateThingRequest
 ```
 
 Constructs UpdateThingRequest's fields from required parameters
@@ -14340,7 +14340,7 @@ Encode Version
 
 ``` purescript
 newtype VersionConflictException
-  = VersionConflictException { message :: NullOrUndefined (ErrorMessage') }
+  = VersionConflictException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>An exception thrown when the version of a thing passed to a command is different than the version specified with the --version parameter.</p>
@@ -14365,7 +14365,7 @@ Constructs VersionConflictException from required parameters
 #### `newVersionConflictException'`
 
 ``` purescript
-newVersionConflictException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> VersionConflictException
+newVersionConflictException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> VersionConflictException
 ```
 
 Constructs VersionConflictException's fields from required parameters
@@ -14374,7 +14374,7 @@ Constructs VersionConflictException's fields from required parameters
 
 ``` purescript
 newtype VersionsLimitExceededException
-  = VersionsLimitExceededException { message :: NullOrUndefined (ErrorMessage') }
+  = VersionsLimitExceededException { message :: Maybe (ErrorMessage') }
 ```
 
 <p>The number of policy versions exceeds the limit.</p>
@@ -14399,7 +14399,7 @@ Constructs VersionsLimitExceededException from required parameters
 #### `newVersionsLimitExceededException'`
 
 ``` purescript
-newVersionsLimitExceededException' :: ({ message :: NullOrUndefined (ErrorMessage') } -> { message :: NullOrUndefined (ErrorMessage') }) -> VersionsLimitExceededException
+newVersionsLimitExceededException' :: ({ message :: Maybe (ErrorMessage') } -> { message :: Maybe (ErrorMessage') }) -> VersionsLimitExceededException
 ```
 
 Constructs VersionsLimitExceededException's fields from required parameters
